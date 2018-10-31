@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 import sys
-import re
-import subprocess
 
 errors = 0
 
@@ -14,8 +12,6 @@ def report_error(message, condition=True):
         print(message)
         errors += 1
 
-
-modified_msg = ""
 msg_file = sys.argv[1]
 with open(msg_file) as file:
     message = file.readlines()
@@ -40,13 +36,5 @@ if len(message) > 1 and len(message[1].strip()) > 0:
 # Check that the third line is not empty
 if len(message) <= 2 or len(message[2].strip()) == 0:
     report_error('Use the body to explain what and why')
-
-with open(msg_file, 'w') as file:
-    file.write(modified_msg)
-
-gitProcess = subprocess.Popen(['git', 'diff', '--cached'], stdout=subprocess.PIPE)
-gitOutput = str(gitProcess.communicate()[0])
-if 'NOCOMMIT' in gitOutput.upper():
-    report_error('The commit contains the string "NOCOMMIT" -- looks like you forgot something')
 
 exit(errors)
