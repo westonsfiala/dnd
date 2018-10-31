@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Encounter.h"
 #include "Party.h"
 #include "Tables.h"
