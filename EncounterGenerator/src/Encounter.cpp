@@ -1,8 +1,9 @@
 #include "Encounter.h"
 #include "Party.h"
-#include "Tables.h"
 #include <random>
 #include <cassert>
+
+using namespace GeneratorUtilities;
 
 const std::vector<float> Encounter::monster_encounter_modifiers = {
     0.5f, // 1 monster w/ large party
@@ -25,7 +26,7 @@ Encounter::Encounter(const Party &adventurers, const uint32_t &num_monsters) :
     fill_out_encounters();
 }
 
-std::map<float, uint32_t> Encounter::get_battle(const difficulty& difficulty) const
+std::map<cr, uint32_t> Encounter::get_battle(const difficulty& difficulty) const
 {
     auto battles = get_all_battles(difficulty);
 
@@ -40,7 +41,7 @@ std::map<float, uint32_t> Encounter::get_battle(const difficulty& difficulty) co
 
     const auto index = dis(gen);
 
-    std::vector<std::map<float, uint32_t>> vectorized_battles;
+    std::vector<std::map<cr, uint32_t>> vectorized_battles;
 
     for(const auto battle : battles)
     {
@@ -50,7 +51,7 @@ std::map<float, uint32_t> Encounter::get_battle(const difficulty& difficulty) co
     return vectorized_battles.at(index);
 }
 
-std::set<std::map<float, uint32_t>> Encounter::get_all_battles(const difficulty& difficulty) const
+std::set<std::map<cr, uint32_t>> Encounter::get_all_battles(const difficulty& difficulty) const
 {
     if(m_valid_battles_.count(difficulty) != 0)
     {
@@ -60,40 +61,14 @@ std::set<std::map<float, uint32_t>> Encounter::get_all_battles(const difficulty&
     return {};
 }
 
-uint32_t Encounter::get_battle_xp(const std::map<float, uint32_t>& monster_map)
+uint32_t Encounter::get_battle_xp(const std::map<cr, uint32_t>& monster_map)
 {
     auto battle_xp = 0;
     for(const auto &monster_group : monster_map)
     {
-        battle_xp += get_monster_xp(monster_group.first) * monster_group.second;
+        battle_xp += GenUtil::get_monster_xp(monster_group.first) * monster_group.second;
     }
     return battle_xp;
-}
-
-uint32_t Encounter::get_monster_xp(const float& monster_cr)
-{
-    // See if this is a valid monster cr.
-    if(cr_to_xp_map.count(monster_cr) != 0)
-    {
-        return cr_to_xp_map.at(monster_cr);
-    }
-    
-    // Nope, return 0;
-    assert(false);
-    return 0;
-}
-
-float Encounter::get_monster_cr(const uint32_t& monster_xp)
-{
-    // See if this is a valid monster xp.
-    if (xp_to_cr_map.count(monster_xp) != 0)
-    {
-        return xp_to_cr_map.at(monster_xp);
-    }
-
-    // Nope, return 0;
-    assert(false);
-    return 0;
 }
 
 float Encounter::get_xp_modifier(const uint32_t& num_monsters) const
@@ -160,13 +135,13 @@ float Encounter::get_xp_modifier(const uint32_t& num_monsters) const
     return monster_encounter_modifiers.at(table_index);
 }
 
-std::map<float, uint32_t> Encounter::get_monster_map(const std::vector<uint32_t>& monsters)
+std::map<cr, uint32_t> Encounter::get_monster_map(const std::vector<uint32_t>& monsters)
 {
-    std::map<float, uint32_t> monster_map;
+    std::map<cr, uint32_t> monster_map;
     // Fill out the list so we can get the desired xp.
-    for (auto monster_xp : monsters)
+    for (uint32_t monster_xp : monsters)
     {
-        auto monster_cr = get_monster_cr(monster_xp);
+        auto monster_cr = GenUtil::get_monster_cr(monster_xp);
         monster_map[monster_cr]++;
     }
 
