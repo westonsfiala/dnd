@@ -149,9 +149,9 @@ static const std::vector<uint32_t> monster_xp_table = {
 enum cr
 {
     zero = 0,
-    oneeighth,
-    onequarter,
-    onehalf,
+    one_eighth,
+    one_quarter,
+    one_half,
     one,
     two,
     three,
