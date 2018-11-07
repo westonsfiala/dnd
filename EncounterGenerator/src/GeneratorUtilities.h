@@ -5,15 +5,15 @@
 namespace GeneratorUtilities
 {
 
-enum difficulty
+enum Difficulty
 {
-    easy,
-    medium,
-    hard,
-    deadly
+    Easy,
+    Medium,
+    Hard,
+    Deadly
 };
 
-static const std::vector<uint32_t> easy_battle_adventurer_xp = {
+static const std::vector<uint32_t> EASY_BATTLE_ADVENTURER_XP = {
     0,
     25,
     50,
@@ -37,7 +37,7 @@ static const std::vector<uint32_t> easy_battle_adventurer_xp = {
     2800
 };
 
-static const std::vector<uint32_t> medium_battle_adventurer_xp = {
+static const std::vector<uint32_t> MEDIUM_BATTLE_ADVENTURER_XP = {
     0,
     50,
     100,
@@ -61,7 +61,7 @@ static const std::vector<uint32_t> medium_battle_adventurer_xp = {
     5700
 };
 
-static const std::vector<uint32_t> hard_battle_adventurer_xp = {
+static const std::vector<uint32_t> HARD_BATTLE_ADVENTURER_XP = {
     0,
     75,
     150,
@@ -85,7 +85,7 @@ static const std::vector<uint32_t> hard_battle_adventurer_xp = {
     8500
 };
 
-static const std::vector<uint32_t> deadly_battle_adventurer_xp = {
+static const std::vector<uint32_t> DEADLY_BATTLE_ADVENTURER_XP = {
     0,
     100,
     200,
@@ -109,7 +109,7 @@ static const std::vector<uint32_t> deadly_battle_adventurer_xp = {
     12700
 };
 
-static const std::vector<uint32_t> monster_xp_table = {
+static const std::vector<uint32_t> MONSTER_XP_TABLE = {
     10,
     25,
     50,
@@ -146,58 +146,60 @@ static const std::vector<uint32_t> monster_xp_table = {
     155000
 };
 
-enum cr
+enum Cr
 {
-    zero = 0,
-    one_eighth,
-    one_quarter,
-    one_half,
-    one,
-    two,
-    three,
-    four,
-    five,
-    six,
-    seven,
-    eight,
-    nine,
-    ten,
-    eleven,
-    twelve,
-    thirteen,
-    fourteen,
-    fifteen,
-    sixteen,
-    seventeen,
-    eighteen,
-    nineteen,
-    twenty,
-    twentyone,
-    twentytwo,
-    twentythree,
-    twentyfour,
-    twentyfive,
-    twentysix,
-    twentyseven,
-    twentyeight,
-    twentynine,
-    thirty
+    Zero = 0,
+    OneEighth,
+    OneQuarter,
+    OneHalf,
+    One,
+    Two,
+    Three,
+    Four,
+    Five,
+    Six,
+    Seven,
+    Eight,
+    Nine,
+    Ten,
+    Eleven,
+    Twelve,
+    Thirteen,
+    Fourteen,
+    Fifteen,
+    Sixteen,
+    Seventeen,
+    Eighteen,
+    Nineteen,
+    Twenty,
+    TwentyOne,
+    TwentyTwo,
+    TwentyThree,
+    TwentyFour,
+    TwentyFive,
+    TwentySix,
+    TwentySeven,
+    TwentyEight,
+    TwentyNine,
+    Thirty
 };
 
 class GenUtil
 {
 public:
-    static uint32_t GenUtil::get_adventurer_xp(const uint32_t& level, const difficulty& difficulty);
-    static uint32_t get_monster_xp(const cr &challenge);
-    static cr get_monster_cr(const uint32_t &xp);
+    static uint32_t GenUtil::getAdventurerXp(const uint32_t& level, const Difficulty& difficulty);
+    static uint32_t getMonsterXp(const Cr &challenge);
+    static Cr getMonsterCr(const uint32_t &xp);
+    static std::string toString(const Difficulty &difficulty);
+    static std::string toString(const Cr &cr);
 
 private:
     GenUtil() = delete;
-    static const std::unordered_map<uint32_t, cr> xp_to_cr_map;
-    static const std::unordered_map<cr, uint32_t> cr_to_xp_map;
+    static const std::unordered_map<uint32_t, Cr> XP_TO_CR_MAP;
+    static const std::unordered_map<Cr, uint32_t> CR_TO_XP_MAP;
 
-    static std::unordered_map<uint32_t, cr> generate_xp_to_cr_map();
-    static std::unordered_map<cr, uint32_t> generate_cr_to_xp_map();
+    static std::unordered_map<uint32_t, Cr> generateXpToCrMap();
+    static std::unordered_map<Cr, uint32_t> generateCrToXpMap();
 
 };
 

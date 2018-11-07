@@ -5,7 +5,7 @@
 
 using namespace GeneratorUtilities;
 
-const std::vector<float> Encounter::monster_encounter_modifiers = {
+const std::vector<float> Encounter::MONSTER_ENCOUNTER_MODIFIERS = {
     0.5f, // 1 monster w/ large party
     1.0f, // 1 monster
     1.5f, // 2 monsters
@@ -13,22 +13,22 @@ const std::vector<float> Encounter::monster_encounter_modifiers = {
     2.5f, // 7-10 monsters
     3.0f, // 11-14 monsters
     4.0f, // 15+ monsters
-    5.0f  // 15+ monsters with large party
+    5.0f  // 15+ monsters w/ small party
 };
 
 Encounter::Encounter(const Party &adventurers, const uint32_t &num_monsters) :
-    m_party_(adventurers),
-    m_num_monsters_(num_monsters),
-    m_num_unique_monsters_(static_cast<uint32_t>(round(log2(m_num_monsters_)))),
-    m_valid_battles_({})
+    mParty(adventurers),
+    mNumMonsters(num_monsters),
+    mNumUniqueMonsters(static_cast<uint32_t>(round(log2(mNumMonsters)))),
+    mValidBattles({})
 {
-    set_minimum_monster_xp();
-    fill_out_encounters();
+    setMinimumMonsterXp();
+    fillOutEncounters();
 }
 
-std::map<cr, uint32_t> Encounter::get_battle(const difficulty& difficulty) const
+std::map<Cr, uint32_t> Encounter::getBattle(const Difficulty& difficulty) const
 {
-    auto battles = get_all_battles(difficulty);
+    auto battles = getAllBattles(difficulty);
 
     if(battles.empty())
     {
@@ -41,190 +41,190 @@ std::map<cr, uint32_t> Encounter::get_battle(const difficulty& difficulty) const
 
     const auto index = dis(gen);
 
-    std::vector<std::map<cr, uint32_t>> vectorized_battles;
+    std::vector<std::map<Cr, uint32_t>> vectorizedBattles;
 
     for(const auto battle : battles)
     {
-        vectorized_battles.push_back(battle);
+        vectorizedBattles.push_back(battle);
     }
 
-    return vectorized_battles.at(index);
+    return vectorizedBattles.at(index);
 }
 
-std::set<std::map<cr, uint32_t>> Encounter::get_all_battles(const difficulty& difficulty) const
+std::set<std::map<Cr, uint32_t>> Encounter::getAllBattles(const Difficulty& difficulty) const
 {
-    if(m_valid_battles_.count(difficulty) != 0)
+    if(mValidBattles.count(difficulty) != 0)
     {
-        return m_valid_battles_.at(difficulty);
+        return mValidBattles.at(difficulty);
     }
 
     return {};
 }
 
-uint32_t Encounter::get_battle_xp(const std::map<cr, uint32_t>& monster_map)
+uint32_t Encounter::getBattleXp(const std::map<Cr, uint32_t>& monsterMap)
 {
-    auto battle_xp = 0;
-    for(const auto &monster_group : monster_map)
+    auto battleXp = 0;
+    for(const auto &monsterGroup : monsterMap)
     {
-        battle_xp += GenUtil::get_monster_xp(monster_group.first) * monster_group.second;
+        battleXp += GenUtil::getMonsterXp(monsterGroup.first) * monsterGroup.second;
     }
-    return battle_xp;
+    return battleXp;
 }
 
-float Encounter::get_xp_modifier(const uint32_t& num_monsters) const
+float Encounter::getXpModifier(const uint32_t& numMonsters) const
 {
-    const auto num_adventurers = m_party_.get_num_adventurers();
+    const auto numAdventurers = mParty.getNumAdventurers();
     // If we have no characters, no xp can be given.
-    if (num_adventurers == 0)
+    if (numAdventurers == 0)
     {
         assert(false);
         return 0;
     }
 
     // If we have no monsters, no xp can be given.
-    if (num_monsters == 0)
+    if (numMonsters == 0)
     {
         return 0;
     }
 
-    uint32_t table_index;
+    uint32_t tableIndex;
 
-    // The standard indexs go from 1-6.
-    switch (num_monsters)
+    // The standard index goes from 1-6.
+    switch (numMonsters)
     {
     case 1: // 1 monster
-        table_index = 1;
+        tableIndex = 1;
         break;
     case 2: // 2 monsters
-        table_index = 2;
+        tableIndex = 2;
         break;
     case 3: // 3-6 monsters
     case 4:
     case 5:
     case 6:
-        table_index = 3;
+        tableIndex = 3;
         break;
     case 7: // 7-8 monsters
     case 8:
     case 9:
     case 10:
-        table_index = 4;
+        tableIndex = 4;
         break;
     case 11: // 11-14 monsters
     case 12:
     case 13:
     case 14:
-        table_index = 5;
+        tableIndex = 5;
         break;
     default: // 15+ monsters
-        table_index = 6;
+        tableIndex = 6;
     }
 
     // If we have few characters, up the modifier.
-    if (num_adventurers <= 2)
+    if (numAdventurers <= 2)
     {
-        table_index++;
+        tableIndex++;
     }
     // If we have many characters, lower the modifier.
-    else if (num_adventurers >= 6)
+    else if (numAdventurers >= 6)
     {
-        table_index--;
+        tableIndex--;
     }
 
     // Return the modifier that
-    return monster_encounter_modifiers.at(table_index);
+    return MONSTER_ENCOUNTER_MODIFIERS.at(tableIndex);
 }
 
-std::map<cr, uint32_t> Encounter::get_monster_map(const std::vector<uint32_t>& monsters)
+std::map<Cr, uint32_t> Encounter::getMonsterMap(const std::vector<uint32_t>& monsters)
 {
-    std::map<cr, uint32_t> monster_map;
+    std::map<Cr, uint32_t> monsterMap;
     // Fill out the list so we can get the desired xp.
-    for (uint32_t monster_xp : monsters)
+    for (auto monsterXp : monsters)
     {
-        auto monster_cr = GenUtil::get_monster_cr(monster_xp);
-        monster_map[monster_cr]++;
+        auto monsterCr = GenUtil::getMonsterCr(monsterXp);
+        monsterMap[monsterCr]++;
     }
 
-    return monster_map;
+    return monsterMap;
 }
 
-void Encounter::set_minimum_monster_xp()
+void Encounter::setMinimumMonsterXp()
 {
-    m_minimum_monster_xp_[easy] = get_minimum_monster_xp(easy);
-    m_minimum_monster_xp_[medium] = get_minimum_monster_xp(medium);
-    m_minimum_monster_xp_[hard] = get_minimum_monster_xp(hard);
-    m_minimum_monster_xp_[deadly] = get_minimum_monster_xp(deadly);
+    mMinimumMonsterXp[Easy] = getMinimumMonsterXp(Easy);
+    mMinimumMonsterXp[Medium] = getMinimumMonsterXp(Medium);
+    mMinimumMonsterXp[Hard] = getMinimumMonsterXp(Hard);
+    mMinimumMonsterXp[Deadly] = getMinimumMonsterXp(Deadly);
 }
 
-uint32_t Encounter::get_minimum_monster_xp(const difficulty& difficulty) const
+uint32_t Encounter::getMinimumMonsterXp(const Difficulty& difficulty) const
 {
-    const auto desired_xp = m_party_.get_desired_xp(difficulty);
+    const auto desiredXp = mParty.getDesiredXp(difficulty);
 
-    if(m_num_monsters_ == 0)
+    if(mNumMonsters == 0)
     {
         return 0;
     }
 
-    const auto lowest_xp = desired_xp / m_num_monsters_;
-    auto last_xp = 0;
+    const auto lowestXp = desiredXp / mNumMonsters;
+    auto lastXp = 0;
 
-    for(auto xp : monster_xp_table)
+    for(auto xp : MONSTER_XP_TABLE)
     {
-        if (lowest_xp <= xp)
+        if (lowestXp <= xp)
         {
-            return last_xp;
+            return lastXp;
         }
-        last_xp = xp;
+        lastXp = xp;
     }
 
     return 0;
 }
 
-void Encounter::fill_out_encounters()
+void Encounter::fillOutEncounters()
 {
-    m_valid_battles_.clear();
+    mValidBattles.clear();
     std::vector<uint32_t> monsters;
-    fill_out_helper(monsters, easy);
+    fillOutHelper(monsters, Easy);
     monsters.clear();
-    fill_out_helper(monsters, medium);
+    fillOutHelper(monsters, Medium);
     monsters.clear();
-    fill_out_helper(monsters, hard);
+    fillOutHelper(monsters, Hard);
     monsters.clear();
-    fill_out_helper(monsters, deadly);
+    fillOutHelper(monsters, Deadly);
 }
 
-void Encounter::fill_out_helper(std::vector<uint32_t>& current_monsters, const difficulty& difficulty)
+void Encounter::fillOutHelper(std::vector<uint32_t>& currentMonsters, const Difficulty& difficulty)
 {
     // Get the monster map.
-    const auto monster_map = get_monster_map(current_monsters);
-    const auto xp = get_battle_xp(monster_map) * get_xp_modifier(static_cast<uint32_t>(current_monsters.size()));
+    const auto monsterMap = getMonsterMap(currentMonsters);
+    const auto xp = getBattleXp(monsterMap) * getXpModifier(static_cast<uint32_t>(currentMonsters.size()));
 
     // Get the lower and upper bounds on xp.
-    const auto low_desired = m_party_.get_lower_desired_xp(difficulty);
-    const auto upper_desired = m_party_.get_upper_desired_xp(difficulty);
+    const auto lowDesired = mParty.getLowerDesiredXp(difficulty);
+    const auto upperDesired = mParty.getUpperDesiredXp(difficulty);
 
     // Get the checks that need to be true to add the monsters into the list.
-    const auto correct_num_monsters = current_monsters.size() <= m_num_monsters_;
-    const auto in_xp_range = xp >= low_desired && xp <= upper_desired;
-    const auto correct_unique_monsters = monster_map.size() <= m_num_unique_monsters_;
+    const auto correctNumMonsters = currentMonsters.size() <= mNumMonsters;
+    const auto inXpRange = xp >= lowDesired && xp <= upperDesired;
+    const auto correctUniqueMonsters = monsterMap.size() <= mNumUniqueMonsters;
 
     // If we have the correct number of monsters and it is in range, success!
-    if(correct_num_monsters && in_xp_range && correct_unique_monsters)
+    if(correctNumMonsters && inXpRange && correctUniqueMonsters)
     {
-        m_valid_battles_[difficulty].insert(monster_map);
+        mValidBattles[difficulty].insert(monsterMap);
     }
-    else if (current_monsters.size() < m_num_monsters_)
+    else if (currentMonsters.size() < mNumMonsters)
     {
         // Go through all of the xp tables and get the monsters.
-        for(auto new_xp : monster_xp_table)
+        for(auto newXp : MONSTER_XP_TABLE)
         {
             // If the current xp + new monster xp is over the upper_desired range, don't even try to add it in.
             // Also, don't try to add in monsters that are lower than the minimum xp threshold.
-            if (xp + new_xp < upper_desired && new_xp >= m_minimum_monster_xp_[difficulty])
+            if (xp + newXp < upperDesired && newXp >= mMinimumMonsterXp[difficulty])
             {
-                current_monsters.push_back(new_xp);
-                fill_out_helper(current_monsters, difficulty);
-                current_monsters.pop_back();
+                currentMonsters.push_back(newXp);
+                fillOutHelper(currentMonsters, difficulty);
+                currentMonsters.pop_back();
             }
         }
     }

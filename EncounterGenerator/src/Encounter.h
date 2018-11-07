@@ -10,30 +10,30 @@ using namespace GeneratorUtilities;
 class Encounter
 {
 public:
-    Encounter(const Party& adventurers, const uint32_t& num_monsters);
+    Encounter(const Party& adventurers, const uint32_t& numMonsters);
     ~Encounter() = default;
 
-    std::map<cr, uint32_t> get_battle(const difficulty& difficulty) const;
+    std::map<Cr, uint32_t> getBattle(const Difficulty& difficulty) const;
 
-    std::set<std::map<cr, uint32_t>> get_all_battles(const difficulty& difficulty) const;
+    std::set<std::map<Cr, uint32_t>> getAllBattles(const Difficulty& difficulty) const;
 
-    static uint32_t get_battle_xp(const std::map<cr, uint32_t>& monster_map);
+    static uint32_t getBattleXp(const std::map<Cr, uint32_t>& monsterMap);
 
 private:
-    static const std::vector<float> monster_encounter_modifiers;
+    static const std::vector<float> MONSTER_ENCOUNTER_MODIFIERS;
 
-    float get_xp_modifier(const uint32_t& num_monsters) const;
-    static std::map<cr, uint32_t> get_monster_map(const std::vector<uint32_t>& monsters);
+    float getXpModifier(const uint32_t& numMonsters) const;
+    static std::map<Cr, uint32_t> getMonsterMap(const std::vector<uint32_t>& monsters);
 
-    void set_minimum_monster_xp();
-    uint32_t get_minimum_monster_xp(const difficulty& difficulty) const;
+    void setMinimumMonsterXp();
+    uint32_t getMinimumMonsterXp(const Difficulty& difficulty) const;
 
-    void fill_out_encounters();
-    void fill_out_helper(std::vector<uint32_t>& current_monsters, const difficulty& difficulty);
+    void fillOutEncounters();
+    void fillOutHelper(std::vector<uint32_t>& currentMonsters, const Difficulty& difficulty);
 
-    Party m_party_;
-    uint32_t m_num_monsters_{};
-    uint32_t m_num_unique_monsters_{};
-    std::map<difficulty, uint32_t> m_minimum_monster_xp_{};
-    std::unordered_map<difficulty, std::set<std::map<cr, uint32_t>>> m_valid_battles_{};
+    Party mParty;
+    uint32_t mNumMonsters{};
+    uint32_t mNumUniqueMonsters{};
+    std::map<Difficulty, uint32_t> mMinimumMonsterXp{};
+    std::unordered_map<Difficulty, std::set<std::map<Cr, uint32_t>>> mValidBattles{};
 };

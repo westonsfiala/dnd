@@ -4,128 +4,128 @@
 
 using namespace GeneratorUtilities;
 
-const float Party::upper_xp_modifier = 1.25f;
-const float Party::lower_xp_modifier = 0.75f;
+const float Party::UPPER_XP_MODIFIER = 1.25f;
+const float Party::LOWER_XP_MODIFIER = 0.75f;
 
-bool Party::add_adventurer(const uint32_t& level)
+bool Party::addAdventurer(const uint32_t& level)
 {
     // Only add an adventurer when the level is valid.
     if (level >= 1 && level <= 20)
     {
-        const auto current_adventurers = m_adventurer_map_[level];
-        m_adventurer_map_[level] = current_adventurers + 1;
-        calculate_desired_xp();
+        const auto currentAdventurers = mAdventurerMap[level];
+        mAdventurerMap[level] = currentAdventurers + 1;
+        calculateDesiredXp();
         return true;
     }
     return false;
 }
 
-bool Party::remove_adventurer(const uint32_t& level)
+bool Party::removeAdventurer(const uint32_t& level)
 {
     // Only remove an adventurer when the level is valid.
     if (level >= 1 && level <= 20)
     {
-        const auto current_adventurers = m_adventurer_map_[level];
+        const auto currentAdventurers = mAdventurerMap[level];
         // If we don't have an adventurer 
-        if (current_adventurers != 0)
+        if (currentAdventurers != 0)
         {
-            m_adventurer_map_[level] = current_adventurers - 1;
-            calculate_desired_xp();
+            mAdventurerMap[level] = currentAdventurers - 1;
+            calculateDesiredXp();
             return true;
         }
     }
     return false;
 }
 
-uint32_t Party::get_num_adventurers() const
+uint32_t Party::getNumAdventurers() const
 {
-    auto num_adventurers = 0;
+    auto numAdventurers = 0;
 
-    for (const auto& adventurers : m_adventurer_map_)
+    for (const auto& adventurers : mAdventurerMap)
     {
-        num_adventurers += adventurers.second;
+        numAdventurers += adventurers.second;
     }
 
-    return num_adventurers;
+    return numAdventurers;
 }
 
-uint32_t Party::get_num_adventurers(const uint32_t& level) const
+uint32_t Party::getNumAdventurers(const uint32_t& level) const
 {
-    if (m_adventurer_map_.count(level) != 0)
+    if (mAdventurerMap.count(level) != 0)
     {
-        return m_adventurer_map_.at(level);
+        return mAdventurerMap.at(level);
     }
 
     return 0;
 }
 
-uint32_t Party::get_desired_xp(const GeneratorUtilities::difficulty& difficulty) const
+uint32_t Party::getDesiredXp(const GeneratorUtilities::Difficulty& difficulty) const
 {
     switch (difficulty)
     {
-    case easy: return m_desired_xp_map_.at(easy);
-    case medium: return m_desired_xp_map_.at(medium);
-    case hard: return m_desired_xp_map_.at(hard);
-    case deadly: return m_desired_xp_map_.at(deadly);
+    case Easy: return mDesiredXpMap.at(Easy);
+    case Medium: return mDesiredXpMap.at(Medium);
+    case Hard: return mDesiredXpMap.at(Hard);
+    case Deadly: return mDesiredXpMap.at(Deadly);
     default: return 0;
     }
 }
 
-uint32_t Party::get_lower_desired_xp(const difficulty& difficulty) const
+uint32_t Party::getLowerDesiredXp(const Difficulty& difficulty) const
 {
     switch (difficulty)
     {
-    case easy: return m_desired_lower_xp_map_.at(easy);
-    case medium: return m_desired_lower_xp_map_.at(medium);
-    case hard: return m_desired_lower_xp_map_.at(hard);
-    case deadly: return m_desired_lower_xp_map_.at(deadly);
+    case Easy: return mDesiredLowerXpMap.at(Easy);
+    case Medium: return mDesiredLowerXpMap.at(Medium);
+    case Hard: return mDesiredLowerXpMap.at(Hard);
+    case Deadly: return mDesiredLowerXpMap.at(Deadly);
     default: return 0;
     }
 }
 
-uint32_t Party::get_upper_desired_xp(const difficulty& difficulty) const
+uint32_t Party::getUpperDesiredXp(const Difficulty& difficulty) const
 {
     switch (difficulty)
     {
-    case easy: return m_desired_upper_xp_map_.at(easy);
-    case medium: return m_desired_upper_xp_map_.at(medium);
-    case hard: return m_desired_upper_xp_map_.at(hard);
-    case deadly: return m_desired_upper_xp_map_.at(deadly);
+    case Easy: return mDesiredUpperXpMap.at(Easy);
+    case Medium: return mDesiredUpperXpMap.at(Medium);
+    case Hard: return mDesiredUpperXpMap.at(Hard);
+    case Deadly: return mDesiredUpperXpMap.at(Deadly);
     default: return 0;
     }
 }
 
-void Party::calculate_desired_xp()
+void Party::calculateDesiredXp()
 {
-    m_desired_xp_map_[easy] = get_battle_xp(easy);
-    m_desired_xp_map_[medium] = get_battle_xp(medium);
-    m_desired_xp_map_[hard] = get_battle_xp(hard);
-    m_desired_xp_map_[deadly] = get_battle_xp(deadly);
+    mDesiredXpMap[Easy] = getBattleXp(Easy);
+    mDesiredXpMap[Medium] = getBattleXp(Medium);
+    mDesiredXpMap[Hard] = getBattleXp(Hard);
+    mDesiredXpMap[Deadly] = getBattleXp(Deadly);
 
-    m_desired_lower_xp_map_[easy] = static_cast<uint32_t>(m_desired_xp_map_[easy] * lower_xp_modifier);
-    m_desired_lower_xp_map_[medium] = static_cast<uint32_t>(m_desired_xp_map_[medium] * lower_xp_modifier);
-    m_desired_lower_xp_map_[hard] = static_cast<uint32_t>(m_desired_xp_map_[hard] * lower_xp_modifier);
-    m_desired_lower_xp_map_[deadly] = static_cast<uint32_t>(m_desired_xp_map_[deadly] * lower_xp_modifier);
+    mDesiredLowerXpMap[Easy] = static_cast<uint32_t>(mDesiredXpMap[Easy] * LOWER_XP_MODIFIER);
+    mDesiredLowerXpMap[Medium] = static_cast<uint32_t>(mDesiredXpMap[Medium] * LOWER_XP_MODIFIER);
+    mDesiredLowerXpMap[Hard] = static_cast<uint32_t>(mDesiredXpMap[Hard] * LOWER_XP_MODIFIER);
+    mDesiredLowerXpMap[Deadly] = static_cast<uint32_t>(mDesiredXpMap[Deadly] * LOWER_XP_MODIFIER);
 
-    m_desired_upper_xp_map_[easy] = static_cast<uint32_t>(m_desired_xp_map_[easy] * upper_xp_modifier);
-    m_desired_upper_xp_map_[medium] = static_cast<uint32_t>(m_desired_xp_map_[medium] * upper_xp_modifier);
-    m_desired_upper_xp_map_[hard] = static_cast<uint32_t>(m_desired_xp_map_[hard] * upper_xp_modifier);
-    m_desired_upper_xp_map_[deadly] = static_cast<uint32_t>(m_desired_xp_map_[deadly] * upper_xp_modifier);
+    mDesiredUpperXpMap[Easy] = static_cast<uint32_t>(mDesiredXpMap[Easy] * UPPER_XP_MODIFIER);
+    mDesiredUpperXpMap[Medium] = static_cast<uint32_t>(mDesiredXpMap[Medium] * UPPER_XP_MODIFIER);
+    mDesiredUpperXpMap[Hard] = static_cast<uint32_t>(mDesiredXpMap[Hard] * UPPER_XP_MODIFIER);
+    mDesiredUpperXpMap[Deadly] = static_cast<uint32_t>(mDesiredXpMap[Deadly] * UPPER_XP_MODIFIER);
 }
 
-uint32_t Party::get_battle_xp(const difficulty& difficulty) const
+uint32_t Party::getBattleXp(const Difficulty& difficulty) const
 {
-    if (difficulty < easy || difficulty > deadly)
+    if (difficulty < Easy || difficulty > Deadly)
     {
         return 0;
     }
 
-    auto desired_xp = 0;
+    auto desiredXp = 0;
 
-    for (const auto& adventurers : m_adventurer_map_)
+    for (const auto& adventurers : mAdventurerMap)
     {
-        desired_xp += GenUtil::get_adventurer_xp(adventurers.first, difficulty) * adventurers.second;
+        desiredXp += GenUtil::getAdventurerXp(adventurers.first, difficulty) * adventurers.second;
     }
 
-    return desired_xp;
+    return desiredXp;
 }

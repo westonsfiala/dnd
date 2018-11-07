@@ -9,28 +9,28 @@ public:
     Party(const Party& other) = default;
     ~Party() = default;
 
-    bool add_adventurer(const uint32_t& level);
-    bool remove_adventurer(const uint32_t& level);
+    bool addAdventurer(const uint32_t& level);
+    bool removeAdventurer(const uint32_t& level);
 
-    uint32_t get_num_adventurers() const;
-    uint32_t get_num_adventurers(const uint32_t& level) const;
+    uint32_t getNumAdventurers() const;
+    uint32_t getNumAdventurers(const uint32_t& level) const;
 
-    uint32_t get_desired_xp(const GeneratorUtilities::difficulty& difficulty) const;
-    uint32_t get_lower_desired_xp(const GeneratorUtilities::difficulty& difficulty) const;
-    uint32_t get_upper_desired_xp(const GeneratorUtilities::difficulty& difficulty) const;
+    uint32_t getDesiredXp(const GeneratorUtilities::Difficulty& difficulty) const;
+    uint32_t getLowerDesiredXp(const GeneratorUtilities::Difficulty& difficulty) const;
+    uint32_t getUpperDesiredXp(const GeneratorUtilities::Difficulty& difficulty) const;
 
 private:
 
-    static const float upper_xp_modifier;
-    static const float lower_xp_modifier;
+    static const float UPPER_XP_MODIFIER;
+    static const float LOWER_XP_MODIFIER;
 
-    void calculate_desired_xp();
-    uint32_t get_battle_xp(const GeneratorUtilities::difficulty& difficulty) const;
+    void calculateDesiredXp();
+    uint32_t getBattleXp(const GeneratorUtilities::Difficulty& difficulty) const;
 
-    std::map<uint32_t, uint32_t> m_adventurer_map_;
-    std::map<GeneratorUtilities::difficulty, uint32_t> m_desired_xp_map_;
-    std::map<GeneratorUtilities::difficulty, uint32_t> m_desired_lower_xp_map_;
-    std::map<GeneratorUtilities::difficulty, uint32_t> m_desired_upper_xp_map_;
+    std::map<uint32_t, uint32_t> mAdventurerMap;
+    std::map<GeneratorUtilities::Difficulty, uint32_t> mDesiredXpMap;
+    std::map<GeneratorUtilities::Difficulty, uint32_t> mDesiredLowerXpMap;
+    std::map<GeneratorUtilities::Difficulty, uint32_t> mDesiredUpperXpMap;
 
 };
 
