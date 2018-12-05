@@ -168,9 +168,14 @@ set(CMAKE_INSTALL_PREFIX ${DND_OUTPUT_DIR})
 # other boost subsets: _system|_iostreams|_serialization|_zlib|_date_time|_regex
 #define_boost_subset("BoostSubset" "(_filesystem|_program_options|_system)")
 
+# Typically you don't care so much for a third party library's tests to be
+# run from your own project's code.
+set(JSON_BuildTests OFF CACHE INTERNAL "")
+
 #
 # Application targets
 #
+add_subdirectory(json)
 add_subdirectory(EncounterGenerator)
 add_subdirectory(Gui)
 
@@ -179,11 +184,12 @@ add_subdirectory(Gui)
 #=============================================================
 
 set(MAIN_GUI_FOLDER "Frontend") 
-set_property(TARGET Gui                  PROPERTY FOLDER ${MAIN_GUI_FOLDER})
-set_property(TARGET Gui_lib                  PROPERTY FOLDER ${MAIN_GUI_FOLDER})
+set_property(TARGET Gui     PROPERTY FOLDER ${MAIN_GUI_FOLDER})
+set_property(TARGET Gui_lib PROPERTY FOLDER ${MAIN_GUI_FOLDER})
 
 set(BACKEND_FOLDER "Backend") 
-set_property(TARGET EncounterGenerator                 PROPERTY FOLDER ${BACKEND_FOLDER})
+set_property(TARGET EncounterGenerator PROPERTY FOLDER ${BACKEND_FOLDER})
+
 #
 # Set the default start-up project (for Visual Studio)
 #
