@@ -5,9 +5,6 @@
 
 #include <nlohmann/json.hpp>
 
-// for convenience
-using json = nlohmann::json;
-
 using namespace GeneratorUtilities;
 
 const std::vector<float> Encounter::MONSTER_ENCOUNTER_MODIFIERS = {
@@ -155,11 +152,10 @@ std::map<Cr, uint32_t> Encounter::getMonsterMap(const std::vector<uint32_t>& mon
 
 void Encounter::setMinimumMonsterXp()
 {
-    mMinimumMonsterXp[Difficulty::Easy] = getMinimumMonsterXp(Difficulty::Easy);
-    mMinimumMonsterXp[Difficulty::Medium] = getMinimumMonsterXp(Difficulty::Medium);
-    mMinimumMonsterXp[Difficulty::Hard] = getMinimumMonsterXp(Difficulty::Hard);
-    mMinimumMonsterXp[Difficulty::Deadly] = getMinimumMonsterXp(Difficulty::Deadly);
-    mMinimumMonsterXp[Difficulty::Insanity] = getMinimumMonsterXp(Difficulty::Insanity);
+    for(const auto & diff : DIFFICULTY_VECTOR)
+    {
+        mMinimumMonsterXp[diff] = getMinimumMonsterXp(diff);
+    }
 }
 
 uint32_t Encounter::getMinimumMonsterXp(const Difficulty& difficulty) const
@@ -189,16 +185,11 @@ uint32_t Encounter::getMinimumMonsterXp(const Difficulty& difficulty) const
 void Encounter::fillOutEncounters()
 {
     mValidBattles.clear();
-    std::vector<uint32_t> monsters;
-    fillOutHelper(monsters, Difficulty::Easy);
-    monsters.clear();
-    fillOutHelper(monsters, Difficulty::Medium);
-    monsters.clear();
-    fillOutHelper(monsters, Difficulty::Hard);
-    monsters.clear();
-    fillOutHelper(monsters, Difficulty::Deadly);
-    monsters.clear();
-    fillOutHelper(monsters, Difficulty::Insanity);
+    for(const auto& diff : DIFFICULTY_VECTOR)
+    {
+        std::vector<uint32_t> monsters;
+        fillOutHelper(monsters, diff);
+    }
 }
 
 void Encounter::fillOutHelper(std::vector<uint32_t>& currentMonsters, const Difficulty& difficulty)

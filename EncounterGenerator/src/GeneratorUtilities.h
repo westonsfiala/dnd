@@ -14,6 +14,14 @@ enum class Difficulty
     Insanity
 };
 
+static const std::vector<Difficulty> DIFFICULTY_VECTOR = {
+    Difficulty::Easy,
+    Difficulty::Medium,
+    Difficulty::Hard,
+    Difficulty::Deadly,
+    Difficulty::Insanity
+};
+
 static const std::vector<uint32_t> EASY_BATTLE_ADVENTURER_XP = {
     0,
     25,
