@@ -6,7 +6,6 @@ set(src_CPP
     src/Encounter.cpp
 	src/Party.cpp
 	src/Monster.cpp
-	src/Battle.cpp
 	src/GeneratorUtilities.cpp
 )
     
@@ -14,7 +13,6 @@ set(src_H
     src/Encounter.h
 	src/Party.h
 	src/Monster.h
-	src/Battle.h
 	src/GeneratorUtilities.h
 )
 

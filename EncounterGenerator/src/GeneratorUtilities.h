@@ -5,12 +5,13 @@
 namespace GeneratorUtilities
 {
 
-enum Difficulty
+enum class Difficulty
 {
     Easy,
     Medium,
     Hard,
-    Deadly
+    Deadly,
+    Insanity
 };
 
 static const std::vector<uint32_t> EASY_BATTLE_ADVENTURER_XP = {
@@ -109,6 +110,30 @@ static const std::vector<uint32_t> DEADLY_BATTLE_ADVENTURER_XP = {
     12700
 };
 
+static const std::vector<uint32_t> INSANITY_BATTLE_ADVENTURER_XP = {
+    0,
+    200,
+    400,
+    800,
+    1000,
+    2200,
+    2800,
+    3400,
+    4200,
+    4800,
+    5600,
+    7200,
+    9000,
+    10200,
+    11400,
+    12800,
+    14400,
+    17600,
+    19000,
+    21800,
+    25400
+};
+
 static const std::vector<uint32_t> MONSTER_XP_TABLE = {
     10,
     25,
@@ -146,7 +171,7 @@ static const std::vector<uint32_t> MONSTER_XP_TABLE = {
     155000
 };
 
-enum Cr
+enum class Cr
 {
     Zero = 0,
     OneEighth,

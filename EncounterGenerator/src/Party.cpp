@@ -63,10 +63,11 @@ uint32_t Party::getDesiredXp(const GeneratorUtilities::Difficulty& difficulty) c
 {
     switch (difficulty)
     {
-    case Easy: return mDesiredXpMap.at(Easy);
-    case Medium: return mDesiredXpMap.at(Medium);
-    case Hard: return mDesiredXpMap.at(Hard);
-    case Deadly: return mDesiredXpMap.at(Deadly);
+    case Difficulty::Easy: return mDesiredXpMap.at(Difficulty::Easy);
+    case Difficulty::Medium: return mDesiredXpMap.at(Difficulty::Medium);
+    case Difficulty::Hard: return mDesiredXpMap.at(Difficulty::Hard);
+    case Difficulty::Deadly: return mDesiredXpMap.at(Difficulty::Deadly);
+    case Difficulty::Insanity: return mDesiredXpMap.at(Difficulty::Insanity);
     default: return 0;
     }
 }
@@ -75,10 +76,11 @@ uint32_t Party::getLowerDesiredXp(const Difficulty& difficulty) const
 {
     switch (difficulty)
     {
-    case Easy: return mDesiredLowerXpMap.at(Easy);
-    case Medium: return mDesiredLowerXpMap.at(Medium);
-    case Hard: return mDesiredLowerXpMap.at(Hard);
-    case Deadly: return mDesiredLowerXpMap.at(Deadly);
+    case Difficulty::Easy: return mDesiredLowerXpMap.at(Difficulty::Easy);
+    case Difficulty::Medium: return mDesiredLowerXpMap.at(Difficulty::Medium);
+    case Difficulty::Hard: return mDesiredLowerXpMap.at(Difficulty::Hard);
+    case Difficulty::Deadly: return mDesiredLowerXpMap.at(Difficulty::Deadly);
+    case Difficulty::Insanity: return mDesiredLowerXpMap.at(Difficulty::Insanity);
     default: return 0;
     }
 }
@@ -87,35 +89,39 @@ uint32_t Party::getUpperDesiredXp(const Difficulty& difficulty) const
 {
     switch (difficulty)
     {
-    case Easy: return mDesiredUpperXpMap.at(Easy);
-    case Medium: return mDesiredUpperXpMap.at(Medium);
-    case Hard: return mDesiredUpperXpMap.at(Hard);
-    case Deadly: return mDesiredUpperXpMap.at(Deadly);
+    case Difficulty::Easy: return mDesiredUpperXpMap.at(Difficulty::Easy);
+    case Difficulty::Medium: return mDesiredUpperXpMap.at(Difficulty::Medium);
+    case Difficulty::Hard: return mDesiredUpperXpMap.at(Difficulty::Hard);
+    case Difficulty::Deadly: return mDesiredUpperXpMap.at(Difficulty::Deadly);
+    case Difficulty::Insanity: return mDesiredUpperXpMap.at(Difficulty::Insanity);
     default: return 0;
     }
 }
 
 void Party::calculateDesiredXp()
 {
-    mDesiredXpMap[Easy] = getBattleXp(Easy);
-    mDesiredXpMap[Medium] = getBattleXp(Medium);
-    mDesiredXpMap[Hard] = getBattleXp(Hard);
-    mDesiredXpMap[Deadly] = getBattleXp(Deadly);
+    mDesiredXpMap[Difficulty::Easy] = getBattleXp(Difficulty::Easy);
+    mDesiredXpMap[Difficulty::Medium] = getBattleXp(Difficulty::Medium);
+    mDesiredXpMap[Difficulty::Hard] = getBattleXp(Difficulty::Hard);
+    mDesiredXpMap[Difficulty::Deadly] = getBattleXp(Difficulty::Deadly);
+    mDesiredXpMap[Difficulty::Insanity] = getBattleXp(Difficulty::Insanity);
 
-    mDesiredLowerXpMap[Easy] = static_cast<uint32_t>(mDesiredXpMap[Easy] * LOWER_XP_MODIFIER);
-    mDesiredLowerXpMap[Medium] = static_cast<uint32_t>(mDesiredXpMap[Medium] * LOWER_XP_MODIFIER);
-    mDesiredLowerXpMap[Hard] = static_cast<uint32_t>(mDesiredXpMap[Hard] * LOWER_XP_MODIFIER);
-    mDesiredLowerXpMap[Deadly] = static_cast<uint32_t>(mDesiredXpMap[Deadly] * LOWER_XP_MODIFIER);
+    mDesiredLowerXpMap[Difficulty::Easy] = static_cast<uint32_t>(mDesiredXpMap[Difficulty::Easy] * LOWER_XP_MODIFIER);
+    mDesiredLowerXpMap[Difficulty::Medium] = static_cast<uint32_t>(mDesiredXpMap[Difficulty::Medium] * LOWER_XP_MODIFIER);
+    mDesiredLowerXpMap[Difficulty::Hard] = static_cast<uint32_t>(mDesiredXpMap[Difficulty::Hard] * LOWER_XP_MODIFIER);
+    mDesiredLowerXpMap[Difficulty::Deadly] = static_cast<uint32_t>(mDesiredXpMap[Difficulty::Deadly] * LOWER_XP_MODIFIER);
+    mDesiredLowerXpMap[Difficulty::Insanity] = static_cast<uint32_t>(mDesiredXpMap[Difficulty::Insanity] * LOWER_XP_MODIFIER);
 
-    mDesiredUpperXpMap[Easy] = static_cast<uint32_t>(mDesiredXpMap[Easy] * UPPER_XP_MODIFIER);
-    mDesiredUpperXpMap[Medium] = static_cast<uint32_t>(mDesiredXpMap[Medium] * UPPER_XP_MODIFIER);
-    mDesiredUpperXpMap[Hard] = static_cast<uint32_t>(mDesiredXpMap[Hard] * UPPER_XP_MODIFIER);
-    mDesiredUpperXpMap[Deadly] = static_cast<uint32_t>(mDesiredXpMap[Deadly] * UPPER_XP_MODIFIER);
+    mDesiredUpperXpMap[Difficulty::Easy] = static_cast<uint32_t>(mDesiredXpMap[Difficulty::Easy] * UPPER_XP_MODIFIER);
+    mDesiredUpperXpMap[Difficulty::Medium] = static_cast<uint32_t>(mDesiredXpMap[Difficulty::Medium] * UPPER_XP_MODIFIER);
+    mDesiredUpperXpMap[Difficulty::Hard] = static_cast<uint32_t>(mDesiredXpMap[Difficulty::Hard] * UPPER_XP_MODIFIER);
+    mDesiredUpperXpMap[Difficulty::Deadly] = static_cast<uint32_t>(mDesiredXpMap[Difficulty::Deadly] * UPPER_XP_MODIFIER);
+    mDesiredUpperXpMap[Difficulty::Insanity] = static_cast<uint32_t>(mDesiredXpMap[Difficulty::Insanity] * UPPER_XP_MODIFIER);
 }
 
 uint32_t Party::getBattleXp(const Difficulty& difficulty) const
 {
-    if (difficulty < Easy || difficulty > Deadly)
+    if (difficulty < Difficulty::Easy || difficulty > Difficulty::Insanity)
     {
         return 0;
     }

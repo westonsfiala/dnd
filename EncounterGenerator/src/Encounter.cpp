@@ -155,10 +155,11 @@ std::map<Cr, uint32_t> Encounter::getMonsterMap(const std::vector<uint32_t>& mon
 
 void Encounter::setMinimumMonsterXp()
 {
-    mMinimumMonsterXp[Easy] = getMinimumMonsterXp(Easy);
-    mMinimumMonsterXp[Medium] = getMinimumMonsterXp(Medium);
-    mMinimumMonsterXp[Hard] = getMinimumMonsterXp(Hard);
-    mMinimumMonsterXp[Deadly] = getMinimumMonsterXp(Deadly);
+    mMinimumMonsterXp[Difficulty::Easy] = getMinimumMonsterXp(Difficulty::Easy);
+    mMinimumMonsterXp[Difficulty::Medium] = getMinimumMonsterXp(Difficulty::Medium);
+    mMinimumMonsterXp[Difficulty::Hard] = getMinimumMonsterXp(Difficulty::Hard);
+    mMinimumMonsterXp[Difficulty::Deadly] = getMinimumMonsterXp(Difficulty::Deadly);
+    mMinimumMonsterXp[Difficulty::Insanity] = getMinimumMonsterXp(Difficulty::Insanity);
 }
 
 uint32_t Encounter::getMinimumMonsterXp(const Difficulty& difficulty) const
@@ -189,13 +190,15 @@ void Encounter::fillOutEncounters()
 {
     mValidBattles.clear();
     std::vector<uint32_t> monsters;
-    fillOutHelper(monsters, Easy);
+    fillOutHelper(monsters, Difficulty::Easy);
     monsters.clear();
-    fillOutHelper(monsters, Medium);
+    fillOutHelper(monsters, Difficulty::Medium);
     monsters.clear();
-    fillOutHelper(monsters, Hard);
+    fillOutHelper(monsters, Difficulty::Hard);
     monsters.clear();
-    fillOutHelper(monsters, Deadly);
+    fillOutHelper(monsters, Difficulty::Deadly);
+    monsters.clear();
+    fillOutHelper(monsters, Difficulty::Insanity);
 }
 
 void Encounter::fillOutHelper(std::vector<uint32_t>& currentMonsters, const Difficulty& difficulty)
