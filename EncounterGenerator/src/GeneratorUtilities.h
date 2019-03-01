@@ -5,6 +5,9 @@
 namespace GeneratorUtilities
 {
 
+/**
+ * \brief Set difficulties for a battle.
+ */
 enum class Difficulty
 {
     Easy,
@@ -14,6 +17,9 @@ enum class Difficulty
     Insanity
 };
 
+/**
+ * \brief Vector of all the difficulties.
+ */
 static const std::vector<Difficulty> DIFFICULTY_VECTOR = {
     Difficulty::Easy,
     Difficulty::Medium,
@@ -22,6 +28,9 @@ static const std::vector<Difficulty> DIFFICULTY_VECTOR = {
     Difficulty::Insanity
 };
 
+/**
+ * \brief Battle xp for all adventurer levels 0-20 at easy difficulty.
+ */
 static const std::vector<uint32_t> EASY_BATTLE_ADVENTURER_XP = {
     0,
     25,
@@ -46,6 +55,9 @@ static const std::vector<uint32_t> EASY_BATTLE_ADVENTURER_XP = {
     2800
 };
 
+/**
+ * \brief Battle xp for all adventurer levels 0-20 at medium difficulty.
+ */
 static const std::vector<uint32_t> MEDIUM_BATTLE_ADVENTURER_XP = {
     0,
     50,
@@ -70,6 +82,9 @@ static const std::vector<uint32_t> MEDIUM_BATTLE_ADVENTURER_XP = {
     5700
 };
 
+/**
+ * \brief Battle xp for all adventurer levels 0-20 at hard difficulty.
+ */
 static const std::vector<uint32_t> HARD_BATTLE_ADVENTURER_XP = {
     0,
     75,
@@ -94,6 +109,9 @@ static const std::vector<uint32_t> HARD_BATTLE_ADVENTURER_XP = {
     8500
 };
 
+/**
+ * \brief Battle xp for all adventurer levels 0-20 at deadly difficulty.
+ */
 static const std::vector<uint32_t> DEADLY_BATTLE_ADVENTURER_XP = {
     0,
     100,
@@ -118,6 +136,9 @@ static const std::vector<uint32_t> DEADLY_BATTLE_ADVENTURER_XP = {
     12700
 };
 
+/**
+ * \brief Battle xp for all adventurer levels 0-20 at insanity difficulty.
+ */
 static const std::vector<uint32_t> INSANITY_BATTLE_ADVENTURER_XP = {
     0,
     200,
@@ -142,6 +163,9 @@ static const std::vector<uint32_t> INSANITY_BATTLE_ADVENTURER_XP = {
     25400
 };
 
+/**
+ * \brief Battle xp for all monster CRs from 0-30.
+ */
 static const std::vector<uint32_t> MONSTER_XP_TABLE = {
     10,
     25,
@@ -179,6 +203,9 @@ static const std::vector<uint32_t> MONSTER_XP_TABLE = {
     155000
 };
 
+/**
+ * \brief Allowed CRs for all monsters.
+ */
 enum class Cr
 {
     Zero = 0,
@@ -217,26 +244,39 @@ enum class Cr
     Thirty
 };
 
-class GenUtil
-{
-public:
-    static uint32_t GenUtil::getAdventurerXp(const uint32_t& level, const Difficulty& difficulty);
-    static uint32_t getMonsterXp(const Cr &challenge);
-    static Cr getMonsterCr(const uint32_t &xp);
-    static std::string toString(const Difficulty &difficulty);
-    static std::string toString(const Cr &cr);
+    /**
+     * \brief Gets the xp that an adventurer of the given level wants at the given difficulty.
+     * \param level Level of the adventurer.
+     * \param difficulty Difficulty of the battle.
+     * \return XP that the adventurer wants to earn.
+     */
+    uint32_t getAdventurerXp(const uint32_t& level, const Difficulty& difficulty);
 
-private:
-    GenUtil() = delete;
-    static const std::unordered_map<uint32_t, Cr> XP_TO_CR_MAP;
-    static const std::unordered_map<Cr, uint32_t> CR_TO_XP_MAP;
+/**
+     * \brief Gets the xp that a monster of the given CR will reward.
+     * \param challenge CR of the monster.
+     * \return XP to award for the given CR.
+     */
+    uint32_t getMonsterXp(const Cr &challenge);
 
-    static std::unordered_map<uint32_t, Cr> generateXpToCrMap();
-    static std::unordered_map<Cr, uint32_t> generateCrToXpMap();
+/**
+     * \brief Gets the CR of a monster from how much xp it awards.
+     * \param xp XP of the monster.
+     * \return CR of the monster with the given XP reward. If no exact match is found, finds the nearest, by flooring.
+     */
+    Cr getMonsterCr(const uint32_t &xp);
 
+/**
+     * \brief Turns the given difficulty into its string representation.
+     * \param difficulty Difficult to turn into a string.
+     * \return String representation of the difficulty.
+     */
+    std::string toString(const Difficulty &difficulty);
+
+/**
+     * \brief Turns the given CR into its string representation.
+     * \param cr CR to turn into a string.
+     * \return String representation of the CR.
+     */
+    std::string toString(const Cr &cr);
 };
-
-
-
-
-}

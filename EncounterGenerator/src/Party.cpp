@@ -71,9 +71,9 @@ uint32_t Party::getDesiredXp(const GeneratorUtilities::Difficulty& difficulty) c
 
 uint32_t Party::getLowerDesiredXp(const Difficulty& difficulty) const
 {
-    if (mDesiredLowerXpMap.count(difficulty) != 0)
+    if (mDesiredXpMap.count(difficulty) != 0)
     {
-        return mDesiredLowerXpMap.at(difficulty);
+        return static_cast<uint32_t>(mDesiredXpMap.at(difficulty) * LOWER_XP_MODIFIER);
     }
 
     return 0;
@@ -81,9 +81,9 @@ uint32_t Party::getLowerDesiredXp(const Difficulty& difficulty) const
 
 uint32_t Party::getUpperDesiredXp(const Difficulty& difficulty) const
 {
-    if (mDesiredUpperXpMap.count(difficulty) != 0)
+    if (mDesiredXpMap.count(difficulty) != 0)
     {
-        return mDesiredUpperXpMap.at(difficulty);
+        return static_cast<uint32_t>(mDesiredXpMap.at(difficulty) * UPPER_XP_MODIFIER);
     }
 
     return 0;
@@ -94,8 +94,6 @@ void Party::calculateDesiredXp()
     for(const auto& diff : DIFFICULTY_VECTOR)
     {
         mDesiredXpMap[diff] = getBattleXp(diff);
-        mDesiredLowerXpMap[diff] = static_cast<uint32_t>(mDesiredXpMap[diff] * LOWER_XP_MODIFIER);
-        mDesiredUpperXpMap[diff] = static_cast<uint32_t>(mDesiredXpMap[diff] * UPPER_XP_MODIFIER);
     }
 }
 
@@ -110,7 +108,8 @@ uint32_t Party::getBattleXp(const Difficulty& difficulty) const
 
     for (const auto& adventurers : mAdventurerMap)
     {
-        desiredXp += GenUtil::getAdventurerXp(adventurers.first, difficulty) * adventurers.second;
+        // For every level that we have adventurers, get their desired xp and multiply it by the number of adventurers. 
+        desiredXp += getAdventurerXp(adventurers.first, difficulty) * adventurers.second;
     }
 
     return desiredXp;

@@ -68,7 +68,7 @@ uint32_t Encounter::getBattleXp(const std::map<Cr, uint32_t>& monsterMap)
     auto battleXp = 0;
     for(const auto &monsterGroup : monsterMap)
     {
-        battleXp += GenUtil::getMonsterXp(monsterGroup.first) * monsterGroup.second;
+        battleXp += getMonsterXp(monsterGroup.first) * monsterGroup.second;
     }
     return battleXp;
 }
@@ -143,7 +143,7 @@ std::map<Cr, uint32_t> Encounter::getMonsterMap(const std::vector<uint32_t>& mon
     // Fill out the list so we can get the desired xp.
     for (auto monsterXp : monsters)
     {
-        auto monsterCr = GenUtil::getMonsterCr(monsterXp);
+        auto monsterCr = getMonsterCr(monsterXp);
         monsterMap[monsterCr]++;
     }
 
