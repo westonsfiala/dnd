@@ -1,6 +1,7 @@
 #include "Encounter.h"
 #include "Party.h"
 #include <random>
+#include <cmath>
 #include <cassert>
 
 #include <nlohmann/json.hpp>
@@ -18,13 +19,14 @@ const std::vector<float> Encounter::MONSTER_ENCOUNTER_MODIFIERS = {
     5.0f  // 15+ monsters w/ small party
 };
 
-Encounter::Encounter(const Party &adventurers, const uint32_t &num_monsters) :
+Encounter::Encounter(const Party &adventurers, const uint32_t &numUniqueMonsters, const uint32_t& numTotalMonsters) :
     mParty(adventurers),
-    mNumMonsters(num_monsters),
-    mNumUniqueMonsters(static_cast<uint32_t>(round(log2(mNumMonsters)))),
+    mNumUniqueMonsters(numUniqueMonsters),
+    mNumTotalMonsters(numTotalMonsters),
     mValidBattles({})
 {
     setMinimumMonsterXp();
+    setMaximumMonsterXp();
     fillOutEncounters();
 }
 
@@ -106,7 +108,7 @@ float Encounter::getXpModifier(const uint32_t& numMonsters) const
     case 6:
         tableIndex = 3;
         break;
-    case 7: // 7-8 monsters
+    case 7: // 7-10 monsters
     case 8:
     case 9:
     case 10:
@@ -150,6 +152,21 @@ std::map<Cr, uint32_t> Encounter::getMonsterMap(const std::vector<uint32_t>& mon
     return monsterMap;
 }
 
+std::vector<uint32_t> Encounter::getValidMonsterXPs ( const uint32_t& minXp, const uint32_t& maxXp )
+{
+    std::vector<uint32_t> validXps;
+
+    for (auto xp : MONSTER_XP_TABLE)
+    {
+        if (xp >= minXp && xp <= maxXp)
+        {
+            validXps.push_back(xp);
+        }
+    }
+
+    return validXps;
+}
+
 void Encounter::setMinimumMonsterXp()
 {
     for(const auto & diff : DIFFICULTY_VECTOR)
@@ -162,17 +179,49 @@ uint32_t Encounter::getMinimumMonsterXp(const Difficulty& difficulty) const
 {
     const auto desiredXp = mParty.getDesiredXp(difficulty);
 
-    if(mNumMonsters == 0)
+    if(mNumTotalMonsters == 0)
     {
         return 0;
     }
 
-    const auto lowestXp = desiredXp / mNumMonsters;
+    const auto lowestXp = desiredXp / mNumTotalMonsters;
     auto lastXp = 0;
 
     for(auto xp : MONSTER_XP_TABLE)
     {
         if (lowestXp <= xp)
+        {
+            return lastXp;
+        }
+        lastXp = xp;
+    }
+
+    return 0;
+}
+
+void Encounter::setMaximumMonsterXp()
+{
+    for (const auto & diff : DIFFICULTY_VECTOR)
+    {
+        mMaximumMonsterXp[diff] = getMaximumMonsterXp(diff);
+    }
+}
+
+uint32_t Encounter::getMaximumMonsterXp(const Difficulty& difficulty) const
+{
+    const auto desiredXp = mParty.getDesiredXp(difficulty);
+
+    if (mNumTotalMonsters == 0)
+    {
+        return 0;
+    }
+
+    const auto highestXp = desiredXp / getXpModifier(1);
+    auto lastXp = 0;
+
+    for (auto xp : MONSTER_XP_TABLE)
+    {
+        if (xp >= highestXp)
         {
             return lastXp;
         }
@@ -188,43 +237,58 @@ void Encounter::fillOutEncounters()
     for(const auto& diff : DIFFICULTY_VECTOR)
     {
         std::vector<uint32_t> monsters;
-        fillOutHelper(monsters, diff);
+        auto validXps = getValidMonsterXPs(mMinimumMonsterXp[diff], mMaximumMonsterXp[diff]);
+        auto lowXp = mParty.getLowerDesiredXp(diff);
+        auto desiredXp = mParty.getDesiredXp(diff);
+        auto highXp = mParty.getUpperDesiredXp(diff);
+        fillOutHelper(monsters, diff, validXps, lowXp, desiredXp, highXp);
     }
 }
 
-void Encounter::fillOutHelper(std::vector<uint32_t>& currentMonsters, const Difficulty& difficulty)
+void Encounter::fillOutHelper(std::vector<uint32_t>& currentMonsters, const Difficulty& difficulty, const std::vector<uint32_t>& validXps, const uint32_t& lowXp, const uint32_t& desiredXp, const uint32_t& highXp)
 {
     // Get the monster map.
     const auto monsterMap = getMonsterMap(currentMonsters);
     const auto xp = getBattleXp(monsterMap) * getXpModifier(static_cast<uint32_t>(currentMonsters.size()));
 
-    // Get the lower and upper bounds on xp.
-    const auto lowDesired = mParty.getLowerDesiredXp(difficulty);
-    const auto upperDesired = mParty.getUpperDesiredXp(difficulty);
+    // Run some checks to see if we should quit out now.
+    const auto tooManyTotalMonsters = currentMonsters.size() > mNumTotalMonsters;
+    const auto tooManyUniqueMonsters = monsterMap.size() > mNumUniqueMonsters;
+    const auto tooMuchXp = xp > highXp;
+    if (tooManyTotalMonsters || tooManyUniqueMonsters || tooMuchXp)
+    {
+        return;
+    }
 
-    // Get the checks that need to be true to add the monsters into the list.
-    const auto correctNumMonsters = currentMonsters.size() <= mNumMonsters;
-    const auto inXpRange = xp >= lowDesired && xp <= upperDesired;
-    const auto correctUniqueMonsters = monsterMap.size() <= mNumUniqueMonsters;
+    // See if we are in a valid xp range.
+    const auto inXpRange = (xp >= lowXp) && (xp <= highXp);
+
+    // When adding monsters into the map, add them in chunks that must make up at least 20% of allotted xp.
+    const auto minXpPerCr = desiredXp / 5;
 
     // If we have the correct number of monsters and it is in range, success!
-    if(correctNumMonsters && inXpRange && correctUniqueMonsters)
+    if(inXpRange)
     {
         mValidBattles[difficulty].insert(monsterMap);
+        return;
     }
-    else if (currentMonsters.size() < mNumMonsters)
+
+    // We are not in a valid state yet, try to add more monsters in.
+    for(auto newXp : validXps)
     {
-        // Go through all of the xp tables and get the monsters.
-        for(auto newXp : MONSTER_XP_TABLE)
+        // Calculate how many monsters should be added in this batch
+        auto numNewMonsters = minXpPerCr / newXp;
+        if (numNewMonsters == 0) numNewMonsters = 1;
+
+        // Add the monsters in. Recurse. Remove monsters.
+        for (uint32_t i = 0; i < numNewMonsters; i++)
         {
-            // If the current xp + new monster xp is over the upper_desired range, don't even try to add it in.
-            // Also, don't try to add in monsters that are lower than the minimum xp threshold.
-            if (xp + newXp < upperDesired && newXp >= mMinimumMonsterXp[difficulty])
-            {
-                currentMonsters.push_back(newXp);
-                fillOutHelper(currentMonsters, difficulty);
-                currentMonsters.pop_back();
-            }
+            currentMonsters.push_back(newXp);
+        }
+        fillOutHelper(currentMonsters, difficulty, validXps, lowXp, desiredXp, highXp);
+        for (uint32_t i = 0; i < numNewMonsters; i++)
+        {
+            currentMonsters.pop_back();
         }
     }
 

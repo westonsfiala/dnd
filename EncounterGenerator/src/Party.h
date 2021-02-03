@@ -20,7 +20,7 @@ public:
      * \param level Level of the adventurer. Must be between 1 -> 20 inclusive. 
      * \return If the adventurer is added to the party.
      */
-    bool addAdventurer(const uint32_t& level);
+    bool addAdventurer(const uint32_t& level, const uint32_t& count);
 
     /**
      * \brief Removes an adventurer from the party of the desired level.

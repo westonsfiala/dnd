@@ -7,13 +7,13 @@ using namespace GeneratorUtilities;
 const float Party::UPPER_XP_MODIFIER = 1.25f;
 const float Party::LOWER_XP_MODIFIER = 0.75f;
 
-bool Party::addAdventurer(const uint32_t& level)
+bool Party::addAdventurer(const uint32_t& level, const uint32_t& count)
 {
     // Only add an adventurer when the level is valid.
     if (level >= 1 && level <= 20)
     {
         const auto currentAdventurers = mAdventurerMap[level];
-        mAdventurerMap[level] = currentAdventurers + 1;
+        mAdventurerMap[level] = currentAdventurers + count;
         calculateDesiredXp();
         return true;
     }
