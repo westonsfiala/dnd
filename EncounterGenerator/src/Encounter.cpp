@@ -91,52 +91,13 @@ float Encounter::getXpModifier(const uint32_t& numMonsters) const
         return 0;
     }
 
-    uint32_t tableIndex;
-
-    // The standard index goes from 1-6.
-    switch (numMonsters)
+    auto xpMod = 2.0f - numAdventurers / 4.0f + (numMonsters - 1)*0.2f;
+    if(xpMod < 0.5f)
     {
-    case 1: // 1 monster
-        tableIndex = 1;
-        break;
-    case 2: // 2 monsters
-        tableIndex = 2;
-        break;
-    case 3: // 3-6 monsters
-    case 4:
-    case 5:
-    case 6:
-        tableIndex = 3;
-        break;
-    case 7: // 7-10 monsters
-    case 8:
-    case 9:
-    case 10:
-        tableIndex = 4;
-        break;
-    case 11: // 11-14 monsters
-    case 12:
-    case 13:
-    case 14:
-        tableIndex = 5;
-        break;
-    default: // 15+ monsters
-        tableIndex = 6;
+        xpMod = 0.5f;
     }
 
-    // If we have few characters, up the modifier.
-    if (numAdventurers <= 2)
-    {
-        tableIndex++;
-    }
-    // If we have many characters, lower the modifier.
-    else if (numAdventurers >= 6)
-    {
-        tableIndex--;
-    }
-
-    // Return the modifier that
-    return MONSTER_ENCOUNTER_MODIFIERS.at(tableIndex);
+    return xpMod;
 }
 
 std::map<Cr, uint32_t> Encounter::getMonsterMap(const std::vector<uint32_t>& monsters)
@@ -243,6 +204,7 @@ void Encounter::fillOutEncounters()
         auto highXp = mParty.getUpperDesiredXp(diff);
         fillOutHelper(monsters, diff, validXps, lowXp, desiredXp, highXp);
     }
+
 }
 
 void Encounter::fillOutHelper(std::vector<uint32_t>& currentMonsters, const Difficulty& difficulty, const std::vector<uint32_t>& validXps, const uint32_t& lowXp, const uint32_t& desiredXp, const uint32_t& highXp)
@@ -266,11 +228,33 @@ void Encounter::fillOutHelper(std::vector<uint32_t>& currentMonsters, const Diff
     // When adding monsters into the map, add them in chunks that must make up at least 20% of allotted xp.
     const auto minXpPerCr = desiredXp / 5;
 
-    // If we have the correct number of monsters and it is in range, success!
+    // If we are in the correct xp range do some last checks.
+    // Ensure that only one battle per set has a unique number of monsters.
+    // This stops it from having 3 entries in the table being nearly the same but just one cr off with the same number of monsters.
     if(inXpRange)
     {
-        mValidBattles[difficulty].insert(monsterMap);
-        return;
+        auto uniqueNumberOfMonsters = true;
+        auto testNumMons = 0;
+        for (const auto& crNumPair : monsterMap)
+        {
+            testNumMons += crNumPair.second;
+        }
+
+        for(const auto& monsterMaps : mValidBattles[difficulty])
+        {
+            auto numSetMons = 0;
+            for(const auto& crNumPair : monsterMaps)
+            {
+                numSetMons += crNumPair.second;
+            }
+            uniqueNumberOfMonsters = uniqueNumberOfMonsters && (testNumMons != numSetMons);
+        }
+
+        if(uniqueNumberOfMonsters)
+        {
+            mValidBattles[difficulty].insert(monsterMap);
+            return;
+        }
     }
 
     // We are not in a valid state yet, try to add more monsters in.
