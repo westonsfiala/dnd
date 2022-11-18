@@ -26,7 +26,7 @@ set(PRODUCT_VERSION ${PRODUCT_VERSION_NAME}_${PRODUCT_VERSION_MAJ}.${PRODUCT_VER
 set(PLATFORM_NAME                 "DnD Helper")
 set(COMPANY_NAME                  "Weston")
 set(COMPANY_NAME_FULL             "Weston Fiala")
-set(COPYRIGHT_STRING              "Copyright ${COMPANY_NAME_FULL} 2018-2019")
+set(COPYRIGHT_STRING              "Copyright ${COMPANY_NAME_FULL} 2018-2022")
 
 # PRODUCT_DESCRIPTION is the name displayed in the 'Open With' shortcut and in the .exe file properties Description
 set(PRODUCT_DESCRIPTION           "${COMPANY_NAME} ${PLATFORM_NAME}")

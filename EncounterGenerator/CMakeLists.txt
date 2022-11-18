@@ -10,10 +10,10 @@ set(src_CPP
 )
     
 set(src_H
-    src/Encounter.h
-	src/Party.h
-	src/Monster.h
-	src/GeneratorUtilities.h
+    include/Encounter.h
+	include/Party.h
+	include/Monster.h
+	include/GeneratorUtilities.h
 )
 
 add_library(${PROJECT_NAME} STATIC
@@ -29,6 +29,6 @@ target_link_libraries(${PROJECT_NAME}
 # Provide our source for Gui to include automatically
 target_include_directories(${PROJECT_NAME}
     INTERFACE .
-	INTERFACE src
+	INTERFACE include
 )
 

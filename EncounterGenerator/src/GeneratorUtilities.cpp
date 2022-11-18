@@ -137,4 +137,18 @@ namespace GeneratorUtilities
         default: return "invalid cr";
         }
     }
+
+    std::string toString(const CreatureSize& creatureSize)
+    {
+        switch (creatureSize)
+        {
+        case CreatureSize::Tiny: return "Tiny";
+        case CreatureSize::Small: return "Small";
+        case CreatureSize::Medium: return "Medium";
+        case CreatureSize::Large: return "Large";
+        case CreatureSize::Huge: return "Huge";
+        case CreatureSize::Gargantuan: return "Gargantuan";
+        default: return "Invalid Creature Size";
+        }
+    }
 }
