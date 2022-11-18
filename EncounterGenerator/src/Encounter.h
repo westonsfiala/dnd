@@ -18,7 +18,7 @@ public:
     Encounter(const Party& adventurers, const uint32_t& numUniqueMonsters, const uint32_t& numTotalMonsters);
     ~Encounter() = default;
 
-    std::map<Cr, uint32_t> getBattle(const Difficulty& difficulty) const;
+    std::vector<std::map<Cr, uint32_t>> getBattles(const Difficulty& difficulty, uint32_t numBattles) const;
 
     std::set<std::map<Cr, uint32_t>> getAllBattles(const Difficulty& difficulty) const;
 

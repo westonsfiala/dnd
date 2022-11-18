@@ -3,6 +3,7 @@
 #include <random>
 #include <cmath>
 #include <cassert>
+#include <chrono>
 
 #include <nlohmann/json.hpp>
 
@@ -30,29 +31,43 @@ Encounter::Encounter(const Party &adventurers, const uint32_t &numUniqueMonsters
     fillOutEncounters();
 }
 
-std::map<Cr, uint32_t> Encounter::getBattle(const Difficulty& difficulty) const
+std::vector<std::map<Cr, uint32_t>> Encounter::getBattles(const Difficulty& difficulty, uint32_t numBattles) const
 {
     auto battles = getAllBattles(difficulty);
 
-    if(battles.empty())
+    if(battles.empty() || numBattles == 0)
     {
         return {};
     }
 
-    std::random_device rd;  // Will be used to obtain a seed for the random number engine
-    std::mt19937 gen(rd()); // Standard mersenne_twister_engine seeded with rd()
-    const std::uniform_int_distribution<> dis(0, static_cast<int>(battles.size()) - 1);
-
-    const auto index = dis(gen);
-
+    // Vectorize the battles we will be choosing from.
     std::vector<std::map<Cr, uint32_t>> vectorizedBattles;
 
-    for(const auto battle : battles)
+    for (const auto battle : battles)
     {
         vectorizedBattles.push_back(battle);
     }
 
-    return vectorizedBattles.at(index);
+    // Create a selection vector that increases from 0 -> total number of battles - 1.
+    // Then shuffle it around so we have a pick without replacement vector.
+    std::vector<int> selectionVector(battles.size());
+    std::iota(std::begin(selectionVector), std::end(selectionVector), 0); // Fill with 0, 1, ..., 99.
+
+    // obtain a time-based seed:
+    auto seed = static_cast<uint32_t>(std::chrono::system_clock::now().time_since_epoch().count());
+    std::shuffle(selectionVector.begin(), selectionVector.end(), std::default_random_engine(seed));
+
+    // Create the output battleVector.
+    std::vector<std::map<Cr, uint32_t>> outputBattles(numBattles);
+
+    // if we have less numBattles than the total num battles, we will never have repeats.
+    // If we loop over, just keep filling it so that we always get how many we ask for.
+    for(uint32_t i = 0; i < numBattles; i++)
+    {
+        outputBattles[i] = vectorizedBattles[selectionVector[i%selectionVector.size()]];
+    }
+
+    return outputBattles;
 }
 
 std::set<std::map<Cr, uint32_t>> Encounter::getAllBattles(const Difficulty& difficulty) const
