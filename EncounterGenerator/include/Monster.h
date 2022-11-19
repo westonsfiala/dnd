@@ -8,7 +8,7 @@ using namespace DnD;
 class Monster
 {
 public:
-    Monster() = default;
+    Monster();
     Monster(const Monster& other) = default;
     ~Monster() = default;
 

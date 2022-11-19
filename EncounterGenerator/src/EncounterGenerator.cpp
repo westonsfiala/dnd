@@ -1,7 +1,6 @@
-#include "Encounter.h"
+#include "EncounterGenerator.h"
 #include "Party.h"
 #include <random>
-#include <cmath>
 #include <cassert>
 #include <chrono>
 
@@ -9,7 +8,7 @@
 
 using namespace DnD;
 
-const std::vector<float> Encounter::MONSTER_ENCOUNTER_MODIFIERS = {
+const std::vector<float> EncounterGenerator::MONSTER_ENCOUNTER_MODIFIERS = {
     0.5f, // 1 monster w/ large party
     1.0f, // 1 monster
     1.5f, // 2 monsters
@@ -20,7 +19,7 @@ const std::vector<float> Encounter::MONSTER_ENCOUNTER_MODIFIERS = {
     5.0f  // 15+ monsters w/ small party
 };
 
-Encounter::Encounter(const Party &adventurers, const uint32_t &numUniqueMonsters, const uint32_t& numTotalMonsters) :
+EncounterGenerator::EncounterGenerator(const Party &adventurers, const uint32_t &numUniqueMonsters, const uint32_t& numTotalMonsters) :
     mParty(adventurers),
     mNumUniqueMonsters(numUniqueMonsters),
     mNumTotalMonsters(numTotalMonsters),
@@ -31,9 +30,9 @@ Encounter::Encounter(const Party &adventurers, const uint32_t &numUniqueMonsters
     fillOutEncounters();
 }
 
-std::vector<std::map<Cr, uint32_t>> Encounter::getBattles(const Difficulty& difficulty, uint32_t numBattles) const
+std::vector<std::map<Cr, uint32_t>> EncounterGenerator::getEncounters(const Difficulty& difficulty, uint32_t numBattles) const
 {
-    auto battles = getAllBattles(difficulty);
+    auto battles = getAllEncounters(difficulty);
 
     if(battles.empty() || numBattles == 0)
     {
@@ -70,7 +69,7 @@ std::vector<std::map<Cr, uint32_t>> Encounter::getBattles(const Difficulty& diff
     return outputBattles;
 }
 
-std::set<std::map<Cr, uint32_t>> Encounter::getAllBattles(const Difficulty& difficulty) const
+std::set<std::map<Cr, uint32_t>> EncounterGenerator::getAllEncounters(const Difficulty& difficulty) const
 {
     if(mValidBattles.count(difficulty) != 0)
     {
@@ -80,7 +79,7 @@ std::set<std::map<Cr, uint32_t>> Encounter::getAllBattles(const Difficulty& diff
     return {};
 }
 
-uint32_t Encounter::getBattleXp(const std::map<Cr, uint32_t>& monsterMap)
+uint32_t EncounterGenerator::getEncounterXp(const std::map<Cr, uint32_t>& monsterMap)
 {
     auto battleXp = 0;
     for(const auto &monsterGroup : monsterMap)
@@ -90,7 +89,7 @@ uint32_t Encounter::getBattleXp(const std::map<Cr, uint32_t>& monsterMap)
     return battleXp;
 }
 
-float Encounter::getXpModifier(const uint32_t& numMonsters) const
+float EncounterGenerator::getXpModifier(const uint32_t& numMonsters) const
 {
     const auto numAdventurers = mParty.getNumAdventurers();
     // If we have no characters, no xp can be given.
@@ -106,6 +105,7 @@ float Encounter::getXpModifier(const uint32_t& numMonsters) const
         return 0;
     }
 
+    // This approximates the Monster EncounterGenerator Modifier, with more emphasis on balancing monsters vs players.
     auto xpMod = 2.0f - numAdventurers / 4.0f + (numMonsters - 1)*0.2f;
     if(xpMod < 0.5f)
     {
@@ -115,7 +115,7 @@ float Encounter::getXpModifier(const uint32_t& numMonsters) const
     return xpMod;
 }
 
-std::map<Cr, uint32_t> Encounter::getMonsterMap(const std::vector<uint32_t>& monsters)
+std::map<Cr, uint32_t> EncounterGenerator::getMonsterMap(const std::vector<uint32_t>& monsters)
 {
     std::map<Cr, uint32_t> monsterMap;
     // Fill out the list so we can get the desired xp.
@@ -128,7 +128,7 @@ std::map<Cr, uint32_t> Encounter::getMonsterMap(const std::vector<uint32_t>& mon
     return monsterMap;
 }
 
-std::vector<uint32_t> Encounter::getValidMonsterXPs ( const uint32_t& minXp, const uint32_t& maxXp )
+std::vector<uint32_t> EncounterGenerator::getValidMonsterXPs ( const uint32_t& minXp, const uint32_t& maxXp )
 {
     std::vector<uint32_t> validXps;
 
@@ -143,7 +143,7 @@ std::vector<uint32_t> Encounter::getValidMonsterXPs ( const uint32_t& minXp, con
     return validXps;
 }
 
-void Encounter::setMinimumMonsterXp()
+void EncounterGenerator::setMinimumMonsterXp()
 {
     for(const auto & diff : DIFFICULTY_VECTOR)
     {
@@ -151,7 +151,7 @@ void Encounter::setMinimumMonsterXp()
     }
 }
 
-uint32_t Encounter::getMinimumMonsterXp(const Difficulty& difficulty) const
+uint32_t EncounterGenerator::getMinimumMonsterXp(const Difficulty& difficulty) const
 {
     const auto desiredXp = mParty.getDesiredXp(difficulty);
 
@@ -175,7 +175,7 @@ uint32_t Encounter::getMinimumMonsterXp(const Difficulty& difficulty) const
     return 0;
 }
 
-void Encounter::setMaximumMonsterXp()
+void EncounterGenerator::setMaximumMonsterXp()
 {
     for (const auto & diff : DIFFICULTY_VECTOR)
     {
@@ -183,7 +183,7 @@ void Encounter::setMaximumMonsterXp()
     }
 }
 
-uint32_t Encounter::getMaximumMonsterXp(const Difficulty& difficulty) const
+uint32_t EncounterGenerator::getMaximumMonsterXp(const Difficulty& difficulty) const
 {
     const auto desiredXp = mParty.getDesiredXp(difficulty);
 
@@ -207,7 +207,7 @@ uint32_t Encounter::getMaximumMonsterXp(const Difficulty& difficulty) const
     return 0;
 }
 
-void Encounter::fillOutEncounters()
+void EncounterGenerator::fillOutEncounters()
 {
     mValidBattles.clear();
     for(const auto& diff : DIFFICULTY_VECTOR)
@@ -222,11 +222,11 @@ void Encounter::fillOutEncounters()
 
 }
 
-void Encounter::fillOutHelper(std::vector<uint32_t>& currentMonsters, const Difficulty& difficulty, const std::vector<uint32_t>& validXps, const uint32_t& lowXp, const uint32_t& desiredXp, const uint32_t& highXp)
+void EncounterGenerator::fillOutHelper(std::vector<uint32_t>& currentMonsters, const Difficulty& difficulty, const std::vector<uint32_t>& validXps, const uint32_t& lowXp, const uint32_t& desiredXp, const uint32_t& highXp)
 {
     // Get the monster map.
     const auto monsterMap = getMonsterMap(currentMonsters);
-    const auto xp = getBattleXp(monsterMap) * getXpModifier(static_cast<uint32_t>(currentMonsters.size()));
+    const auto xp = getEncounterXp(monsterMap) * getXpModifier(static_cast<uint32_t>(currentMonsters.size()));
 
     // Run some checks to see if we should quit out now.
     const auto tooManyTotalMonsters = currentMonsters.size() > mNumTotalMonsters;

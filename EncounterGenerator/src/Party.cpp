@@ -1,5 +1,5 @@
 #include "Party.h"
-#include "Encounter.h"
+#include "EncounterGenerator.h"
 #include "GeneratorUtilities.h"
 
 using namespace DnD;

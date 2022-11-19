@@ -1,5 +1,15 @@
 #include "Monster.h"
 
+Monster::Monster() :
+    mName{ "" },
+    mCr{ Cr::INVALID },
+    mCreatureSize{ CreatureSize::INVALID },
+    mCreatureType{ CreatureType::INVALID },
+    mBook{ "" },
+    mPage{0}
+{
+}
+
 bool Monster::isValid() const
 {
     if (mName.empty())

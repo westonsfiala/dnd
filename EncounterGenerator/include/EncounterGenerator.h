@@ -7,7 +7,7 @@
 
 using namespace DnD;
 
-class Encounter
+class EncounterGenerator
 {
 public:
     /**
@@ -15,14 +15,14 @@ public:
      * \param adventurers A party of adventurers
      * \param numUniqueMonsters How many unique monsters to field
      */
-    Encounter(const Party& adventurers, const uint32_t& numUniqueMonsters, const uint32_t& numTotalMonsters);
-    ~Encounter() = default;
+    EncounterGenerator(const Party& adventurers, const uint32_t& numUniqueMonsters, const uint32_t& numTotalMonsters);
+    ~EncounterGenerator() = default;
 
-    std::vector<std::map<Cr, uint32_t>> getBattles(const Difficulty& difficulty, uint32_t numBattles) const;
+    std::vector<std::map<Cr, uint32_t>> getEncounters(const Difficulty& difficulty, uint32_t numBattles) const;
 
-    std::set<std::map<Cr, uint32_t>> getAllBattles(const Difficulty& difficulty) const;
+    std::set<std::map<Cr, uint32_t>> getAllEncounters(const Difficulty& difficulty) const;
 
-    static uint32_t getBattleXp(const std::map<Cr, uint32_t>& monsterMap);
+    static uint32_t getEncounterXp(const std::map<Cr, uint32_t>& monsterMap);
 
 private:
     static const std::vector<float> MONSTER_ENCOUNTER_MODIFIERS;
