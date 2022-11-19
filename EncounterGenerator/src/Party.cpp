@@ -2,7 +2,7 @@
 #include "Encounter.h"
 #include "GeneratorUtilities.h"
 
-using namespace GeneratorUtilities;
+using namespace DnD;
 
 const float Party::UPPER_XP_MODIFIER = 1.25f;
 const float Party::LOWER_XP_MODIFIER = 0.75f;
@@ -59,7 +59,7 @@ uint32_t Party::getNumAdventurers(const uint32_t& level) const
     return 0;
 }
 
-uint32_t Party::getDesiredXp(const GeneratorUtilities::Difficulty& difficulty) const
+uint32_t Party::getDesiredXp(const Difficulty& difficulty) const
 {
     if(mDesiredXpMap.count(difficulty) != 0)
     {

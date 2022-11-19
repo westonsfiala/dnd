@@ -10,7 +10,7 @@ set(src_CPP
 )
     
 set(src_H
-    include/Encounter.h
+	include/Encounter.h
 	include/Party.h
 	include/Monster.h
 	include/GeneratorUtilities.h
@@ -26,9 +26,12 @@ target_link_libraries(${PROJECT_NAME}
 	PUBLIC nlohmann_json::nlohmann_json
 )
 
-# Provide our source for Gui to include automatically
 target_include_directories(${PROJECT_NAME}
-    INTERFACE .
-	INTERFACE include
+	PUBLIC include
+	PRIVATE src
 )
 
+add_library(${PROJECT_NAME}PrivateHeaders INTERFACE)
+target_include_directories(${PROJECT_NAME}PrivateHeaders 
+    INTERFACE src
+)

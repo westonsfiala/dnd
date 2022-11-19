@@ -7,7 +7,7 @@
 
 #include <nlohmann/json.hpp>
 
-using namespace GeneratorUtilities;
+using namespace DnD;
 
 const std::vector<float> Encounter::MONSTER_ENCOUNTER_MODIFIERS = {
     0.5f, // 1 monster w/ large party

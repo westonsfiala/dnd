@@ -1,6 +1,6 @@
 #include "GeneratorUtilities.h"
 
-namespace GeneratorUtilities
+namespace DnD
 {
 /**
      * \brief Helper function for generating a map from xp to cr.
@@ -8,26 +8,32 @@ namespace GeneratorUtilities
      */
     std::unordered_map<uint32_t, Cr> generateXpToCrMap()
     {
-        std::unordered_map<uint32_t, Cr> map;
-        for (auto crIndex = 0; crIndex < MONSTER_XP_TABLE.size(); ++crIndex)
+        static std::unordered_map<uint32_t, Cr> map;
+        if (map.empty())
         {
-            const auto xp = MONSTER_XP_TABLE[crIndex];
-            map[xp] = static_cast<Cr>(crIndex);
+            for (auto crIndex = 0; crIndex < MONSTER_XP_TABLE.size(); ++crIndex)
+            {
+                const auto xp = MONSTER_XP_TABLE[crIndex];
+                map[xp] = static_cast<Cr>(crIndex);
+            }
         }
         return map;
     }
 
-/**
+    /**
      * \brief Helper function for generating a map from cr to xp.
      * \return Map from cr to xp.
      */
     std::unordered_map<Cr, uint32_t> generateCrToXpMap()
     {
-        std::unordered_map<Cr, uint32_t> map;
-        for (auto crIndex = 0; crIndex < MONSTER_XP_TABLE.size(); ++crIndex)
+        static std::unordered_map<Cr, uint32_t> map;
+        if (map.empty())
         {
-            const auto xp = MONSTER_XP_TABLE[crIndex];
-            map[static_cast<Cr>(crIndex)] = xp;
+            for (auto crIndex = 0; crIndex < MONSTER_XP_TABLE.size(); ++crIndex)
+            {
+                const auto xp = MONSTER_XP_TABLE[crIndex];
+                map[static_cast<Cr>(crIndex)] = xp;
+            }
         }
         return map;
     }
@@ -96,6 +102,31 @@ namespace GeneratorUtilities
         }
     }
 
+    Difficulty fromStringDifficulty(const std::string& difficultyString)
+    {
+        if(difficultyString == "Easy")
+        {
+            return Difficulty::Easy;
+        }
+        if (difficultyString == "Medium")
+        {
+            return Difficulty::Medium;
+        }
+        if (difficultyString == "Hard")
+        {
+            return Difficulty::Hard;
+        }
+        if (difficultyString == "Deadly")
+        {
+            return Difficulty::Deadly;
+        }
+        if (difficultyString == "Insanity")
+        {
+            return Difficulty::Insanity;
+        }
+        return Difficulty::INVALID;
+    }
+
     std::string toString(const Cr& cr)
     {
         switch (cr)
@@ -138,6 +169,147 @@ namespace GeneratorUtilities
         }
     }
 
+    Cr fromStringCr(const std::string& crString)
+    {
+        if (crString == "0")
+        {
+            return Cr::Zero;
+        }
+        if (crString == "1/8" || crString == "0.125")
+        {
+            return Cr::OneEighth;
+        }
+        if (crString == "1/4" || crString == "0.25")
+        {
+            return Cr::OneQuarter;
+        }
+        if (crString == "1/2" || crString == "0.5")
+        {
+            return Cr::OneHalf;
+        }
+        if (crString == "1")
+        {
+            return Cr::One;
+        }
+        if (crString == "2")
+        {
+            return Cr::Two;
+        }
+        if (crString == "3")
+        {
+            return Cr::Three;
+        }
+        if (crString == "4")
+        {
+            return Cr::Four;
+        }
+        if (crString == "5")
+        {
+            return Cr::Five;
+        }
+        if (crString == "6")
+        {
+            return Cr::Six;
+        }
+        if (crString == "7")
+        {
+            return Cr::Seven;
+        }
+        if (crString == "8")
+        {
+            return Cr::Eight;
+        }
+        if (crString == "9")
+        {
+            return Cr::Nine;
+        }
+        if (crString == "10")
+        {
+            return Cr::Ten;
+        }
+        if (crString == "11")
+        {
+            return Cr::Eleven;
+        }
+        if (crString == "12")
+        {
+            return Cr::Twelve;
+        }
+        if (crString == "13")
+        {
+            return Cr::Thirteen;
+        }
+        if (crString == "14")
+        {
+            return Cr::Fourteen;
+        }
+        if (crString == "15")
+        {
+            return Cr::Fifteen;
+        }
+        if (crString == "16")
+        {
+            return Cr::Sixteen;
+        }
+        if (crString == "17")
+        {
+            return Cr::Seventeen;
+        }
+        if (crString == "18")
+        {
+            return Cr::Eighteen;
+        }
+        if (crString == "19")
+        {
+            return Cr::Nineteen;
+        }
+        if (crString == "20")
+        {
+            return Cr::Twenty;
+        }
+        if (crString == "21")
+        {
+            return Cr::TwentyOne;
+        }
+        if (crString == "22")
+        {
+            return Cr::TwentyTwo;
+        }
+        if (crString == "23")
+        {
+            return Cr::TwentyThree;
+        }
+        if (crString == "24")
+        {
+            return Cr::TwentyFour;
+        }
+        if (crString == "25")
+        {
+            return Cr::TwentyFive;
+        }
+        if (crString == "26")
+        {
+            return Cr::TwentySix;
+        }
+        if (crString == "27")
+        {
+            return Cr::TwentySeven;
+        }
+        if (crString == "28")
+        {
+            return Cr::TwentyEight;
+        }
+        if (crString == "29")
+        {
+            return Cr::TwentyNine;
+        }
+        if (crString == "30")
+        {
+            return Cr::Thirty;
+        }
+        return Cr::INVALID;
+    }
+
     std::string toString(const CreatureSize& creatureSize)
     {
         switch (creatureSize)
@@ -150,5 +322,117 @@ namespace GeneratorUtilities
         case CreatureSize::Gargantuan: return "Gargantuan";
         default: return "Invalid Creature Size";
         }
+    }
+
+    CreatureSize fromStringCreatureSize(const std::string& creatureSizeString)
+    {
+        if (creatureSizeString == "Tiny")
+        {
+            return CreatureSize::Tiny;
+        }
+        if (creatureSizeString == "Small")
+        {
+            return CreatureSize::Tiny;
+        }
+        if (creatureSizeString == "Medium")
+        {
+            return CreatureSize::Tiny;
+        }
+        if (creatureSizeString == "Large")
+        {
+            return CreatureSize::Tiny;
+        }
+        if (creatureSizeString == "Huge")
+        {
+            return CreatureSize::Tiny;
+        }
+        if (creatureSizeString == "Gargantuan")
+        {
+            return CreatureSize::Tiny;
+        }
+        return CreatureSize::INVALID;
+    }
+
+    std::string toString(const CreatureType& creatureType)
+    {
+        switch (creatureType)
+        {
+        case CreatureType::Aberration: return "Aberration";
+        case CreatureType::Beast: return "Beast";
+        case CreatureType::Celestial: return "Celestial";
+        case CreatureType::Construct: return "Construct";
+        case CreatureType::Dragon: return "Dragon";
+        case CreatureType::Elemental: return "Elemental";
+        case CreatureType::Fey: return "Fey";
+        case CreatureType::Fiend: return "Fiend";
+        case CreatureType::Giant: return "Giant";
+        case CreatureType::Humanoid: return "Humanoid";
+        case CreatureType::Monstrosity: return "Monstrosity";
+        case CreatureType::Ooze: return "Ooze";
+        case CreatureType::Plant: return "Plant";
+        case CreatureType::Undead: return "Undead";
+        default: return "Invalid Creature Type";
+        }
+    }
+
+    CreatureType fromStringCreatureType(const std::string& creatureTypeString)
+    {
+        if (creatureTypeString == "Aberration")
+        {
+            return CreatureType::Aberration;
+        }
+        if (creatureTypeString == "Beast")
+        {
+            return CreatureType::Beast;
+        }
+        if (creatureTypeString == "Celestial")
+        {
+            return CreatureType::Celestial;
+        }
+        if (creatureTypeString == "Construct")
+        {
+            return CreatureType::Construct;
+        }
+        if (creatureTypeString == "Dragon")
+        {
+            return CreatureType::Dragon;
+        }
+        if (creatureTypeString == "Elemental")
+        {
+            return CreatureType::Elemental;
+        }
+        if (creatureTypeString == "Fey")
+        {
+            return CreatureType::Fey;
+        }
+        if (creatureTypeString == "Fiend")
+        {
+            return CreatureType::Fiend;
+        }
+        if (creatureTypeString == "Giant")
+        {
+            return CreatureType::Giant;
+        }
+        if (creatureTypeString == "Humanoid")
+        {
+            return CreatureType::Humanoid;
+        }
+        if (creatureTypeString == "Monstrosity")
+        {
+            return CreatureType::Monstrosity;
+        }
+        if (creatureTypeString == "Ooze")
+        {
+            return CreatureType::Ooze;
+        }
+        if (creatureTypeString == "Plant")
+        {
+            return CreatureType::Plant;
+        }
+        if (creatureTypeString == "Undead")
+        {
+            return CreatureType::Undead;
+        }
+        return CreatureType::INVALID;
     }
 }

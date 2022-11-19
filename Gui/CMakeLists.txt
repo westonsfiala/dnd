@@ -68,3 +68,8 @@ target_link_libraries(${PROJECT_NAME}_lib
 target_link_libraries(${PROJECT_NAME}
     PRIVATE     ${PROJECT_NAME}_lib
 )
+
+add_library(${PROJECT_NAME}PrivateHeaders INTERFACE)
+target_include_directories(${PROJECT_NAME}PrivateHeaders 
+    INTERFACE src
+)

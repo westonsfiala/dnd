@@ -5,7 +5,7 @@
 #include <set>
 #include "Party.h"
 
-using namespace GeneratorUtilities;
+using namespace DnD;
 
 class Encounter
 {

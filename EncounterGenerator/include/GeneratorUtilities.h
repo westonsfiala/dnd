@@ -2,7 +2,7 @@
 #include <vector>
 #include <unordered_map>
 
-namespace GeneratorUtilities
+namespace DnD
 {
 
 /**
@@ -14,7 +14,8 @@ enum class Difficulty
     Medium,
     Hard,
     Deadly,
-    Insanity
+    Insanity,
+    INVALID
 };
 
 /**
@@ -241,7 +242,8 @@ enum class Cr
     TwentySeven,
     TwentyEight,
     TwentyNine,
-    Thirty
+    Thirty,
+    INVALID
 };
 
 /**
@@ -254,7 +256,30 @@ enum class CreatureSize
     Medium,
     Large,
     Huge,
-    Gargantuan
+    Gargantuan,
+    INVALID
+};
+
+/**
+ * \brief Allowed Types for all monsters.
+ */
+enum class CreatureType
+{
+    Aberration = 0,
+    Beast,
+    Celestial,
+    Construct,
+    Dragon,
+    Elemental,
+    Fey,
+    Fiend,
+    Giant,
+    Humanoid,
+    Monstrosity,
+    Ooze,
+    Plant,
+    Undead,
+    INVALID
 };
 
     /**
@@ -287,6 +312,13 @@ enum class CreatureSize
     std::string toString(const Difficulty &difficulty);
 
     /**
+     * \brief Finds the difficulty from the given string.
+     * \param difficultyString String representation of a difficulty.
+     * \return Difficulty found from the given string. If no match is found, returns INVALID.
+     */
+    Difficulty fromStringDifficulty(const std::string &difficultyString);
+
+    /**
      * \brief Turns the given CR into its string representation.
      * \param cr CR to turn into a string.
      * \return String representation of the CR.
@@ -294,9 +326,37 @@ enum class CreatureSize
     std::string toString(const Cr &cr);
 
     /**
+     * \brief Finds the CR from the given string.
+     * \param crString String representation of a CR.
+     * \return Cr found from the given string. If no match is found, returns INVALID.
+     */
+    Cr fromStringCr(const std::string &crString);
+
+    /**
      * \brief Turns the given Size into its string representation.
      * \param creatureSize Size to turn into a string.
      * \return String representation of the size.
      */
     std::string toString(const CreatureSize &creatureSize);
+
+    /**
+     * \brief Finds the creature size from the given string.
+     * \param creatureSizeString String representation of a creature size.
+     * \return Creature size found from the given string. If no match is found, returns INVALID.
+     */
+    CreatureSize fromStringCreatureSize(const std::string &creatureSizeString);
+
+    /**
+     * \brief Turns the given type into its string representation.
+     * \param creatureType Type to turn into a string.
+     * \return String representation of the size.
+     */
+    std::string toString(const CreatureType &creatureType);
+
+    /**
+     * \brief Finds the creature type from the given string.
+     * \param creatureTypeString String representation of a creature type.
+     * \return Creature type found from the given string. If no match is found, returns INVALID.
+     */
+    CreatureType fromStringCreatureType(const std::string &creatureTypeString);
 };

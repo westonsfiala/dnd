@@ -3,7 +3,7 @@
 
 #include <map>
 
-using namespace GeneratorUtilities;
+using namespace DnD;
 
 /**
  * \brief A party is made up of a number of adventurers and has desired XP for each difficulty.
