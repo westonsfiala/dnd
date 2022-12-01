@@ -1,14 +1,16 @@
 #include "GeneratorUtilities.h"
 
+#include <map>
+
 namespace DnD
 {
 /**
      * \brief Helper function for generating a map from xp to cr.
      * \return Map from xp to cr.
      */
-    std::unordered_map<uint32_t, Cr> generateXpToCrMap()
+    std::map<uint32_t, Cr> generateXpToCrMap()
     {
-        static std::unordered_map<uint32_t, Cr> map;
+        static std::map<uint32_t, Cr> map;
         if (map.empty())
         {
             for (auto crIndex = 0; crIndex < MONSTER_XP_TABLE.size(); ++crIndex)
@@ -24,9 +26,9 @@ namespace DnD
      * \brief Helper function for generating a map from cr to xp.
      * \return Map from cr to xp.
      */
-    std::unordered_map<Cr, uint32_t> generateCrToXpMap()
+    std::map<Cr, uint32_t> generateCrToXpMap()
     {
-        static std::unordered_map<Cr, uint32_t> map;
+        static std::map<Cr, uint32_t> map;
         if (map.empty())
         {
             for (auto crIndex = 0; crIndex < MONSTER_XP_TABLE.size(); ++crIndex)
@@ -89,7 +91,7 @@ namespace DnD
         return Cr::Zero;
     }
 
-    std::string toString(const Difficulty& difficulty)
+    std::string toStringDifficulty(const Difficulty& difficulty)
     {
         switch (difficulty)
         {
@@ -127,7 +129,7 @@ namespace DnD
         return Difficulty::INVALID;
     }
 
-    std::string toString(const Cr& cr)
+    std::string toStringCr(const Cr& cr)
     {
         switch (cr)
         {
@@ -310,7 +312,7 @@ namespace DnD
         return Cr::INVALID;
     }
 
-    std::string toString(const CreatureSize& creatureSize)
+    std::string toStringCreatureSize(const CreatureSize& creatureSize)
     {
         switch (creatureSize)
         {
@@ -353,7 +355,7 @@ namespace DnD
         return CreatureSize::INVALID;
     }
 
-    std::string toString(const CreatureType& creatureType)
+    std::string toStringCreatureType(const CreatureType& creatureType)
     {
         switch (creatureType)
         {

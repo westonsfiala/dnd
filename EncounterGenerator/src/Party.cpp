@@ -4,8 +4,8 @@
 
 using namespace DnD;
 
-const float Party::UPPER_XP_MODIFIER = 1.25f;
-const float Party::LOWER_XP_MODIFIER = 0.75f;
+constexpr float Party::UPPER_XP_MODIFIER = 1.25f;
+constexpr float Party::LOWER_XP_MODIFIER = 0.75f;
 
 bool Party::addAdventurer(const uint32_t& level, const uint32_t& count)
 {

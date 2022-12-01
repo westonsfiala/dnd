@@ -1,8 +1,8 @@
 #pragma once
 #include <vector>
 #include <map>
-#include <unordered_map>
-#include <set>
+
+#include "Encounter.h"
 #include "Party.h"
 
 using namespace DnD;
@@ -18,17 +18,15 @@ public:
     EncounterGenerator(const Party& adventurers, const uint32_t& numUniqueMonsters, const uint32_t& numTotalMonsters);
     ~EncounterGenerator() = default;
 
-    std::vector<std::map<Cr, uint32_t>> getEncounters(const Difficulty& difficulty, uint32_t numBattles) const;
+    std::vector<Encounter> getEncounters(const Difficulty& difficulty, uint32_t numBattles) const;
 
-    std::set<std::map<Cr, uint32_t>> getAllEncounters(const Difficulty& difficulty) const;
-
-    static uint32_t getEncounterXp(const std::map<Cr, uint32_t>& monsterMap);
+    std::vector<Encounter> getAllEncounters(const Difficulty& difficulty) const;
 
 private:
     static const std::vector<float> MONSTER_ENCOUNTER_MODIFIERS;
 
     float getXpModifier(const uint32_t& numMonsters) const;
-    static std::map<Cr, uint32_t> getMonsterMap(const std::vector<uint32_t>& monsters);
+    static Encounter convertMonsterVectorToEncounter(const std::vector<uint32_t>& monsters);
 
     static std::vector<uint32_t> getValidMonsterXPs(const uint32_t& minXp, const uint32_t& maxXp);
 
@@ -45,5 +43,5 @@ private:
     uint32_t mNumTotalMonsters{};
     std::map<Difficulty, uint32_t> mMinimumMonsterXp{};
     std::map<Difficulty, uint32_t> mMaximumMonsterXp{};
-    std::unordered_map<Difficulty, std::set<std::map<Cr, uint32_t>>> mValidBattles{};
+    std::map<Difficulty, std::vector<Encounter>> mValidBattles{};
 };

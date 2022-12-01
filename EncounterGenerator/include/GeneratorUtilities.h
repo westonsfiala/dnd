@@ -1,6 +1,5 @@
 #pragma once
 #include <vector>
-#include <unordered_map>
 
 namespace DnD
 {
@@ -309,7 +308,7 @@ enum class CreatureType
      * \param difficulty Difficult to turn into a string.
      * \return String representation of the difficulty.
      */
-    std::string toString(const Difficulty &difficulty);
+    std::string toStringDifficulty(const Difficulty &difficulty);
 
     /**
      * \brief Finds the difficulty from the given string.
@@ -323,7 +322,7 @@ enum class CreatureType
      * \param cr CR to turn into a string.
      * \return String representation of the CR.
      */
-    std::string toString(const Cr &cr);
+    std::string toStringCr(const Cr &cr);
 
     /**
      * \brief Finds the CR from the given string.
@@ -337,7 +336,7 @@ enum class CreatureType
      * \param creatureSize Size to turn into a string.
      * \return String representation of the size.
      */
-    std::string toString(const CreatureSize &creatureSize);
+    std::string toStringCreatureSize(const CreatureSize &creatureSize);
 
     /**
      * \brief Finds the creature size from the given string.
@@ -351,7 +350,7 @@ enum class CreatureType
      * \param creatureType Type to turn into a string.
      * \return String representation of the size.
      */
-    std::string toString(const CreatureType &creatureType);
+    std::string toStringCreatureType(const CreatureType &creatureType);
 
     /**
      * \brief Finds the creature type from the given string.

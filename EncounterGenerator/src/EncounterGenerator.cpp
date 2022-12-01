@@ -30,7 +30,7 @@ EncounterGenerator::EncounterGenerator(const Party &adventurers, const uint32_t 
     fillOutEncounters();
 }
 
-std::vector<std::map<Cr, uint32_t>> EncounterGenerator::getEncounters(const Difficulty& difficulty, uint32_t numBattles) const
+std::vector<Encounter> EncounterGenerator::getEncounters(const Difficulty& difficulty, uint32_t numBattles) const
 {
     auto battles = getAllEncounters(difficulty);
 
@@ -40,7 +40,7 @@ std::vector<std::map<Cr, uint32_t>> EncounterGenerator::getEncounters(const Diff
     }
 
     // Vectorize the battles we will be choosing from.
-    std::vector<std::map<Cr, uint32_t>> vectorizedBattles;
+    std::vector<Encounter> vectorizedBattles;
 
     for (const auto battle : battles)
     {
@@ -57,7 +57,7 @@ std::vector<std::map<Cr, uint32_t>> EncounterGenerator::getEncounters(const Diff
     std::shuffle(selectionVector.begin(), selectionVector.end(), std::default_random_engine(seed));
 
     // Create the output battleVector.
-    std::vector<std::map<Cr, uint32_t>> outputBattles(numBattles);
+    std::vector<Encounter> outputBattles(numBattles);
 
     // if we have less numBattles than the total num battles, we will never have repeats.
     // If we loop over, just keep filling it so that we always get how many we ask for.
@@ -69,7 +69,7 @@ std::vector<std::map<Cr, uint32_t>> EncounterGenerator::getEncounters(const Diff
     return outputBattles;
 }
 
-std::set<std::map<Cr, uint32_t>> EncounterGenerator::getAllEncounters(const Difficulty& difficulty) const
+std::vector<Encounter> EncounterGenerator::getAllEncounters(const Difficulty& difficulty) const
 {
     if(mValidBattles.count(difficulty) != 0)
     {
@@ -77,16 +77,6 @@ std::set<std::map<Cr, uint32_t>> EncounterGenerator::getAllEncounters(const Diff
     }
 
     return {};
-}
-
-uint32_t EncounterGenerator::getEncounterXp(const std::map<Cr, uint32_t>& monsterMap)
-{
-    auto battleXp = 0;
-    for(const auto &monsterGroup : monsterMap)
-    {
-        battleXp += getMonsterXp(monsterGroup.first) * monsterGroup.second;
-    }
-    return battleXp;
 }
 
 float EncounterGenerator::getXpModifier(const uint32_t& numMonsters) const
@@ -115,20 +105,20 @@ float EncounterGenerator::getXpModifier(const uint32_t& numMonsters) const
     return xpMod;
 }
 
-std::map<Cr, uint32_t> EncounterGenerator::getMonsterMap(const std::vector<uint32_t>& monsters)
+Encounter EncounterGenerator::convertMonsterVectorToEncounter(const std::vector<uint32_t>& monsters)
 {
-    std::map<Cr, uint32_t> monsterMap;
+    Encounter encounter;
     // Fill out the list so we can get the desired xp.
     for (auto monsterXp : monsters)
     {
         auto monsterCr = getMonsterCr(monsterXp);
-        monsterMap[monsterCr]++;
+        encounter.addMonsters(monsterCr, 1);
     }
 
-    return monsterMap;
+    return encounter;
 }
 
-std::vector<uint32_t> EncounterGenerator::getValidMonsterXPs ( const uint32_t& minXp, const uint32_t& maxXp )
+std::vector<uint32_t> EncounterGenerator::getValidMonsterXPs(const uint32_t& minXp, const uint32_t& maxXp)
 {
     std::vector<uint32_t> validXps;
 
@@ -224,13 +214,13 @@ void EncounterGenerator::fillOutEncounters()
 
 void EncounterGenerator::fillOutHelper(std::vector<uint32_t>& currentMonsters, const Difficulty& difficulty, const std::vector<uint32_t>& validXps, const uint32_t& lowXp, const uint32_t& desiredXp, const uint32_t& highXp)
 {
-    // Get the monster map.
-    const auto monsterMap = getMonsterMap(currentMonsters);
-    const auto xp = getEncounterXp(monsterMap) * getXpModifier(static_cast<uint32_t>(currentMonsters.size()));
+    // Get the current encounter as it stands.
+    const auto encounter = convertMonsterVectorToEncounter(currentMonsters);
+    const auto xp = encounter.getEncounterXp() * getXpModifier(static_cast<uint32_t>(currentMonsters.size()));
 
     // Run some checks to see if we should quit out now.
     const auto tooManyTotalMonsters = currentMonsters.size() > mNumTotalMonsters;
-    const auto tooManyUniqueMonsters = monsterMap.size() > mNumUniqueMonsters;
+    const auto tooManyUniqueMonsters = encounter.getNumUniqueMonsters() > mNumUniqueMonsters;
     const auto tooMuchXp = xp > highXp;
     if (tooManyTotalMonsters || tooManyUniqueMonsters || tooMuchXp)
     {
@@ -249,25 +239,17 @@ void EncounterGenerator::fillOutHelper(std::vector<uint32_t>& currentMonsters, c
     if(inXpRange)
     {
         auto uniqueNumberOfMonsters = true;
-        auto testNumMons = 0;
-        for (const auto& crNumPair : monsterMap)
-        {
-            testNumMons += crNumPair.second;
-        }
+        const auto testNumMons = encounter.getNumTotalMonsters();
 
-        for(const auto& monsterMaps : mValidBattles[difficulty])
+        for(const auto& diffEncounter : mValidBattles[difficulty])
         {
-            auto numSetMons = 0;
-            for(const auto& crNumPair : monsterMaps)
-            {
-                numSetMons += crNumPair.second;
-            }
+            const auto numSetMons = diffEncounter.getNumTotalMonsters();
             uniqueNumberOfMonsters = uniqueNumberOfMonsters && (testNumMons != numSetMons);
         }
 
         if(uniqueNumberOfMonsters)
         {
-            mValidBattles[difficulty].insert(monsterMap);
+            mValidBattles[difficulty].push_back(encounter);
             return;
         }
     }
