@@ -26,7 +26,7 @@ private:
     static const std::vector<float> MONSTER_ENCOUNTER_MODIFIERS;
 
     float getXpModifier(const uint32_t& numMonsters) const;
-    static Encounter convertMonsterVectorToEncounter(const std::vector<uint32_t>& monsters);
+    static Encounter convertMonsterVectorToEncounter(const std::vector<uint32_t>& monsterXpVector);
 
     static std::vector<uint32_t> getValidMonsterXPs(const uint32_t& minXp, const uint32_t& maxXp);
 

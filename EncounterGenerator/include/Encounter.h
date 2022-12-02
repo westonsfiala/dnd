@@ -3,6 +3,8 @@
 
 #include <map>
 
+#include "Monster.h"
+
 using namespace DnD;
 
 class Encounter
@@ -26,10 +28,16 @@ public:
     void removeMonsters(Cr cr, uint32_t numMonsters);
 
     /**
-     * \brief Get the monsters that are in this encounter.
+     * \brief Get the monster Crs that are in this encounter and how many of them there are.
+     * \return Monster CR map of this encounter.
+     */
+    std::map<Cr, uint32_t> getMonsterCrMap() const;
+
+    /**
+     * \brief Get the Monsters that are present in this encounter and how many of them there are.
      * \return Monster map of this encounter.
      */
-    std::map<Cr, uint32_t> getMonsters() const;
+    std::map<Monster, uint32_t> getMonsterMap() const;
 
     /**
      * \brief Get the number of unique monsters in this encounter.
@@ -58,5 +66,7 @@ public:
     std::string toString() const;
 
 private:
-    std::map<Cr, uint32_t> mMonsterMap;
+    std::map<Cr, uint32_t> mMonsterCrMap;
+    std::map<Monster, uint32_t> mMonsterMap;
+
 };

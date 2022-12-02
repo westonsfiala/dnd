@@ -104,11 +104,11 @@ float EncounterGenerator::getXpModifier(const uint32_t& numMonsters) const
     return xpMod;
 }
 
-Encounter EncounterGenerator::convertMonsterVectorToEncounter(const std::vector<uint32_t>& monsters)
+Encounter EncounterGenerator::convertMonsterVectorToEncounter(const std::vector<uint32_t>& monsterXpVector)
 {
     Encounter encounter;
     // Fill out the list so we can get the desired xp.
-    for (auto monsterXp : monsters)
+    for (auto monsterXp : monsterXpVector)
     {
         auto monsterCr = GeneratorUtilities::getMonsterCr(monsterXp);
         encounter.addMonsters(monsterCr, 1);
