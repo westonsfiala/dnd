@@ -1,4 +1,5 @@
 #pragma once
+#include <map>
 #include <vector>
 
 namespace DnD
@@ -281,81 +282,89 @@ enum class CreatureType
     INVALID
 };
 
+class GeneratorUtilities
+{
+public:
     /**
      * \brief Gets the xp that an adventurer of the given level wants at the given difficulty.
      * \param level Level of the adventurer.
      * \param difficulty Difficulty of the battle.
      * \return XP that the adventurer wants to earn.
      */
-    uint32_t getAdventurerXp(const uint32_t& level, const Difficulty& difficulty);
+    static uint32_t getAdventurerXp(const uint32_t& level, const Difficulty& difficulty);
 
     /**
      * \brief Gets the xp that a monster of the given CR will reward.
      * \param challenge CR of the monster.
      * \return XP to award for the given CR.
      */
-    uint32_t getMonsterXp(const Cr &challenge);
+    static uint32_t getMonsterXp(const Cr &challenge);
 
     /**
      * \brief Gets the CR of a monster from how much xp it awards.
      * \param xp XP of the monster.
      * \return CR of the monster with the given XP reward. If no exact match is found, finds the nearest, by flooring.
      */
-    Cr getMonsterCr(const uint32_t &xp);
+    static Cr getMonsterCr(const uint32_t &xp);
 
     /**
      * \brief Turns the given difficulty into its string representation.
      * \param difficulty Difficult to turn into a string.
      * \return String representation of the difficulty.
      */
-    std::string toStringDifficulty(const Difficulty &difficulty);
+    static std::string toStringDifficulty(const Difficulty &difficulty);
 
     /**
      * \brief Finds the difficulty from the given string.
      * \param difficultyString String representation of a difficulty.
      * \return Difficulty found from the given string. If no match is found, returns INVALID.
      */
-    Difficulty fromStringDifficulty(const std::string &difficultyString);
+    static Difficulty fromStringDifficulty(const std::string &difficultyString);
 
     /**
      * \brief Turns the given CR into its string representation.
      * \param cr CR to turn into a string.
      * \return String representation of the CR.
      */
-    std::string toStringCr(const Cr &cr);
+    static std::string toStringCr(const Cr &cr);
 
     /**
      * \brief Finds the CR from the given string.
-     * \param crString String representation of a CR.
+     * \param crDouble Double representation of a CR. Rounds down to nearest cr.
      * \return Cr found from the given string. If no match is found, returns INVALID.
      */
-    Cr fromStringCr(const std::string &crString);
+    static Cr fromDoubleCr(const double &crDouble);
 
     /**
      * \brief Turns the given Size into its string representation.
      * \param creatureSize Size to turn into a string.
      * \return String representation of the size.
      */
-    std::string toStringCreatureSize(const CreatureSize &creatureSize);
+    static std::string toStringCreatureSize(const CreatureSize &creatureSize);
 
     /**
      * \brief Finds the creature size from the given string.
      * \param creatureSizeString String representation of a creature size.
      * \return Creature size found from the given string. If no match is found, returns INVALID.
      */
-    CreatureSize fromStringCreatureSize(const std::string &creatureSizeString);
+    static CreatureSize fromStringCreatureSize(const std::string &creatureSizeString);
 
     /**
      * \brief Turns the given type into its string representation.
      * \param creatureType Type to turn into a string.
      * \return String representation of the size.
      */
-    std::string toStringCreatureType(const CreatureType &creatureType);
+    static std::string toStringCreatureType(const CreatureType &creatureType);
 
     /**
      * \brief Finds the creature type from the given string.
      * \param creatureTypeString String representation of a creature type.
      * \return Creature type found from the given string. If no match is found, returns INVALID.
      */
-    CreatureType fromStringCreatureType(const std::string &creatureTypeString);
+    static CreatureType fromStringCreatureType(const std::string &creatureTypeString);
+
+private:
+    static std::map<uint32_t, Cr> GeneratorUtilities::generateXpToCrMap();
+    static std::map<Cr, uint32_t> GeneratorUtilities::generateCrToXpMap();
 };
+}

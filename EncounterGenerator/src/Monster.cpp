@@ -10,6 +10,46 @@ Monster::Monster() :
 {
 }
 
+bool Monster::operator==(const Monster& other) const
+{
+
+    if(mName != other.mName)
+    {
+        return false;
+    }
+    if (mCr != other.mCr)
+    {
+        return false;
+    }
+    if (mCreatureSize != other.mCreatureSize)
+    {
+        return false;
+    }
+    if (mCreatureType != other.mCreatureType)
+    {
+        return false;
+    }
+    if (mBook != other.mBook)
+    {
+        return false;
+    }
+    if (mPage != other.mPage)
+    {
+        return false;
+    }
+    return true;
+}
+
+bool Monster::operator<(const Monster& other) const
+{
+    if(mCr != other.mCr)
+    {
+        return mCr < other.mCr;
+    }
+
+    return mName < other.mName;
+}
+
 bool Monster::isValid() const
 {
     if (mName.empty())

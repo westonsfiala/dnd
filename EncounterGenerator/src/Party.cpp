@@ -109,7 +109,7 @@ uint32_t Party::getBattleXp(const Difficulty& difficulty) const
     for (const auto& adventurers : mAdventurerMap)
     {
         // For every level that we have adventurers, get their desired xp and multiply it by the number of adventurers. 
-        desiredXp += getAdventurerXp(adventurers.first, difficulty) * adventurers.second;
+        desiredXp += GeneratorUtilities::getAdventurerXp(adventurers.first, difficulty) * adventurers.second;
     }
 
     return desiredXp;

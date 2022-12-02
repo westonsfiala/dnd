@@ -12,6 +12,9 @@ public:
     Monster(const Monster& other) = default;
     ~Monster() = default;
 
+    bool operator==(const Monster& other) const;
+    bool operator<(const Monster& other) const;
+
     bool isValid() const;
 
     std::string getName() const;
@@ -33,7 +36,6 @@ public:
 
     uint32_t getPage() const;
     void setPage(uint32_t page);
-
 
 private:
     std::string mName;

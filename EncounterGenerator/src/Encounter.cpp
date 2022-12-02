@@ -53,7 +53,7 @@ uint32_t Encounter::getEncounterXp() const
     auto battleXp = 0;
     for (const auto &monsterGroup : mMonsterMap)
     {
-        battleXp += getMonsterXp(monsterGroup.first) * monsterGroup.second;
+        battleXp += GeneratorUtilities::getMonsterXp(monsterGroup.first) * monsterGroup.second;
     }
     return battleXp;
 }
@@ -63,7 +63,7 @@ std::string Encounter::toString() const
     std::string encounterString = "";
     for (auto monsterPair : mMonsterMap)
     {
-        encounterString += std::to_string(monsterPair.second) + " CR " + toStringCr(monsterPair.first) + " : ";
+        encounterString += std::to_string(monsterPair.second) + " CR " + GeneratorUtilities::toStringCr(monsterPair.first) + " : ";
     }
     // Get rid of the fence post stuff.
     encounterString.pop_back();

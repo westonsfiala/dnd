@@ -3,8 +3,7 @@
 #include <random>
 #include <cassert>
 #include <chrono>
-
-#include <nlohmann/json.hpp>
+#include <numeric>
 
 using namespace DnD;
 
@@ -111,7 +110,7 @@ Encounter EncounterGenerator::convertMonsterVectorToEncounter(const std::vector<
     // Fill out the list so we can get the desired xp.
     for (auto monsterXp : monsters)
     {
-        auto monsterCr = getMonsterCr(monsterXp);
+        auto monsterCr = GeneratorUtilities::getMonsterCr(monsterXp);
         encounter.addMonsters(monsterCr, 1);
     }
 
