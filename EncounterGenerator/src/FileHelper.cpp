@@ -1,4 +1,4 @@
-#include "JsonMonsterParser.h"
+#include "FileHelper.h"
 
 #include <fstream>
 #include <nlohmann/json.hpp>
@@ -8,7 +8,7 @@
 using namespace DnD;
 using namespace nlohmann;
 
-MonsterList JsonMonsterParser::parseJson(const std::string& jsonFilePath)
+MonsterList FileHelper::parseJson(const std::string& jsonFilePath)
 {
     auto monsterList = MonsterList();
 
@@ -17,8 +17,8 @@ MonsterList JsonMonsterParser::parseJson(const std::string& jsonFilePath)
 
     for(const auto& monsterObject : parsedJson)
     {
-        auto parsedCr = monsterObject["#"].get<double>();
-        auto parsedName = monsterObject["Monster Name"].get<std::string>();
+        auto parsedCr = monsterObject["CR"].get<double>();
+        auto parsedName = monsterObject["Name"].get<std::string>();
         auto parsedSize = monsterObject["Size"].get<std::string>();
         auto parsedType = monsterObject["Type"].get<std::string>();
         auto parsedBook = monsterObject["Book"].get<std::string>();

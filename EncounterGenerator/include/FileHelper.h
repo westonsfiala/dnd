@@ -3,7 +3,7 @@
 
 using namespace DnD;
 
-class JsonMonsterParser
+class FileHelper
 {
 public:
     static MonsterList parseJson(const std::string& jsonPath);
