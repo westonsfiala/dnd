@@ -33,11 +33,6 @@ std::map<Cr, uint32_t> Encounter::getMonsterCrMap() const
     return mMonsterCrMap;
 }
 
-std::map<Monster, uint32_t> Encounter::getMonsterMap() const
-{
-    return mMonsterMap;
-}
-
 uint32_t Encounter::getNumUniqueMonsters() const
 {
     return static_cast<uint32_t>(mMonsterCrMap.size());

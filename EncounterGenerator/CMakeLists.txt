@@ -5,8 +5,9 @@ project(EncounterGenerator)
 set(src_CPP
     src/Encounter.cpp
     src/EncounterGenerator.cpp
+	src/FileHelper.cpp
+    src/FilledEncounter.cpp
 	src/GeneratorUtilities.cpp
-	src/JsonMonsterParser.cpp
 	src/Monster.cpp
 	src/MonsterList.cpp
 	src/Party.cpp
@@ -15,8 +16,9 @@ set(src_CPP
 set(src_H
 	include/Encounter.h
 	include/EncounterGenerator.h
+	include/FileHelper.h
+	include/FilledEncounter.h
 	include/GeneratorUtilities.h
-	include/JsonMonsterParser.h
 	include/Monster.h
 	include/MonsterList.h
 	include/Party.h

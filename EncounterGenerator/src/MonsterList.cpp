@@ -20,6 +20,33 @@ void MonsterList::removeMonster(const Monster& monster)
     std::remove_if(mMonsters.begin(), mMonsters.end(), [monster](const Monster& checkMonster) { return monster == checkMonster; });
 }
 
+FilledEncounter MonsterList::fillEncounter(const Encounter& encounter) const
+{
+    FilledEncounter newEncounter;
+
+    for(const auto& monsterPair : encounter.getMonsterCrMap())
+    {
+        auto filteredList = filteredListByCr(monsterPair.first);
+        auto randomMonster = filteredList.getRandomMonster();
+        newEncounter.addMonsters(randomMonster, monsterPair.second);
+    }
+
+    return newEncounter;
+}
+
+std::vector<FilledEncounter> MonsterList::fillEncounters(const std::vector<Encounter>& encounters) const
+{
+    std::vector<FilledEncounter> filledEncounters;
+
+    for(const auto& encounter : encounters)
+    {
+        auto filledEncounter = fillEncounter(encounter);
+        filledEncounters.push_back(filledEncounter);
+    }
+
+    return filledEncounters;
+}
+
 MonsterList MonsterList::filteredListByCr(const Cr& cr) const
 {
     MonsterList filteredList;

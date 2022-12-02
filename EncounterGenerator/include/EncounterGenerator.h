@@ -12,8 +12,9 @@ class EncounterGenerator
 public:
     /**
      * \brief Constructs an encounter where you have a group of adventurers and how many unique monsters you will see.
-     * \param adventurers A party of adventurers
-     * \param numUniqueMonsters How many unique monsters to field
+     * \param adventurers A party of adventurers.
+     * \param numUniqueMonsters How many unique monsters to field.
+     * \param numTotalMonsters Maximum number of monsters to field.
      */
     EncounterGenerator(const Party& adventurers, const uint32_t& numUniqueMonsters, const uint32_t& numTotalMonsters);
     ~EncounterGenerator() = default;

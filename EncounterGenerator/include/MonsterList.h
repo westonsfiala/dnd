@@ -1,5 +1,6 @@
 #pragma once
 #include "Encounter.h"
+#include "FilledEncounter.h"
 #include "Monster.h"
 
 using namespace DnD;
@@ -12,6 +13,9 @@ public:
 
     void addMonster(const Monster& monster);
     void removeMonster(const Monster& monster);
+
+    FilledEncounter fillEncounter(const Encounter& encounter) const;
+    std::vector<FilledEncounter> fillEncounters(const std::vector<Encounter>& encounters) const;
 
 private:
 
