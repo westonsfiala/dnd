@@ -1,6 +1,7 @@
 #include "FileHelper.h"
 
 #include <fstream>
+#include <string>
 #include <nlohmann/json.hpp>
 
 #include "Monster.h"
@@ -24,17 +25,23 @@ MonsterList FileHelper::parseJson(const std::string& jsonFilePath)
         auto parsedBook = monsterObject["Book"].get<std::string>();
         auto parsedPage = monsterObject["Page"].get<uint32_t>();
 
-        Monster newMonster;
-
-        newMonster.setName(parsedName);
-        newMonster.setCr(GeneratorUtilities::fromDoubleCr(parsedCr));
-        newMonster.setCreatureSize(GeneratorUtilities::fromStringCreatureSize(parsedSize));
-        newMonster.setCreatureType(GeneratorUtilities::fromStringCreatureType(parsedType));
-        newMonster.setBook(parsedBook);
-        newMonster.setPage(parsedPage);
+        Monster newMonster(
+            parsedName, 
+            GeneratorUtilities::fromDoubleCr(parsedCr), 
+            GeneratorUtilities::fromStringCreatureSize(parsedSize), 
+            GeneratorUtilities::fromStringCreatureType(parsedType), 
+            parsedBook, 
+            parsedPage);
 
         monsterList.addMonster(newMonster);
     }
 
     return monsterList;
+}
+
+void FileHelper::writeToFile(const std::string& filePath, const std::string& fileContent)
+{
+    std::ofstream out(filePath);
+    out << fileContent;
+    out.close();
 }

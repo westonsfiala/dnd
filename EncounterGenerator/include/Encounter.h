@@ -5,6 +5,9 @@
 
 using namespace DnD;
 
+/**
+ * \brief An Encounter is a mapping of Cr and the number of monsters of that cr.
+ */
 class Encounter
 {
 public:

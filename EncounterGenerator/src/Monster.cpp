@@ -1,12 +1,12 @@
 #include "Monster.h"
 
-Monster::Monster() :
-    mName{ "" },
-    mCr{ Cr::INVALID },
-    mCreatureSize{ CreatureSize::INVALID },
-    mCreatureType{ CreatureType::INVALID },
-    mBook{ "" },
-    mPage{0}
+Monster::Monster(const std::string& name, const Cr& cr, const CreatureSize& creatureSize, const CreatureType& creatureType, const std::string& book, const uint32_t& page) :
+    mName{ name },
+    mCr{ cr },
+    mCreatureSize{ creatureSize },
+    mCreatureType{ creatureType },
+    mBook{ book },
+    mPage{ page }
 {
 }
 
@@ -80,19 +80,9 @@ std::string Monster::getName() const
     return mName;
 }
 
-void Monster::setName(const std::string& name)
-{
-    mName = name;
-}
-
 Cr Monster::getCr() const
 {
     return mCr;
-}
-
-void Monster::setCr(const Cr cr)
-{
-    mCr = cr;
 }
 
 CreatureSize Monster::getCreatureSize() const
@@ -100,19 +90,9 @@ CreatureSize Monster::getCreatureSize() const
     return mCreatureSize;
 }
 
-void Monster::setCreatureSize(const CreatureSize creatureSize)
-{
-    mCreatureSize = creatureSize;
-}
-
 CreatureType Monster::getCreatureType() const
 {
     return mCreatureType;
-}
-
-void Monster::setCreatureType(const CreatureType creatureType)
-{
-    mCreatureType = creatureType;
 }
 
 std::string Monster::getBookLocation() const
@@ -125,17 +105,7 @@ std::string Monster::getBook() const
     return mBook;
 }
 
-void Monster::setBook(const std::string& book)
-{
-    mBook = book;
-}
-
 uint32_t Monster::getPage() const
 {
     return mPage;
-}
-
-void Monster::setPage(const uint32_t page)
-{
-    mPage = page;
 }

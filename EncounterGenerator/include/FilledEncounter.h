@@ -7,6 +7,9 @@
 
 using namespace DnD;
 
+/**
+ * \brief A filled encounter is a grouping of monsters describing one encounter for a party of adventurers.
+ */
 class FilledEncounter
 {
 public:
@@ -58,6 +61,14 @@ public:
      * \return String form of an encounter.
      */
     std::string toString() const;
+
+    /**
+     * \brief Converts the current encounter into a string in csv format.
+     *
+     * Has the form "{MonsterCount},{Name},{BookPage}...".
+     * \return String form of an encounter in csv format
+     */
+    std::string toCsvString() const;
 
 private:
     std::map<Monster, uint32_t> mMonsterMap;

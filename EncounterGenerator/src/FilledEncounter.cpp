@@ -73,3 +73,16 @@ std::string FilledEncounter::toString() const
     return FilledEncounterString;
 }
 
+std::string FilledEncounter::toCsvString() const
+{
+    std::string FilledEncounterString = "";
+    for (auto monsterPair : mMonsterMap)
+    {
+        FilledEncounterString += std::to_string(monsterPair.second) + "," + monsterPair.first.getName() + "," + GeneratorUtilities::toStringCreatureType(monsterPair.first.getCreatureType()) + "," + monsterPair.first.getBookLocation() + ",";
+    }
+    // Get rid of the fence post stuff.
+    FilledEncounterString.pop_back();
+
+    return FilledEncounterString;
+}
+

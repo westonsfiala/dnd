@@ -7,6 +7,9 @@
 
 using namespace DnD;
 
+/**
+ * \brief The EncounterGenerator takes a party of adventurers and generates lists of valid encounters of all the difficulty types.
+ */
 class EncounterGenerator
 {
 public:
@@ -19,8 +22,19 @@ public:
     EncounterGenerator(const Party& adventurers, const uint32_t& numUniqueMonsters, const uint32_t& numTotalMonsters);
     ~EncounterGenerator() = default;
 
+    /**
+     * \brief Get a number of encounters from the valid encounters. If asking for more than available, loops over the available.
+     * \param difficulty Difficulty of the encounters to grab.
+     * \param numBattles Number of encounters to grab.
+     * \return Number of encounters of the given difficulty.
+     */
     std::vector<Encounter> getEncounters(const Difficulty& difficulty, uint32_t numBattles) const;
 
+    /**
+     * \brief Get all of the valid encounters of the given difficulty.
+     * \param difficulty Difficulty of encounters to be grabbed.
+     * \return Encounters of the given difficulty.
+     */
     std::vector<Encounter> getAllEncounters(const Difficulty& difficulty) const;
 
 private:

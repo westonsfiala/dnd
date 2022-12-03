@@ -1,0 +1,2000 @@
+1,Medium,10,Crab,Beast,MM 320
+2,Medium,2,Nalusa Falaya,Aberration,CC 274
+3,Medium,4,Giant Bombardier Beetle,Beast,ToB2 39
+4,Medium,6,Expeditious Messenger,Construct,Ebb 293
+5,Medium,10,Badger,Beast,MM 318
+6,Medium,2,Corpse Thief,Humanoid,CC 66
+7,Medium,4,Violet Fungus,Plant,MM 138
+8,Medium,6,Xvart,Humanoid,VGM 200
+9,Medium,10,Raven,Beast,MM 335
+10,Medium,2,Derro Guard,Humanoid,ToB2 97
+11,Medium,4,Giant Frog,Beast,MM 325
+12,Medium,6,Young Kruthik,Monstrosity,MTF 211
+13,Medium,10,Goat,Beast,MM 330
+14,Medium,2,Moon Weaver,Beast,ToB3 274
+15,Medium,4,Needle Blight,Plant,MM 32
+16,Medium,6,Shroud,Undead,ToB 348
+17,Medium,10,Baboon,Beast,MM 318
+18,Medium,2,Attercroppe,Fey,ToB2 32
+19,Medium,4,Zombie,Undead,MM 316
+20,Medium,6,Stirge,Beast,MM 284
+21,Medium,10,Shrieker,Plant,MM 138
+22,Medium,2,Nupperibo,Fiend,MTF 168
+23,Medium,4,Giant Armadillo,Beast,ToB2 392
+24,Medium,6,Guard,Humanoid,MM 347
+25,Medium,10,Quipper,Beast,MM 335
+26,Medium,2,Alkonost,Monstrosity,CC 12
+27,Medium,4,Necrotic Tick,Beast,CC 275
+28,Medium,6,Kobold,Humanoid,MM 195
+29,Medium,10,Spider,Beast,MM 337
+30,Medium,2,Air Jiinborn Pirate,Humanoid,ToB3 246
+31,Hard,5,Violet Fungus,Plant,MM 138
+32,Hard,2,Broodiken,Construct,ToB 45
+33,Hard,1,Chimeric Phantom,Undead,ToB2 63
+34,Hard,3,Clockwork Watchman,Construct,ToB 65
+35,Hard,5,Giant Armadillo,Beast,ToB2 392
+36,Hard,2,Balloon Spider,Beast,ToB2 387
+37,Hard,1,Giant Pufferfish,Beast,ToB3 200
+38,Hard,3,Torch Mimic,Monstrosity,ToB3 370
+39,Hard,5,Ramag,Humanoid,ToB 317
+40,Hard,2,Iron Defender,Construct,Ebb 293
+41,Hard,1,Burnished Hart,Construct,MOoT 211
+42,Hard,3,Darkling,Fey,VGM 134
+43,Hard,5,Swarm of Rats,Beast,MM 339
+44,Hard,2,Slavedriver,Humanoid,Skaven 4
+45,Hard,1,Hybrid Brute,Humanoid,GGR 217
+46,Hard,3,Dire Rat,Beast,Skaven 15
+47,Hard,5,Tuberkith,Plant,ToB3 379
+48,Hard,2,Quasit,Fiend,MM 63
+49,Hard,1,Quetzalcoatlus,Beast,VGM 140
+50,Hard,3,Gray Ooze,Ooze,MM 243
+51,Hard,5,Golem' Lesser' Hair,Construct,CC 200
+52,Hard,2,Bilwis,Elemental,CC 53
+53,Hard,1,Drake' Paper,Dragon,ToB 154
+54,Hard,3,Shifter,Humanoid,Ebb 319
+55,Hard,5,Azza Gremlin,Fey,ToB 28
+56,Hard,2,Drake' Pact,Dragon,CC 130
+57,Hard,1,Berserker,Humanoid,MM 344
+58,Hard,3,Skulk,Humanoid,MTF 227
+59,Hard,5,Skeleton,Undead,MM 272
+60,Hard,2,Nehekhara Warrior,Undead,TombKings 0
+61,Deadly,8,Edjet Initiate,Humanoid,ToB2 131
+62,Deadly,6,Vegepygmy,Plant,VGM 196
+63,Deadly,4,Darkmantle,Monstrosity,MM 46
+64,Deadly,2,Yuan-ti Pureblood,Humanoid,MM 310
+65,Deadly,8,Gorao-Ka,Fey,ToB2 221
+66,Deadly,6,Pseudodragon,Dragon,MM 254
+67,Deadly,4,Podling,Plant,VRgtR 227
+68,Deadly,2,Ooze' Alchemical App,Ooze,CC 281
+69,Deadly,8,Mule,Beast,MM 333
+70,Deadly,6,Snake' Swamp Adder,Beast,ToB 354
+71,Deadly,4,Cueyatl,Humanoid,CC 68
+72,Deadly,2,Clockwork Pugalist,Construct,ToB3 88
+73,Deadly,8,Edjet Initiate,Humanoid,ToB2 131
+74,Deadly,6,Sprite,Fey,MM 283
+75,Deadly,4,Crimson Shambler,Plant,ToB2 73
+76,Deadly,2,Clockwork Leech,Construct,ToB2 66
+77,Deadly,8,Expeditious Messenger,Construct,Ebb 293
+78,Deadly,6,Male Steeder,Monstrosity,MTF 238
+79,Deadly,4,Tosculi Drone,Monstrosity,ToB 386
+80,Deadly,2,Yuan-ti Pureblood,Humanoid,MM 310
+81,Deadly,8,Camel,Beast,MM 320
+82,Deadly,6,Orniraptor,Monstrosity,ToB2 285
+83,Deadly,4,Swarm of Insects,Beast,MM 338
+84,Deadly,2,Dhampir,Humanoid,CC 106
+85,Deadly,8,Camel,Beast,MM 320
+86,Deadly,6,Giant Moth' Sootwing,Beast,CC 179
+87,Deadly,4,Sunflower Sprite,Fey,ToB3 358
+88,Deadly,2,Horncaller,Humanoid,GGR 253
+89,Deadly,8,Fennec Fox,Beast,ToB2 390
+90,Deadly,6,Swarm of Bats,Beast,MM 337
+91,Insanity,4,Living Burning Hands,Construct,Ebb 298
+92,Insanity,8,Barnyard Dragonette,Dragon,ToB3 148
+93,Insanity,20,Cat,Beast,MM 320
+94,Insanity,2,Spined Devil,Fiend,MM 78
+95,Insanity,1,Asp Vine,Plant,ToB3 45
+96,Insanity,6,Devil' Fire Imp,Fiend,CC 103
+97,Insanity,4,Scorchrunner Jackal,Monstrosity,ToB3 340
+98,Insanity,8,Ghoul Bat,Undead,ToB2 391
+99,Insanity,20,Deer,Beast,MM 321
+100,Insanity,2,Spider Thief,Construct,ToB 366
+101,Medium,4,Empty Cloak,Construct,ToB 176
+102,Medium,2,Herd Skulker,Monstrosity,ToB3 231
+103,Medium,8,Stirge,Beast,MM 284
+104,Medium,6,Velociraptor,Beast,VGM 140
+105,Medium,4,Warhorse Skeleton,Undead,MM 273
+106,Medium,2,Cueyatl Sea Priest,Humanoid,CC 69
+107,Medium,8,Giant Moth,Beast,CC 178
+108,Medium,6,Riding Horse,Beast,MM 336
+109,Medium,4,Empty Cloak,Construct,ToB 176
+110,Medium,2,Sunset Raptor,Monstrosity,CC 351
+111,Medium,8,Gremishka,Monstrosity,VRgtR 235
+112,Medium,6,Returned Drifter,Undead,MOoT 240
+113,Medium,4,Storm Spirit,Elemental,CC 350
+114,Medium,2,Giant Moth' Shockwing,Beast,CC 179
+115,Medium,8,Flying Snake,Beast,MM 322
+116,Medium,6,Dimetrodon,Beast,VGM 139
+117,Medium,4,Bone Crab,Beast,ToB 40
+118,Medium,2,Bugbear,Humanoid,MM 33
+119,Medium,8,Slaad Tadpole,Aberration,MM 276
+120,Medium,6,Giant Owl,Beast,MM 327
+121,Medium,4,Pike Guard,Humanoid,ToB3 166
+122,Medium,2,Plague Priest,Humanoid,Skaven 7
+123,Medium,8,Gorao-Ka,Fey,ToB2 221
+124,Medium,6,Suturefly,Beast,ToB 372
+125,Medium,4,Goblin' Chaos-Spawn,Humanoid,CC 190
+126,Medium,2,Khamaseen,Elemental,ToB3 250
+127,Medium,8,Pixie's Umbrella,Plant,ToB2 158
+128,Medium,6,Goreling,Undead,CC 207
+129,Medium,4,Lizardfolk,Humanoid,MM 204
+130,Medium,2,Ooze' Suppurating,Ooze,CC 288
+131,Hard,5,Dust Mephit,Elemental,MM 215
+132,Hard,12,Tribal Warrior,Humanoid,MM 350
+133,Hard,2,Myling,Undead,ToB 301
+134,Hard,3,Spurred Water Skate,Beast,ToB2 399
+135,Hard,5,Cackling Skeleton,Undead,ToB2 330
+136,Hard,12,Stryx,Monstrosity,ToB 369
+137,Hard,2,Swampgas Shade,Undead,ToB3 359
+138,Hard,3,Rime Worm Grub,Elemental,ToB 327
+139,Hard,5,Shard Swarm,Construct,CC 329
+140,Hard,12,Camel,Beast,MM 320
+141,Hard,2,Eshin Saboteur,Humanoid,Skaven 10
+142,Hard,3,Fire Snake,Elemental,MM 265
+143,Hard,5,Kraul Warrior,Humanoid,GGR 213
+144,Hard,12,Gremishka,Monstrosity,VRgtR 235
+145,Hard,2,Ogre Howdah,Giant,MTF 221
+146,Hard,3,Brass Dragon Wyrmling,Dragon,MM 106
+147,Hard,5,Bone Collector,Undead,ToB3 64
+148,Hard,12,Flumph,Aberration,MM 135
+149,Hard,2,Duergar Xarrorn,Humanoid,MTF 193
+150,Hard,3,Quickling,Fey,VGM 187
+151,Hard,5,Dire Rat,Beast,Skaven 15
+152,Hard,12,Blood-Toll Harpy,Monstrosity,MOoT 227
+153,Hard,2,Griffon,Monstrosity,MM 174
+154,Hard,3,Harpy,Monstrosity,MM 181
+155,Hard,5,Gnoll,Humanoid,MM 163
+156,Hard,12,Expeditious Messenger,Construct,Ebb 293
+157,Hard,2,Adult Faerie Dragon,Dragon,MM 133
+158,Hard,3,Ghillie Dubh,Celestial,ToB2 165
+159,Hard,5,Lizardfolk,Humanoid,MM 204
+160,Hard,12,Manes,Fiend,MM 60
+161,Deadly,2,Saber-toothed Tiger,Beast,MM 336
+162,Deadly,4,Minor Malleable,Aberration,ToB2 252
+163,Deadly,8,Oblex Spawn,Ooze,MTF 217
+164,Deadly,1,Brachyura Shambler,Monstrosity,ToB2 49
+165,Deadly,20,Hawk,Beast,MM 330
+166,Deadly,6,Clockwork Beetle,Construct,ToB 60
+167,Deadly,2,Bronze Dragon Wyrmling,Dragon,MM 109
+168,Deadly,4,Thought Spy,Humanoid,GGR 233
+169,Deadly,8,Animated Instrument,Construct,ToB3 35
+170,Deadly,1,Infernal Centaur,Fiend,ToB2 214
+171,Deadly,20,Awakened Shrub,Plant,MM 317
+172,Deadly,6,Dust Mephit,Elemental,MM 215
+173,Deadly,2,Peryton,Monstrosity,MM 251
+174,Deadly,4,Warforged Soldier,Humanoid,Ebb 320
+175,Deadly,8,Panther,Beast,MM 333
+176,Deadly,1,Elves' Shadow Fey' Guardian,Humanoid,ToB 174
+177,Deadly,20,Octopus,Beast,MM 333
+178,Deadly,6,Firenewt Warrior,Humanoid,VGM 142
+179,Deadly,2,Beli,Fey,ToB 35
+180,Deadly,4,Catterball,Fey,ToB3 76
+181,Deadly,8,Snow Cat,Beast,CC 346
+182,Deadly,1,Elemental' Venom,Elemental,CC 140
+183,Deadly,20,Vulture,Beast,MM 339
+184,Deadly,6,Devil' Fire Imp,Fiend,CC 103
+185,Deadly,2,Scarsupial,Beast,ToB3 339
+186,Deadly,4,Swarm of Quippers,Beast,MM 338
+187,Deadly,8,Cow,Beast,VGM 207
+188,Deadly,1,Devil' Wind’s Harp,Fiend,CC 105
+189,Deadly,20,Zoog,Aberration,CC 396
+190,Deadly,6,Eshin Arbalester,Humanoid,Skaven 13
+191,Insanity,8,Storm Spirit,Elemental,CC 350
+192,Insanity,2,Dybbuk,Fiend,MTF 132
+193,Insanity,16,Monodrone,Construct,MM 224
+194,Insanity,6,Young Faerie Dragon,Dragon,MM 133
+195,Insanity,1,Draconian Mastermind,Monstrosity,FToD 180
+196,Insanity,3,Anubian,Elemental,ToB 24
+197,Insanity,8,Swarm of Rot Grubs,Beast,VGM 208
+198,Insanity,2,Darakhul Shadowmancer,Undead,CC 173
+199,Insanity,16,Giant Weasel,Beast,MM 329
+200,Insanity,6,Boneless,Undead,VRgtR 228
+201,Medium,3,Swarm of Bees,Beast,ToB2 400
+202,Medium,5,Burrowling,Humanoid,ToB 49
+203,Medium,12,Skavenslave,Humanoid,Skaven 5
+204,Medium,2,Peri,Elemental,ToB3 314
+205,Medium,3,Choker,Aberration,MTF 123
+206,Medium,5,Moon Weaver,Beast,ToB3 274
+207,Medium,12,Giant Rat,Beast,MM 327
+208,Medium,2,Cave Bear,Beast,MM 334
+209,Medium,3,Scorchrunner Jackal,Monstrosity,ToB3 340
+210,Medium,5,Myconid Adult,Plant,MM 232
+211,Medium,12,Climbing Vine,Plant,ToB3 85
+212,Medium,2,Specter (poltergeist),Undead,MM 279
+213,Medium,3,Khamaseen,Elemental,ToB3 250
+214,Medium,5,Worg,Monstrosity,MM 341
+215,Medium,12,Bookkeeper,Construct,CC 55
+216,Medium,2,Umbral Shambler,Aberration,ToB3 380
+217,Medium,3,Carnivorous Sod,Plant,ToB2 57
+218,Medium,5,Shovel Dragonette,Dragon,ToB3 150
+219,Medium,12,Mule,Beast,MM 333
+220,Medium,2,Dubius,Fiend,ToB3 162
+221,Medium,3,Carbuncle,Monstrosity,CC 57
+222,Medium,5,Chitine,Monstrosity,VGM 131
+223,Medium,12,Expeditious Messenger,Construct,Ebb 293
+224,Medium,2,Metee-Kolen-Ol,Humanoid,CC 404
+225,Medium,3,Plague Priest,Humanoid,Skaven 7
+226,Medium,5,Clockwork Beetle,Construct,ToB 60
+227,Medium,12,Climbing Vine,Plant,ToB3 85
+228,Medium,2,Egg Hunter Hatchling,Monstrosity,FToD 193
+229,Medium,3,Boneless,Undead,VRgtR 228
+230,Medium,5,Orc' Green Abyss,Humanoid,CC 291
+231,Hard,22,Zoog,Aberration,CC 396
+232,Hard,4,Chernomoi,Fey,ToB 55
+233,Hard,8,Musk Deer,Beast,ToB3 282
+234,Hard,2,Rakdos Lampooner,Humanoid,GGR 248
+235,Hard,6,Dolgrim,Aberration,Ebb 291
+236,Hard,22,Commoner,Humanoid,MM 344
+237,Hard,4,Nihilethic Zombie,Undead,ToB 9
+238,Hard,8,Elves' Shadow Fey' Elf,Humanoid,ToB 171
+239,Hard,2,Prismatic Dragon Wyrmling,Dragon,ToB3 143
+240,Hard,6,Aviere,Celestial,ToB2 36
+241,Hard,22,Cat,Beast,MM 320
+242,Hard,4,Spurred Water Skate,Beast,ToB2 399
+243,Hard,8,Giant Honey Bee,Beast,ToB2 392
+244,Hard,2,Vegepygmy Chief,Plant,VGM 197
+245,Hard,6,Clockwork Beetle,Construct,ToB 60
+246,Hard,22,Jackal,Beast,MM 331
+247,Hard,4,Young Faerie Dragon,Dragon,MM 133
+248,Hard,8,Alligator,Beast,ToB2 387
+249,Hard,2,Ogre,Giant,MM 237
+250,Hard,6,Soldier,Humanoid,GGR 226
+251,Hard,22,Cranium Rat,Beast,VGM 133
+252,Hard,4,Swarm of Bees,Beast,ToB2 400
+253,Hard,8,Metallic Warbler,Construct,FToD 210
+254,Hard,2,Ogre Bolt Launcher,Giant,MTF 220
+255,Hard,6,Devil' Fire Imp,Fiend,CC 103
+256,Hard,22,Lizard,Beast,MM 332
+257,Hard,4,Ghillie Dubh,Celestial,ToB2 165
+258,Hard,8,Pseudodragon,Dragon,MM 254
+259,Hard,2,Trollkin Fire Shaman,Humanoid,ToB3 376
+260,Hard,6,Rum Gremlin,Fey,ToB 239
+261,Deadly,6,Drake' Crimson,Dragon,ToB 151
+262,Deadly,3,Two-Headed Cerberus,Monstrosity,MOoT 215
+263,Deadly,16,Hoard Scarab,Monstrosity,FToD 205
+264,Deadly,8,Kraul Warrior,Humanoid,GGR 213
+265,Deadly,1,Primal Oozer,Aberration,ToB2 297
+266,Deadly,2,Pech' Stonemaster,Elemental,CC 295
+267,Deadly,6,Mantik’s Barbed,Humanoid,CC 263
+268,Deadly,3,Sampgas Bubble,Ooze,ToB2 343
+269,Deadly,16,Flying Snake,Beast,MM 322
+270,Deadly,8,Worg,Monstrosity,MM 341
+271,Deadly,1,Troll' Desert,Giant,CC 356
+272,Deadly,2,Arcanaphage,Monstrosity,CC 42
+273,Deadly,6,Grindylow,Aberration,CC 210
+274,Deadly,3,Cult Fanatic,Humanoid,MM 345
+275,Deadly,16,Pixie's Umbrella,Plant,ToB2 158
+276,Deadly,8,Husk,Undead,ToB2 205
+277,Deadly,1,Moonweb,Aberration,ToB3 276
+278,Deadly,2,Bereginyas,Fey,ToB 36
+279,Deadly,6,Gerridae,Fey,ToB 212
+280,Deadly,3,Swarm of Poisonous Snakes,Beast,MM 338
+281,Deadly,16,Valenar Hawk,Fey,Ebb 312
+282,Deadly,8,Bone Collector,Undead,ToB3 64
+283,Deadly,1,Scheznyki,Fey,ToB 339
+284,Deadly,2,Battle Mage,Humanoid,CC 397
+285,Deadly,6,Wood Ward,Construct,ToB2 374
+286,Deadly,3,Kallikantzaros,Fey,CC 233
+287,Deadly,16,Twig Blight,Plant,MM 32
+288,Deadly,8,Skulk,Humanoid,MTF 227
+289,Deadly,1,Draconian Mastermind,Monstrosity,FToD 180
+290,Deadly,2,Winged Lion,Celestial,MOoT 214
+291,Insanity,16,Kobold Inventor,Humanoid,VGM 166
+292,Insanity,2,The Heavy Weapon Rat,Humanoid,Skaven 2
+293,Insanity,5,Eshin Assassin,Humanoid,Skaven 12
+294,Insanity,8,Manure Ooze,Ooze,ToB3 306
+295,Insanity,1,Golem' Alchemical,Construct,CC 192
+296,Insanity,3,Rainforest Ogre,Giant,ToB3 301
+297,Insanity,4,Meletian Hoplite,Humanoid,MOoT 229
+298,Insanity,16,Mud Mephit,Elemental,MM 216
+299,Insanity,2,Kikimora,Fey,ToB 260
+300,Insanity,5,Topaz Dragon Wyrmling,Dragon,FToD 223
+301,Medium,2,Swarm of Scarabs,Beast,VRgtR 247
+302,Medium,3,Wereraven,Humanoid,VRgtR 253
+303,Medium,6,Bone Collector,Undead,ToB3 64
+304,Medium,4,Ghillie Dubh,Celestial,ToB2 165
+305,Medium,10,Gnoll Witherling,Undead,VGM 155
+306,Medium,25,Commoner,Humanoid,MM 344
+307,Medium,2,Dragonflesh Grafter,Monstrosity,FToD 186
+308,Medium,3,Yumerai,Fey,ToB2 381
+309,Medium,6,Yowler,Undead,ToB2 380
+310,Medium,4,Giant Octopus,Beast,MM 326
+311,Medium,10,Male Steeder,Monstrosity,MTF 238
+312,Medium,25,Cat,Beast,MM 320
+313,Medium,2,Golem' Bronze,Construct,CC 195
+314,Medium,3,Two-Headed Cerberus,Monstrosity,MOoT 215
+315,Medium,6,Magmin,Elemental,MM 212
+316,Medium,4,Ratfolk Warlock,Humanoid,CC 316
+317,Medium,10,Xanka,Construct,ToB 411
+318,Medium,25,Crawling Claw,Undead,MM 44
+319,Medium,2,Imperial Dragon Wyrmling,Dragon,ToB2 117
+320,Medium,3,Duergar Kavalrachni,Humanoid,MTF 189
+321,Medium,6,Execrable Shrub,Fiend,CC 304
+322,Medium,4,Clawfoot,Beast,Ebb 289
+323,Medium,10,Giant Gray Owl,Beast,ToB2 394
+324,Medium,25,Octopus,Beast,MM 333
+325,Medium,2,Meletian Hoplite,Humanoid,MOoT 229
+326,Medium,3,Wereotter,Humanoid,ToB3 266
+327,Medium,6,Human' Elfmarked,Humanoid,CC 403
+328,Medium,4,Imp,Fiend,MM 76
+329,Medium,10,Resinous Frog,Beast,ToB2 397
+330,Medium,25,Rat,Beast,MM 335
+331,Hard,3,Inspired,Humanoid,Ebb 294
+332,Hard,5,Bastet Temple Cat,Beast,ToB 32
+333,Hard,2,Zimwi,Giant,ToB 415
+334,Hard,1,Redcap,Fey,ToB 325
+335,Hard,9,Phoenixborn,Humanoid,ToB3 316
+336,Hard,3,Pentadrone,Construct,MM 226
+337,Hard,5,Kobold' Elite,Humanoid,CC 237
+338,Hard,2,Servant of the Unsated God,Undead,ToB2 321
+339,Hard,1,Spectral Guardian,Undead,ToB 358
+340,Hard,9,Air Jiinborn Pirate,Humanoid,ToB3 246
+341,Hard,3,Gargoyle,Elemental,MM 140
+342,Hard,5,Child of the Briar,Plant,ToB 56
+343,Hard,2,Oracle,Humanoid,MOoT 238
+344,Hard,1,Zombie Clot,Undead,VRgtR 255
+345,Hard,9,Gnoll Hunter,Humanoid,VGM 154
+346,Hard,3,Pentadrone,Construct,MM 226
+347,Hard,5,Word Archon,Celestial,ToB3 44
+348,Hard,2,Cosmotronic Blastseeker,Humanoid,GGR 242
+349,Hard,1,Animated Breath,Elemental,FToD 163
+350,Hard,9,Derro Guard,Humanoid,ToB2 97
+351,Hard,3,Orc Eye of Gruumsh,Humanoid,MM 247
+352,Hard,5,Clockwork Leech,Construct,ToB2 66
+353,Hard,2,Deep One Hybrid Priest,Humanoid,ToB 73
+354,Hard,1,Draconian Mastermind,Monstrosity,FToD 180
+355,Hard,9,Gnoll,Humanoid,MM 163
+356,Hard,3,Bandit Captain,Humanoid,MM 344
+357,Hard,5,Young Faerie Dragon,Dragon,MM 133
+358,Hard,2,Babau,Fiend,VGM 136
+359,Hard,1,Elves' Shadow Fey' Duelist,Humanoid,ToB 171
+360,Hard,9,Lizardfolk,Humanoid,MM 204
+361,Deadly,2,Jubjub Bird,Beast,ToB3 247
+362,Deadly,1,Drow Mage,Humanoid,MM 129
+363,Deadly,6,Young Faerie Dragon,Dragon,MM 133
+364,Deadly,20,Expeditious Messenger,Construct,Ebb 293
+365,Deadly,4,Dragon Speaker,Humanoid,FToD 189
+366,Deadly,3,Giant Mole Lizard,Beast,ToB3 199
+367,Deadly,10,Draconian Foot Soldier,Monstrosity,FToD 178
+368,Deadly,2,Iron Cobra,Construct,MTF 125
+369,Deadly,1,Tar Golem,Construct,ToB3 218
+370,Deadly,6,Grindylow,Aberration,CC 210
+371,Deadly,20,Bookkeeper,Construct,CC 55
+372,Deadly,4,Crystal Dragon Wyrmling,Dragon,FToD 172
+373,Deadly,3,Hook Horror,Monstrosity,MM 189
+374,Deadly,10,Void Cultist,Humanoid,CC 407
+375,Deadly,2,Gear Mage,Humanoid,CC 401
+376,Deadly,1,Golem' Bone,Construct,CC 195
+377,Deadly,6,Moss Lurker,Humanoid,ToB 298
+378,Deadly,20,Wicked Skull,Monstrosity,ToB2 368
+379,Deadly,4,Initiate of the Elder Elementals,Humanoid,ToB2 216
+380,Deadly,3,Korrigan,Fey,CC 242
+381,Deadly,10,Hybrid Spy,Humanoid,GGR 218
+382,Deadly,2,Pech' Stonemaster,Elemental,CC 295
+383,Deadly,1,Young Copper Dragon,Dragon,MM 111
+384,Deadly,6,Skeleton' Sharkjaw,Undead,ToB 350
+385,Deadly,20,Stryx,Monstrosity,ToB 369
+386,Deadly,4,Baba Yaga’s Iron Teeth,Fey,CC 47
+387,Deadly,3,Drake' Skull,Dragon,CC 132
+388,Deadly,10,Foxin,Fey,CC 163
+389,Deadly,2,Vangsluagh,Aberration,ToB2 359
+390,Deadly,1,Elves' Shadow Fey' Enchantress,Humanoid,ToB 172
+391,Insanity,4,Hag' Snow,Fey,CC 214
+392,Insanity,10,Cueyatl Warrior,Humanoid,CC 69
+393,Insanity,20,Alliumite,Plant,CC 13
+394,Insanity,1,Stargazer,Monstrosity,ToB3 354
+395,Insanity,2,Necromancer,Humanoid,CC 404
+396,Insanity,6,Weasel' Wind,Fey,CC 375
+397,Insanity,3,Spawn of Chernobog,Fiend,CC 347
+398,Insanity,4,Mush Marcher,Plant,ToB3 192
+399,Insanity,10,Anophiloi,Monstrosity,CC 39
+400,Insanity,20,Draft Horse,Beast,MM 321
+401,Medium,20,Hoard Scarab,Monstrosity,FToD 205
+402,Medium,3,Millitaur,Monstrosity,ToB 288
+403,Medium,2,Bloodfiend Alabroza,Fiend,ToB3 13
+404,Medium,4,Swarm of Esteron,Beast,ToB2 400
+405,Medium,6,Balloon Spider,Beast,ToB2 387
+406,Medium,1,Aalpamac,Monstrosity,ToB2 8
+407,Medium,10,Bilge Gremlin,Fey,ToB3 219
+408,Medium,20,Gorao-Ka,Fey,ToB2 221
+409,Medium,3,Blue Dragon Wyrmling,Dragon,MM 91
+410,Medium,2,Rainforest Ogre,Giant,ToB3 301
+411,Medium,4,Behtu,Humanoid,ToB 34
+412,Medium,6,Child of the Briar,Plant,ToB 56
+413,Medium,1,Ley Wanderer,Aberration,ToB3 260
+414,Medium,10,Woodwose,Humanoid,CC 383
+415,Medium,20,Clockwork Servant,Construct,CC 65
+416,Medium,3,Slithering Tracker,Ooze,VGM 191
+417,Medium,2,Serpopard,Beast,ToB 342
+418,Medium,4,Silver Dragon Wyrmling,Dragon,MM 118
+419,Medium,6,Giant Eagle,Beast,MM 324
+420,Medium,1,Vallowex,Aberration,ToB2 356
+421,Medium,10,War Ostrich,Beast,ToB 307
+422,Medium,20,Twig Blight,Plant,MM 32
+423,Medium,3,Mindrot Thrall,Plant,ToB 290
+424,Medium,2,Cosmotronic Blastseeker,Humanoid,GGR 242
+425,Medium,4,Tortle Druid,Humanoid,MTF 242
+426,Medium,6,Caretaker Weevil,Beast,ToB3 73
+427,Medium,1,Einherjar,Humanoid,ToB 167
+428,Medium,10,Giant Sea Horse,Beast,MM 328
+429,Medium,20,Gremishka,Monstrosity,VRgtR 235
+430,Medium,3,Dragon' Wasteland Wyrmling,Dragon,CC 118
+431,Hard,1,Xhkarsh,Aberration,ToB 412
+432,Hard,9,Offal Walker,Undead,ToB3 296
+433,Hard,2,Cambion,Fiend,MM 36
+434,Hard,5,Sea Dragon Qyrmling,Dragon,ToB 136
+435,Hard,3,Thursir Hearth Priestess,Giant,ToB3 207
+436,Hard,4,Swarm of Swamp Slirghs,Elemental,ToB3 363
+437,Hard,1,Vines of Nemthyr,Plant,CC 371
+438,Hard,9,Brown Bear,Beast,MM 319
+439,Hard,2,Shadowghast,Undead,EGtW 299
+440,Hard,5,Cave Dragon Wyrmling,Dragon,ToB 127
+441,Hard,3,Ghost,Undead,MM 147
+442,Hard,4,Hungry Ghost' Preta,Undead,CC 223
+443,Hard,1,Scorpion Assassin,Humanoid,CC 405
+444,Hard,9,Conniption Bug,Beast,ToB3 93
+445,Hard,2,Dread Walker Excavator,Construct,ToB2 129
+446,Hard,5,Akanka,Fey,ToB3 10
+447,Hard,3,Deep One Hybrid Priest,Humanoid,ToB 73
+448,Hard,4,Drake' Bathhouse,Dragon,CC 126
+449,Hard,1,Ring Servant,Construct,CC 318
+450,Hard,9,Manure Ooze,Ooze,ToB3 306
+451,Hard,2,Battleforce Angel,Celestial,GGR 189
+452,Hard,5,Dragonnel,Dragon,FToD 190
+453,Hard,3,Spawn of Chernobog,Fiend,CC 347
+454,Hard,4,Woe Siphon,Fey,ToB2 373
+455,Hard,1,Voidwracked Mage,Humanoid,CC 409
+456,Hard,9,Giant Moth' Shockwing,Beast,CC 179
+457,Hard,2,Spawn of Akyishigal,Fiend,ToB 83
+458,Hard,5,Balbazu,Fiend,ToB3 107
+459,Hard,3,Dau,Fey,ToB 70
+460,Hard,4,Knight,Humanoid,MM 347
+461,Deadly,3,Banderhobb,Monstrosity,VGM 122
+462,Deadly,1,Sunder Shaman,Giant,GGR 202
+463,Deadly,5,Flame Dragon Wyrmling,Dragon,ToB 131
+464,Deadly,4,Sulsha,Humanoid,ToB2 329
+465,Deadly,2,Gryllus Swarm,Construct,ToB3 361
+466,Deadly,22,Stench Kow,Beast,VGM 207
+467,Deadly,6,White Dragon Wyrmling,Dragon,MM 102
+468,Deadly,10,Bastet Temple Cat,Beast,ToB 32
+469,Deadly,3,Black Knight Commander,Humanoid,ToB 418
+470,Deadly,1,Fabricator,Construct,ToB2 138
+471,Deadly,5,Xenabsorber,Aberration,CC 387
+472,Deadly,4,Dragon Turtle Wyrmling,Dragon,FToD 192
+473,Deadly,2,Drider,Monstrosity,MM 120
+474,Deadly,22,Kobold Inventor,Humanoid,VGM 166
+475,Deadly,6,Silver Dragon Wyrmling Skeleton,Undead,ToB2 331
+476,Deadly,10,Dhampir,Humanoid,CC 106
+477,Deadly,3,Golgari Shaman,Humanoid,GGR 236
+478,Deadly,1,Conjoined Queen,Monstrosity,ToB2 70
+479,Deadly,5,Leashed Lesion,Aberration,ToB3 259
+480,Deadly,4,Dorreq,Aberration,ToB 124
+481,Deadly,2,Urushi Constrictor,Monstrosity,ToB3 382
+482,Deadly,22,Clockwork Armadillo,Construct,ToB3 86
+483,Deadly,6,Lizardfolk Shaman,Humanoid,MM 205
+484,Deadly,10,Xvart Warlock of Raxivort,Humanoid,VGM 200
+485,Deadly,3,Dragon Blessed,Humanoid,FToD 188
+486,Deadly,1,Gearkeeper Construct,Construct,EGtW 290
+487,Deadly,5,Duffel Crab,Monstrosity,ToB3 97
+488,Deadly,4,Cats of Ulthar,Beast,CC 58
+489,Deadly,2,Witchalder,Plant,ToB3 394
+490,Deadly,22,Oblex Spawn,Ooze,MTF 217
+491,Insanity,2,Master of Cruelties,Fiend,GGR 196
+492,Insanity,6,Setessan Hoplite,Humanoid,MOoT 299
+493,Insanity,4,Dire Owlbear,Monstrosity,ToB3 132
+494,Insanity,1,Isonade,Monstrosity,ToB 257
+495,Insanity,3,Maurezhi,Fiend,MTF 133
+496,Insanity,22,Light Drake,Dragon,ToB2 125
+497,Insanity,2,Glabrezu,Fiend,MM 58
+498,Insanity,6,Frostveil,Plant,ToB 207
+499,Insanity,4,Angel' Fidele,Celestial,ToB 21
+500,Insanity,1,Devkarin Lich,Undead,GGR 198
+501,Medium,1,Minotaur' Lost,Undead,CC 268
+502,Medium,2,Spawn of Parzelon,Fiend,CC 102
+503,Medium,24,Wicked Skull,Monstrosity,ToB2 368
+504,Medium,12,Harvest Horse,Construct,ToB3 230
+505,Medium,3,Leashed Lesion,Aberration,ToB3 259
+506,Medium,4,Ogre Bolt Launcher,Giant,MTF 220
+507,Medium,1,Tyrannosaurus Rex,Beast,MM 80
+508,Medium,2,Young Crystal Dragon,Dragon,FToD 172
+509,Medium,24,Clockwork Servant,Construct,CC 65
+510,Medium,12,Crocodile,Beast,MM 320
+511,Medium,3,Smokeplume Zombie,Undead,ToB3 400
+512,Medium,4,Scrag' Lesser,Monstrosity,CC 322
+513,Medium,1,Ikuchi,Elemental,ToB2 210
+514,Medium,2,Young Crystal Dragon,Dragon,FToD 172
+515,Medium,24,Flumph,Aberration,MM 135
+516,Medium,12,Shovel Dragonette,Dragon,ToB3 150
+517,Medium,3,Sapphire Dragon Wyrmling,Dragon,FToD 216
+518,Medium,4,Zombie' Blood,Undead,CC 393
+519,Medium,1,Spirit Naga,Monstrosity,MM 234
+520,Medium,2,Bone Knight,Humanoid,Ebb 316
+521,Medium,24,Cikavak,Beast,ToB 58
+522,Medium,12,Firenewt Warrior,Humanoid,VGM 142
+523,Medium,3,Spider' J’ba Fofi,Beast,ToB 362
+524,Medium,4,Hobgoblin Iron Shadow,Humanoid,VGM 162
+525,Medium,1,Dragonborn of Bahamut,Humanoid,FToD 184
+526,Medium,2,Aridni,Fey,ToB 26
+527,Medium,24,Blood-Toll Harpy,Monstrosity,MOoT 227
+528,Medium,12,Foxin,Fey,CC 163
+529,Medium,3,Radiant Spark Swarm,Elemental,ToB2 305
+530,Medium,4,Azer,Elemental,MM 22
+531,Hard,3,The Flesh,Aberration,ToB3 367
+532,Hard,18,Giant Centipede,Beast,MM 323
+533,Hard,1,Nycaloth,Fiend,MM 314
+534,Hard,4,Draconian Infiltrator,Monstrosity,FToD 178
+535,Hard,8,Gnoll Flesh Gnawer,Humanoid,VGM 154
+536,Hard,6,Hirudine Stalker,Monstrosity,ToB3 235
+537,Hard,2,Quoreq,Aberration,ToB2 304
+538,Hard,3,Trollkin Reaver,Humanoid,ToB 390
+539,Hard,18,Servitor Thrull,Construct,GGR 221
+540,Hard,1,Hellfire Giant,Giant,ToB3 203
+541,Hard,4,Ghost Boar,Monstrosity,CC 169
+542,Hard,8,Carnivorous Sod,Plant,ToB2 57
+543,Hard,6,Derro Explorer,Humanoid,ToB2 97
+544,Hard,2,Chemosit,Fiend,ToB3 82
+545,Hard,3,Yuan-ti Mind Whisperer,Monstrosity,VGM 204
+546,Hard,18,Gray Orc,Humanoid,ToB2 284
+547,Hard,1,Slayer Rakshasa,Fiend,ToB3 330
+548,Hard,4,Cactid,Plant,ToB 50
+549,Hard,8,Iron Defender,Construct,Ebb 293
+550,Hard,6,Bannik,Fey,ToB3 51
+551,Hard,2,Corpselight Moth,Beast,ToB3 95
+552,Hard,3,Cats of Ulthar,Beast,CC 58
+553,Hard,18,Barnyard Dragonette,Dragon,ToB3 148
+554,Hard,1,Hashalaq Quori,Aberration,Ebb 305
+555,Hard,4,Hell Hound,Fiend,MM 182
+556,Hard,8,Sunset Raptor,Monstrosity,CC 351
+557,Hard,6,Ogre Howdah,Giant,MTF 221
+558,Hard,2,Half-Red Dragon Veteran,Humanoid,MM 180
+559,Hard,3,Nkosi Pridelord,Humanoid,ToB 306
+560,Hard,18,Rothe,Beast,VGM 207
+561,Deadly,4,Catamount,Monstrosity,ToB3 74
+562,Deadly,3,Mi-Go,Plant,ToB 287
+563,Deadly,1,Vesiculosa,Plant,ToB 399
+564,Deadly,2,Ley Wanderer,Aberration,ToB3 260
+565,Deadly,28,Nyctli,Fey,ToB2 271
+566,Deadly,6,Bat' Giant Albino,Monstrosity,CC 50
+567,Deadly,4,Chroma Lizard,Beast,ToB3 84
+568,Deadly,3,Bone Knight,Humanoid,Ebb 316
+569,Deadly,1,Young Imperial Dragon,Dragon,ToB2 117
+570,Deadly,2,Golem' Armory,Construct,CC 194
+571,Deadly,28,Winged Kobold,Humanoid,MM 195
+572,Deadly,6,Nergaliid,Fiend,EGtW 296
+573,Deadly,4,Dwarf' Graveslayer,Humanoid,CC 400
+574,Deadly,3,Vorthropod,Monstrosity,ToB3 387
+575,Deadly,1,Thundercall Hadrosaur,Monstrosity,ToB3 129
+576,Deadly,2,Deathwisp,Undead,ToB 72
+577,Deadly,28,Derro,Humanoid,MTF 158
+578,Deadly,6,Displacer Beast,Monstrosity,MM 81
+579,Deadly,4,Couatl,Celestial,MM 43
+580,Deadly,3,Phase Giant,Giant,ToB2 172
+581,Deadly,1,Djinni,Elemental,MM 144
+582,Deadly,2,Vallowex,Aberration,ToB2 356
+583,Deadly,28,Grung,Humanoid,VGM 156
+584,Deadly,6,Bagiennik,Aberration,ToB 31
+585,Deadly,4,Vertigibbet,Fey,ToB3 384
+586,Deadly,3,Scribe Devil,Fiend,ToB2 105
+587,Deadly,1,Dracohydra,Monstrosity,FToD 176
+588,Deadly,2,Chelicerae,Aberration,ToB 54
+589,Deadly,28,Draft Horse,Beast,MM 321
+590,Deadly,6,Myrmidon Rakshasa,Fiend,ToB3 328
+591,Insanity,5,Dream Wraith,Undead,CC 135
+592,Insanity,2,Belu,Giant,ToB3 55
+593,Insanity,4,Bodak,Undead,VGM 127
+594,Insanity,6,Alchemical Skunk,Monstrosity,ToB2 13
+595,Insanity,1,Fey Snow Queen,Fey,ToB 198
+596,Insanity,8,Giant Scorpion,Beast,MM 327
+597,Insanity,3,Astri,Celestial,ToB2 31
+598,Insanity,28,Black Bear,Beast,MM 318
+599,Insanity,12,Silver Dragon Wyrmling Skeleton,Undead,ToB2 331
+600,Insanity,5,Earth Elemental,Elemental,MM 124
+601,Medium,9,Iron Defender,Construct,Ebb 293
+602,Medium,1,Moon Nymph,Aberration,CC 269
+603,Medium,5,Giant Boar,Beast,MM 323
+604,Medium,2,Faux-Garou,Construct,ToB3 174
+605,Medium,4,Bloodsapper,Aberration,ToB2 44
+606,Medium,3,Zilaq,Dragon,ToB3 399
+607,Medium,9,Minor Malleable,Aberration,ToB2 252
+608,Medium,1,Ala,Fey,ToB 13
+609,Medium,5,Tosculi Warrior,Monstrosity,ToB 386
+610,Medium,2,Aatxe,Celestial,CC 7
+611,Medium,4,Bristled Moorbounder,Beast,EGtW 295
+612,Medium,3,Death Vulture,Monstrosity,ToB2 81
+613,Medium,9,Thorny,Plant,VGM 197
+614,Medium,1,Monolith Champion,Construct,ToB 294
+615,Medium,5,Noctiny,Humanoid,ToB 308
+616,Medium,2,Wereowl,Humanoid,ToB2 246
+617,Medium,4,Pombero,Fey,ToB 313
+618,Medium,3,Devil' Wind’s Harp,Fiend,CC 105
+619,Medium,9,Cueyatl Warrior,Humanoid,CC 69
+620,Medium,1,Astri,Celestial,ToB2 31
+621,Medium,5,Bronze Dragon Wyrmling,Dragon,MM 109
+622,Medium,2,Cambion,Fiend,MM 36
+623,Medium,4,War Chaplain,Humanoid,CC 410
+624,Medium,3,Shadow Demon,Fiend,MM 64
+625,Medium,9,Firenewt Warlock of Imix,Humanoid,VGM 143
+626,Medium,1,Bloodstone Sentinel,Construct,ToB2 45
+627,Medium,5,Fear Liath,Undead,CC 152
+628,Medium,2,Quickstep,Fey,CC 308
+629,Medium,4,Thursir Giant,Giant,ToB 227
+630,Medium,3,Serpopard,Beast,ToB 342
+631,Hard,2,Bodak,Undead,VGM 127
+632,Hard,4,Deep Troll,Giant,ToB2 352
+633,Hard,10,Quaggoth Spore Servant,Plant,MM 230
+634,Hard,6,Derro Explorer,Humanoid,ToB2 97
+635,Hard,22,Blood Barnacle,Beast,ToB3 62
+636,Hard,3,Gargoctopus,Monstrosity,CC 167
+637,Hard,5,Hobgoblin Captain,Humanoid,MM 186
+638,Hard,1,Githzerai Enlightened,Humanoid,MTF 208
+639,Hard,2,Tembril,Monstrosity,ToB2 344
+640,Hard,4,Lobe Lemur,Monstrosity,ToB3 264
+641,Hard,10,Bilwis,Elemental,CC 53
+642,Hard,6,Beli,Fey,ToB 35
+643,Hard,22,Mimic' Map,Aberration,ToB 289
+644,Hard,3,Demon' Cipactli,Fiend,CC 83
+645,Hard,5,Ghoulsteed,Undead,CC 177
+646,Hard,1,Leviathan Hunter Kobold,Humanoid,ToB3 255
+647,Hard,2,Scheznyki,Fey,ToB 339
+648,Hard,4,Carrion Beetle,Beast,ToB 52
+649,Hard,10,Spy,Humanoid,MM 349
+650,Hard,6,Berbalang,Aberration,MTF 120
+651,Hard,22,Boar,Beast,MM 319
+652,Hard,3,Kryt,Humanoid,CC 243
+653,Hard,5,Carrion Stalker,Monstrosity,VRgtR 230
+654,Hard,1,Tormented Qiqirn,Fiend,ToB2 302
+655,Hard,2,Nightgarm,Monstrosity,ToB 305
+656,Hard,4,Amethyst Dragon Wyrmling,Dragon,FToD 162
+657,Hard,10,Young Myrmex,Elemental,ToB3 284
+658,Hard,6,Dragon' Light' Wyrmling,Dragon,CC 113
+659,Hard,22,Diving Gell,Ooze,ToB3 136
+660,Hard,3,Angel' Fidele,Celestial,ToB 21
+661,Deadly,1,Skyswimmer,Monstrosity,GGR 220
+662,Deadly,9,Arcamag,Monstrosity,CC 41
+663,Deadly,3,Naizu-Ha,Fey,ToB2 223
+664,Deadly,5,Derro Fetal Savant,Humanoid,ToB 92
+665,Deadly,4,Scribe Devil,Fiend,ToB2 105
+666,Deadly,17,Firenewt Warrior,Humanoid,VGM 142
+667,Deadly,2,Hezrou,Fiend,MM 60
+668,Deadly,6,Spectator,Aberration,MM 30
+669,Deadly,1,Life Broker,Fey,ToB3 261
+670,Deadly,9,Kobold Alchemist,Humanoid,ToB 261
+671,Deadly,3,Mammoth,Beast,MM 332
+672,Deadly,5,Fleshspurned,Undead,ToB2 153
+673,Deadly,4,Subek,Humanoid,ToB 371
+674,Deadly,17,Amphisbaena,Monstrosity,MOoT 208
+675,Deadly,2,Ankou Soul Seeker,Dragon,CC 38
+676,Deadly,6,Deathlock Wight,Undead,MTF 129
+677,Deadly,1,Bat King,Fey,CC 22
+678,Deadly,9,Swarm of Ice Borers,Elemental,ToB3 362
+679,Deadly,3,Doomspeaker,Humanoid,CC 399
+680,Deadly,5,Faceless Wanderer,Aberration,ToB2 139
+681,Deadly,4,Vapor Lynx,Monstrosity,ToB 398
+682,Deadly,17,Darkmantle,Monstrosity,MM 46
+683,Deadly,2,Hungry Ghost' Gaki,Undead,CC 222
+684,Deadly,6,Ghast of Leng,Aberration,CC 168
+685,Deadly,1,Narzugon,Fiend,MTF 167
+686,Deadly,9,Swarm of Poisonous Snakes,Beast,MM 338
+687,Deadly,3,Elf' Servant of the Vine,Humanoid,CC 144
+688,Deadly,5,Mari Lwyd,Undead,ToB2 257
+689,Deadly,4,Nehekhara Tomb Warden,Undead,TombKings 1
+690,Deadly,17,Library Automaton,Construct,ToB 273
+691,Insanity,5,Zakya Rakshasa,Fiend,Ebb 309
+692,Insanity,3,Tophet,Construct,ToB 383
+693,Insanity,4,Crystaline Monolith,Aberration,ToB2 78
+694,Insanity,1,Nagpa,Humanoid,MTF 215
+695,Insanity,17,Sunset Raptor,Monstrosity,CC 351
+696,Insanity,14,Burnished Hart,Construct,MOoT 211
+697,Insanity,2,Flying Polyp,Aberration,CC 162
+698,Insanity,5,Giant Frilled Lizard,Beast,ToB2 392
+699,Insanity,3,Ikuchi,Elemental,ToB2 210
+700,Insanity,4,Angel' Sammael,Celestial,CC 19
+701,Medium,18,Servitor Thrull,Construct,GGR 221
+702,Medium,6,Roachling Lord,Humanoid,ToB 329
+703,Medium,3,Niya-Atha Sorcerer,Fey,ToB3 290
+704,Medium,2,Phase Giant,Giant,ToB2 172
+705,Medium,8,Fire Snake,Elemental,MM 265
+706,Medium,1,Flind,Humanoid,VGM 153
+707,Medium,4,Duergar Screamer,Construct,MTF 190
+708,Medium,18,Bull,Beast,ToB2 388
+709,Medium,6,Metee-Kolen-Ol,Humanoid,CC 404
+710,Medium,3,Vaettir,Undead,ToB 395
+711,Medium,2,Wormhearted Suffragan,Undead,ToB 410
+712,Medium,8,Grindylow,Aberration,CC 210
+713,Medium,1,Glabrezu,Fiend,MM 58
+714,Medium,4,Hippopotamus,Beast,ToB3 233
+715,Medium,18,Witchlight,Construct,ToB 409
+716,Medium,6,Prismatic Dragon Wyrmling,Dragon,ToB3 143
+717,Medium,3,Gnyan,Elemental,ToB3 210
+718,Medium,2,Pustakam Rakshasa,Fiend,ToB3 329
+719,Medium,8,Wood Ward,Construct,ToB2 374
+720,Medium,1,Khargi,Fiend,ToB3 251
+721,Medium,4,Mindrot Thrall,Plant,ToB 290
+722,Medium,18,Giant Flea,Beast,ToB3 197
+723,Medium,6,Razorfeather Raptor,Monstrosity,ToB3 127
+724,Medium,3,Dark Father,Undead,CC 71
+725,Medium,2,Werebear,Humanoid,MM 208
+726,Medium,8,Harpy,Monstrosity,MM 181
+727,Medium,1,Psychophant,Humanoid,ToB3 405
+728,Medium,4,Doppelganger,Monstrosity,MM 82
+729,Medium,18,Giant Moth' Sootwing,Beast,CC 179
+730,Medium,6,Orc Claw of Luthic,Humanoid,VGM 183
+731,Hard,28,Sprite,Fey,MM 283
+732,Hard,6,Kelp Drake,Dragon,ToB2 124
+733,Hard,4,Zimwi,Giant,ToB 415
+734,Hard,2,Liondrake,Monstrosity,FToD 207
+735,Hard,1,Doomwake Giant,Giant,MOoT 224
+736,Hard,3,Ice Elemental,Elemental,ToB2 133
+737,Hard,28,Grimlock,Humanoid,MM 175
+738,Hard,6,Corpse Worm,Monstrosity,ToB2 71
+739,Hard,4,Spawn of Chernobog,Fiend,CC 347
+740,Hard,2,Pech' Lithlord,Elemental,CC 295
+741,Hard,1,Glacial Crawler,Aberration,ToB3 209
+742,Hard,3,Sandman,Celestial,ToB 333
+743,Hard,28,Aarakocra,Humanoid,MM 12
+744,Hard,6,Ghast of Leng,Aberration,CC 168
+745,Hard,4,Arcanaphage,Monstrosity,CC 42
+746,Hard,2,Pyrrhic Podthrower,Plant,ToB3 324
+747,Hard,1,Dragonbone Golem,Construct,FToD 183
+748,Hard,3,Moonkite,Celestial,ToB2 260
+749,Hard,28,Elves' Shadow Fey' Elf,Humanoid,ToB 171
+750,Hard,6,Cave Fisher,Monstrosity,VGM 130
+751,Hard,4,Ooze' Ink Guardian,Ooze,CC 285
+752,Hard,2,Bodytaker Plant,Plant,VRgtR 227
+753,Hard,1,Grim Jester,Undead,ToB 240
+754,Hard,3,Bulette,Monstrosity,MM 34
+755,Hard,28,Xanka,Construct,ToB 411
+756,Hard,6,Carrion Stalker,Monstrosity,VRgtR 230
+757,Hard,4,Asp Vine,Plant,ToB3 45
+758,Hard,2,Swavain Basilisk,Monstrosity,EGtW 300
+759,Hard,1,Young Imperial Dragon,Dragon,ToB2 117
+760,Hard,3,Owl Harpy,Monstrosity,ToB 246
+761,Deadly,5,Battle Mage,Humanoid,CC 397
+762,Deadly,4,Aatxe,Celestial,CC 7
+763,Deadly,2,Gulper Behemoth,Monstrosity,ToB2 190
+764,Deadly,21,Light Drake,Dragon,ToB2 125
+765,Deadly,1,Necrosphinx,Construct,TombKings 8
+766,Deadly,3,Spawn of Alquam,Fiend,ToB2 95
+767,Deadly,5,Atavist,Humanoid,ToB3 404
+768,Deadly,4,Shoth' Oth,Aberration,CC 334
+769,Deadly,2,Ammut,Celestial,CC 15
+770,Deadly,21,Cockatrice,Monstrosity,MM 42
+771,Deadly,1,Queen of Birds,Fey,CC 31
+772,Deadly,3,Draconian Mastermind,Monstrosity,FToD 180
+773,Deadly,5,Red Dragon Wyrmling,Dragon,MM 98
+774,Deadly,4,Sandman,Celestial,ToB 333
+775,Deadly,2,Shadow Fey Ambassador,Humanoid,CC 145
+776,Deadly,21,Shifter,Humanoid,Ebb 319
+777,Deadly,1,Baliri Demon,Fiend,ToB2 93
+778,Deadly,3,Elf' Servant of the Vine,Humanoid,CC 144
+779,Deadly,5,Death Butterfly Swarm,Beast,ToB 71
+780,Deadly,4,Dread Walker Excavator,Construct,ToB2 129
+781,Deadly,2,Demon' Alnaar,Fiend,CC 82
+782,Deadly,21,Giant Wasp,Beast,MM 329
+783,Deadly,1,Ice Devil,Fiend,MM 75
+784,Deadly,3,Sanddrift Drake,Dragon,ToB2 127
+785,Deadly,5,Astralsupial,Beast,ToB3 46
+786,Deadly,4,Lunarian,Fey,ToB2 245
+787,Deadly,2,Bone Devil,Fiend,MM 71
+788,Deadly,21,Rubberbelt Stalker,Humanoid,GGR 239
+789,Deadly,1,Archon of the Trimvirate,Celestial,GGR 192
+790,Deadly,3,Rockwood,Elemental,ToB3 334
+791,Insanity,6,Fleshdreg,Plant,ToB2 152
+792,Insanity,4,Qwyllion,Fey,ToB 316
+793,Insanity,21,Stained-Glass Moth,Construct,ToB3 353
+794,Insanity,1,Ancient Crystal Dragon,Dragon,FToD 170
+795,Insanity,3,Shadow Fey Ambassador,Humanoid,CC 145
+796,Insanity,5,Sandwyrm,Dragon,ToB 334
+797,Insanity,2,Oinoloth,Fiend,MTF 251
+798,Insanity,9,Winged Bull,Celestial,MOoT 214
+799,Insanity,12,Redcap,Fey,VGM 188
+800,Insanity,6,Wraith,Undead,MM 302
+801,Medium,2,Permafrost Elemental,Elemental,ToB3 167
+802,Medium,1,Death Kiss,Aberration,VGM 124
+803,Medium,5,Basilisk,Monstrosity,MM 24
+804,Medium,3,Aniwye,Monstrosity,ToB2 25
+805,Medium,22,Winged Kobold,Humanoid,MM 195
+806,Medium,6,Yann-An-Oed,Aberration,CC 391
+807,Medium,4,Manabane Scarab Swarm,Beast,ToB 374
+808,Medium,10,Mountain Strider,Monstrosity,ToB2 261
+809,Medium,2,Troll' Desert,Giant,CC 356
+810,Medium,1,Frostjack,Fey,ToB3 189
+811,Medium,5,Veteran Swordbreaker Skeleton,Undead,ToB2 332
+812,Medium,3,Beholder Zombie,Undead,MM 316
+813,Medium,22,Giant Centipede,Beast,MM 323
+814,Medium,6,Woad Warrior,Monstrosity,ToB3 20
+815,Medium,4,Lich Hound,Undead,ToB 274
+816,Medium,10,Scarecrow,Construct,MM 268
+817,Medium,2,Hellforged Derro,Humanoid,ToB3 114
+818,Medium,1,Sathaq Worm,Elemental,ToB 337
+819,Medium,5,Clockwork Beetle Swarm,Construct,ToB 61
+820,Medium,3,Owl Harpy,Monstrosity,ToB 246
+821,Medium,22,Deep Rothe,Beast,VGM 207
+822,Medium,6,Uraeus,Celestial,ToB 392
+823,Medium,4,Incubus,Fiend,MM 285
+824,Medium,10,Alp,Fey,CC 14
+825,Medium,2,Rotsam Swarm,Ooze,ToB2 309
+826,Medium,1,Underworld Sentinel,Undead,ToB3 381
+827,Medium,5,Brimstone Locusthound,Monstrosity,ToB2 51
+828,Medium,3,Young Deep Dragon,Dragon,FToD 175
+829,Medium,22,Giant Bombardier Beetle,Beast,ToB2 39
+830,Medium,6,Drake' Forest,Dragon,CC 128
+831,Hard,5,Pesta Hag,Fey,ToB3 227
+832,Hard,3,Revenant,Undead,MM 259
+833,Hard,6,Trapper,Monstrosity,VGM 194
+834,Hard,1,Glacier Behemoth,Beast,ToB2 177
+835,Hard,9,Swarm of Musk Deer,Beast,ToB3 282
+836,Hard,2,Dakini' Simhamukha,Celestial,CC 70
+837,Hard,16,Winged Thrull,Construct,GGR 221
+838,Hard,5,Dire Padagolin,Beast,ToB3 133
+839,Hard,3,Mandriano,Plant,CC 261
+840,Hard,6,War Chaplain,Humanoid,CC 410
+841,Hard,1,Yuan-ti Anathema,Monstrosity,VGM 202
+842,Hard,9,Aurochs,Beast,VGM 207
+843,Hard,2,Shoosuva,Fiend,VGM 137
+844,Hard,16,Svirfneblin,Humanoid,MM 164
+845,Hard,5,Tusked Skyfish,Aberration,ToB 391
+846,Hard,3,Werebear,Humanoid,MM 208
+847,Hard,6,Displacer Beast,Monstrosity,MM 81
+848,Hard,1,Archlighth Phoenix,Elemental,GGR 193
+849,Hard,9,Myling,Undead,ToB 301
+850,Hard,2,Tetomatli,Construct,ToB2 345
+851,Hard,16,Avestruzii,Humanoid,ToB3 48
+852,Hard,5,Cactus Drake,Dragon,ToB3 152
+853,Hard,3,Tanarukk,Fiend,VGM 186
+854,Hard,6,Bagiennik,Aberration,ToB 31
+855,Hard,1,Sire of Insanity,Fiend,GGR 197
+856,Hard,9,Swarm of Gremishkas,Monstrosity,VRgtR 235
+857,Hard,2,Liosalfar,Elemental,ToB 277
+858,Hard,16,Changeling,Humanoid,Ebb 317
+859,Hard,5,Edimmu,Undead,ToB 165
+860,Hard,3,Wormhearted Suffragan,Undead,ToB 410
+861,Deadly,6,Hobgoblin Devastator,Humanoid,VGM 161
+862,Deadly,3,Warlock’s Trumpetbloom,Plant,CC 372
+863,Deadly,10,Orc Eye of Gruumsh,Humanoid,MM 247
+864,Deadly,9,Carrier Mosquito,Beast,ToB2 389
+865,Deadly,4,Young Deep Dragon,Dragon,FToD 175
+866,Deadly,2,Young Flame Dragon,Dragon,ToB 130
+867,Deadly,24,Moon Weaver,Beast,ToB3 274
+868,Deadly,1,Herald of Great Wyrm,Dragon,CC 217
+869,Deadly,6,Zimwi,Giant,ToB 415
+870,Deadly,3,Theran Chimera,Monstrosity,MOoT 216
+871,Deadly,10,Dragonborn Hvy Cavalry,Humanoid,CC 123
+872,Deadly,9,Water Weird,Elemental,MM 299
+873,Deadly,4,Mezzoloth,Fiend,MM 313
+874,Deadly,2,Anzu,Monstrosity,ToB2 26
+875,Deadly,24,Morphoi,Plant,ToB 297
+876,Deadly,1,Death Tyrant (in lair),Undead,MM 29
+877,Deadly,6,Fleshspurned,Undead,ToB2 153
+878,Deadly,3,Chuhaister,Giant,CC 62
+879,Deadly,10,Roggenwolf,Monstrosity,CC 320
+880,Deadly,9,Dragon Chosen,Humanoid,FToD 189
+881,Deadly,4,Shambling Mound,Plant,MM 270
+882,Deadly,2,Ash Phoenix,Undead,ToB2 28
+883,Deadly,24,Brumalek,Beast,ToB3 70
+884,Deadly,1,Rakshasa' Greater,Fiend,CC 312
+885,Deadly,6,Deep One Hybrid Priest,Humanoid,ToB 73
+886,Deadly,3,Golem' Armory,Construct,CC 194
+887,Deadly,10,Ankheg,Monstrosity,MM 21
+888,Deadly,9,Crocotta,Monstrosity,ToB2 75
+889,Deadly,4,Shoth' Oth,Aberration,CC 334
+890,Deadly,2,Clockwork Scorpion,Construct,ToB3 89
+891,Insanity,24,Weasel' Albino Death,Beast,CC 374
+892,Insanity,8,Demon' Rattok,Fiend,CC 90
+893,Insanity,5,Fire-Infused Water Elemental,Elemental,ToB2 132
+894,Insanity,2,Rakshasa,Fiend,MM 257
+895,Insanity,12,Dolgaunt,Aberration,Ebb 290
+896,Insanity,6,Revenant,Undead,MM 259
+897,Insanity,1,Harbinger of Wrath,Construct,ToB2 193
+898,Insanity,4,Cyonaxin,Celestial,ToB3 102
+899,Insanity,3,Empyrean Kobold,Celestial,ToB3 253
+900,Insanity,24,Swarm of Zombie Limbs,Undead,VRgtR 254
+901,Medium,2,Sloth' Giant,Beast,CC 345
+902,Medium,1,Young Imperial Dragon,Dragon,ToB2 117
+903,Medium,24,Deep Rothe,Beast,VGM 207
+904,Medium,5,Gaunt One,Aberration,ToB2 163
+905,Medium,4,Cats of Ulthar,Beast,CC 58
+906,Medium,3,Diminution Drake,Dragon,ToB2 121
+907,Medium,6,Eshin Saboteur,Humanoid,Skaven 10
+908,Medium,12,Warforged Soldier,Humanoid,Ebb 320
+909,Medium,2,Troll' Lake,Giant,ToB 389
+910,Medium,1,Eye Golem,Construct,ToB 233
+911,Medium,24,Living Wick,Construct,ToB 278
+912,Medium,5,Dragon Chosen,Humanoid,FToD 189
+913,Medium,4,Girallon,Monstrosity,VGM 152
+914,Medium,3,Flayed Wraith,Undead,ToB2 151
+915,Medium,6,Putrid Haunt,Undead,ToB 315
+916,Medium,12,Rakdos Performer,Humanoid,GGR 249
+917,Medium,2,Ethereal Drake,Dragon,ToB3 153
+918,Medium,1,Roc,Monstrosity,MM 260
+919,Medium,24,Giant Mongoose,Beast,ToB2 393
+920,Medium,5,Vampire Blossom Swarm,Plant,ToB3 364
+921,Medium,4,Animated Quartet,Construct,ToB3 35
+922,Medium,3,Yaga Goo,Ooze,CC 389
+923,Medium,6,White Stag,Celestial,CC 379
+924,Medium,12,Scarecrow,Construct,MM 268
+925,Medium,2,Fire-Infused Water Elemental,Elemental,ToB2 132
+926,Medium,1,Devil' Koralk (Harvester Devil),Fiend,ToB 108
+927,Medium,24,Needle Blight,Plant,MM 32
+928,Medium,5,Gloomflower,Plant,CC 188
+929,Medium,4,Chuul,Aberration,MM 40
+930,Medium,3,Lakescourge Lotus,Undead,ToB3 258
+931,Hard,19,Podling,Plant,VRgtR 227
+932,Hard,3,Elf' Servant of the Vine,Humanoid,CC 144
+933,Hard,2,Monolith Champion,Construct,ToB 294
+934,Hard,6,Spire Walker,Fey,ToB 367
+935,Hard,5,Duskwilt,Plant,ToB3 190
+936,Hard,4,Sasquatch,Beast,ToB2 314
+937,Hard,1,Life Broker,Fey,ToB3 261
+938,Hard,8,Bronze Dragon Wyrmling,Dragon,MM 109
+939,Hard,19,Cavefish Zombie,Undead,ToB2 384
+940,Hard,3,Clockwork Tiger,Construct,ToB2 68
+941,Hard,2,Degenerate Titan,Giant,ToB 381
+942,Hard,6,Duergar Screamer,Construct,MTF 190
+943,Hard,5,Dust Grazer,Aberration,ToB3 163
+944,Hard,4,Ice Elemental,Elemental,ToB2 133
+945,Hard,1,Young Red Shadow Dragon,Dragon,MM 85
+946,Hard,8,Folk of Leng,Humanoid,ToB 204
+947,Hard,19,Gnoll Hunter,Humanoid,VGM 154
+948,Hard,3,Invisible Stalker,Elemental,MM 192
+949,Hard,2,Dragonborn of Bahamut,Humanoid,FToD 184
+950,Hard,6,Viiret,Plant,ToB2 361
+951,Hard,5,Faceless Wanderer,Aberration,ToB2 139
+952,Hard,4,Giant Shark,Beast,MM 328
+953,Hard,1,Tigebra,Monstrosity,ToB3 369
+954,Hard,8,Noctiny,Humanoid,ToB 308
+955,Hard,19,Lantern Dragonette,Dragon,ToB 270
+956,Hard,3,Tumor Troll,Giant,ToB3 375
+957,Hard,2,Tophet,Construct,ToB 383
+958,Hard,6,Destroyer,Humanoid,ToB2 315
+959,Hard,5,Catamount,Monstrosity,ToB3 74
+960,Hard,4,Elemental' Blood,Elemental,CC 138
+961,Deadly,12,Duergar Xarrorn,Humanoid,MTF 193
+962,Deadly,6,Orc War Chief,Humanoid,MM 246
+963,Deadly,8,Doppelganger,Monstrosity,MM 82
+964,Deadly,5,Mi-Go,Plant,ToB 287
+965,Deadly,1,Mummy Lord (in lair),Undead,MM 229
+966,Deadly,28,Wintergrim,Fey,ToB2 372
+967,Deadly,2,Conjoined Queen,Monstrosity,ToB2 70
+968,Deadly,4,Angatra,Undead,ToB 19
+969,Deadly,3,Young Green Dragon,Dragon,MM 94
+970,Deadly,12,Duergar Kavalrachni,Humanoid,MTF 189
+971,Deadly,6,Babau,Fiend,VGM 136
+972,Deadly,8,War Chaplain,Humanoid,CC 410
+973,Deadly,5,Half-Red Dragon Veteran,Humanoid,MM 180
+974,Deadly,1,Zegana,Humanoid,GGR 255
+975,Deadly,28,Haladron,Celestial,ToB3 23
+976,Deadly,2,Toad King,Fey,ToB2 22
+977,Deadly,4,Abysswalker Derro,Humanoid,ToB3 113
+978,Deadly,3,Arborcyte,Plant,CC 40
+979,Deadly,12,Demon' Wind,Fiend,CC 93
+980,Deadly,6,Yuan-ti Nightmare Speaker,Monstrosity,VGM 205
+981,Deadly,8,Bakery Drake,Dragon,ToB3 151
+982,Deadly,5,Barlgura,Fiend,MM 56
+983,Deadly,1,Mummy Lord (in lair),Undead,MM 229
+984,Deadly,28,Swarm of Insects,Beast,MM 338
+985,Deadly,2,Aphasian Abomination,Construct,ToB3 39
+986,Deadly,4,Witchalder,Plant,ToB3 394
+987,Deadly,3,Young Green Dragon,Dragon,MM 94
+988,Deadly,12,Dream Squire,Fey,CC 134
+989,Deadly,6,Couatl,Celestial,MM 43
+990,Deadly,8,Redcap,Fey,VGM 188
+991,Insanity,3,Pelagic Deva,Celestial,ToB3 27
+992,Insanity,4,Qwyllion,Fey,ToB 316
+993,Insanity,1,Ancient Emerald Dragon,Dragon,FToD 195
+994,Insanity,2,Smaragdine Golem,Construct,ToB 236
+995,Insanity,28,Wind Dragon Wyrmling,Dragon,ToB 145
+996,Insanity,5,Draegloth,Fiend,VGM 141
+997,Insanity,10,Vangsluagh,Aberration,ToB2 359
+998,Insanity,6,Ruin Scarab,Undead,ToB3 337
+999,Insanity,3,Roc,Monstrosity,MM 260
+1000,Insanity,4,Degenerate Titan,Giant,ToB 381
+1001,Medium,6,Golem' Keg,Construct,CC 199
+1002,Medium,9,Prismatic Dragon Wyrmling,Dragon,ToB3 143
+1003,Medium,16,Lantern Dragonette,Dragon,ToB 270
+1004,Medium,2,Young Green Dragon,Dragon,MM 94
+1005,Medium,1,Fey Lord' Bear King,Fey,ToB 186
+1006,Medium,5,Succubus,Fiend,MM 285
+1007,Medium,3,Gladiator,Humanoid,MM 346
+1008,Medium,6,Clockwork Beetle Swarm,Construct,ToB 61
+1009,Medium,9,Gray Thirster,Undead,ToB 238
+1010,Medium,16,Hallowed Reeds,Celestial,CC 305
+1011,Medium,2,Eyedrake,Aberration,FToD 199
+1012,Medium,1,Titanoboa,Beast,ToB 382
+1013,Medium,5,Quickserpent,Beast,ToB2 303
+1014,Medium,3,Quoreq,Aberration,ToB2 304
+1015,Medium,6,Purple Slime,Ooze,CC 307
+1016,Medium,9,Nehekhara Liche Acolyte,Undead,TombKings 6
+1017,Medium,16,Shoth' Sooze,Aberration,CC 334
+1018,Medium,2,Copperkill Slime,Ooze,ToB3 94
+1019,Medium,1,Shoth' Droth,Aberration,CC 333
+1020,Medium,5,Amber Ooze,Ooze,ToB2 277
+1021,Medium,3,Savior Lumen,Celestial,ToB3 335
+1022,Medium,6,Alseid Grovekeeper,Monstrosity,ToB 15
+1023,Medium,9,Demon' Wind,Fiend,CC 93
+1024,Medium,16,Amphisbaena,Monstrosity,MOoT 208
+1025,Medium,2,Sewer Weird,Elemental,ToB3 341
+1026,Medium,1,Frost Giant Everlasting One,Giant,VGM 148
+1027,Medium,5,Quickserpent,Beast,ToB2 303
+1028,Medium,3,Star Spawn Mangler,Aberration,MTF 236
+1029,Medium,6,Sword Wraith Warrior,Undead,MTF 241
+1030,Medium,9,Cobbleswarm,Monstrosity,ToB 68
+1031,Hard,1,Mistress of Midnight Teeth,Fey,ToB2 146
+1032,Hard,6,Dire Padagolin,Beast,ToB3 133
+1033,Hard,4,Vampire Spawn,Undead,MM 298
+1034,Hard,24,Devil' Fire Imp,Fiend,CC 103
+1035,Hard,3,Young Copper Dragon,Dragon,MM 111
+1036,Hard,10,Ankheg,Monstrosity,MM 21
+1037,Hard,2,Wickerman,Construct,CC 380
+1038,Hard,9,Ooze' Shadow,Ooze,CC 287
+1039,Hard,1,Star-Spawn of Cthulhu,Fiend,ToB 368
+1040,Hard,6,Tripwire Patch,Plant,ToB3 371
+1041,Hard,4,Dogmole Juggernaut,Monstrosity,ToB 121
+1042,Hard,24,Air Jiinborn Pirate,Humanoid,ToB3 246
+1043,Hard,3,Giant Ape,Beast,MM 323
+1044,Hard,10,Dragon' Light' Wyrmling,Dragon,CC 113
+1045,Hard,2,Star-Nosed Diopsid,Aberration,ToB3 355
+1046,Hard,9,Ghost Boar,Monstrosity,CC 169
+1047,Hard,1,Shadow Giant,Giant,ToB2 173
+1048,Hard,6,Black Pudding,Ooze,MM 241
+1049,Hard,4,Sasquatch,Beast,ToB2 314
+1050,Hard,24,Porcellina,Beast,ToB3 317
+1051,Hard,3,Oni,Giant,MM 239
+1052,Hard,10,Tree Skinner,Fiend,ToB2 351
+1053,Hard,2,Treant,Plant,MM 289
+1054,Hard,9,Carrier Mosquito,Beast,ToB2 389
+1055,Hard,1,Timingila,Monstrosity,ToB2 349
+1056,Hard,6,Dancing Foliage,Plant,ToB2 79
+1057,Hard,4,Three-Headed Cobra,Monstrosity,CC 354
+1058,Hard,24,Dust Mephit,Elemental,MM 215
+1059,Hard,3,Shadow Dancer,Humanoid,MTF 225
+1060,Hard,10,Beli,Fey,ToB 35
+1061,Deadly,3,Demon' Yek Alpha,Fiend,CC 95
+1062,Deadly,10,Snake with a Hundred Mage Hands,Monstrosity,ToB2 333
+1063,Deadly,4,Niya-Atha Raja,Fey,ToB3 291
+1064,Deadly,2,Vampiric Knight,Undead,CC 369
+1065,Deadly,5,Treant' Weeping,Plant,ToB 388
+1066,Deadly,1,Demon Lord' Rangda,Fiend,CC 79
+1067,Deadly,18,Quasit,Fiend,MM 63
+1068,Deadly,6,Drow Elite Warrior,Humanoid,MM 128
+1069,Deadly,3,Dragon' Wasteland Young,Dragon,CC 118
+1070,Deadly,10,Orthrus,Monstrosity,CC 292
+1071,Deadly,4,Mind Flayer,Aberration,MM 222
+1072,Deadly,2,Leech Demon,Fiend,ToB3 110
+1073,Deadly,5,Scheznyki,Fey,ToB 339
+1074,Deadly,1,Adult Gold Dragon,Dragon,MM 114
+1075,Deadly,18,Brown Bear,Beast,MM 319
+1076,Deadly,6,Shimmer Seal,Beast,ToB2 324
+1077,Deadly,3,Nharyth,Aberration,ToB2 269
+1078,Deadly,10,Clockwork Beetle Swarm,Construct,ToB 61
+1079,Deadly,4,Vallowex,Aberration,ToB2 356
+1080,Deadly,2,Balhannoth,Aberration,MTF 118
+1081,Deadly,5,Demon' Echo,Fiend,CC 84
+1082,Deadly,1,Master of Demon Mtn,Humanoid,CC 264
+1083,Deadly,18,Dhampir,Humanoid,CC 106
+1084,Deadly,6,Barlgura,Fiend,MM 56
+1085,Deadly,3,Glabrezu,Fiend,MM 58
+1086,Deadly,10,Korrigan,Fey,CC 242
+1087,Deadly,4,Splinter Matron,Fey,ToB3 352
+1088,Deadly,2,Vampiric Knight,Undead,CC 369
+1089,Deadly,5,Death Butterfly Swarm' Greater,Beast,ToB 71
+1090,Deadly,1,Demon Lord' Rangda,Fiend,CC 79
+1091,Insanity,16,Myling,Undead,ToB 301
+1092,Insanity,12,Iron Cobra,Construct,MTF 125
+1093,Insanity,1,Ancient Sea Dragon,Dragon,ToB 135
+1094,Insanity,2,Brother Ox,Fey,CC 25
+1095,Insanity,8,Troll,Giant,MM 291
+1096,Insanity,3,Firemane Angel,Celestial,GGR 190
+1097,Insanity,5,Devil' Lunar,Fiend,ToB 110
+1098,Insanity,4,Skeleton' Vine Troll,Plant,ToB 351
+1099,Insanity,6,Splinter Matron,Fey,ToB3 352
+1100,Insanity,16,Beli,Fey,ToB 35
+1101,Medium,3,Undercity Medusa,Monstrosity,GGR 222
+1102,Medium,4,Nullicorn,Aberration,ToB3 292
+1103,Medium,5,Demon' Yek,Fiend,CC 95
+1104,Medium,2,Clay Golem,Construct,MM 168
+1105,Medium,20,Nehekhara Archer,Undead,TombKings 7
+1106,Medium,8,Merrow,Monstrosity,MM 219
+1107,Medium,1,Loup Garou,Monstrosity,VRgtR 237
+1108,Medium,3,White Abishai,Fiend,MTF 163
+1109,Medium,4,Gargoctopus,Monstrosity,CC 167
+1110,Medium,5,Orc Blade of Ilneval,Humanoid,VGM 183
+1111,Medium,2,Oozasis,Ooze,ToB 310
+1112,Medium,20,Empty Cloak,Construct,ToB 176
+1113,Medium,8,Baba Yaga’s Iron Teeth,Fey,CC 47
+1114,Medium,1,Ultroloth,Fiend,MM 314
+1115,Medium,3,Devil' Crystalline,Fiend,ToB 105
+1116,Medium,4,Gargoctopus,Monstrosity,CC 167
+1117,Medium,5,Niya-Atha Sorcerer,Fey,ToB3 290
+1118,Medium,2,Eater of Dust,Aberration,ToB 164
+1119,Medium,20,Worg,Monstrosity,MM 341
+1120,Medium,8,White Dragon Wyrmling,Dragon,MM 102
+1121,Medium,1,Storm Giant,Giant,MM 156
+1122,Medium,3,Sand Silhouette,Undead,ToB 332
+1123,Medium,4,Bone Knight,Humanoid,Ebb 316
+1124,Medium,5,Angler Dwarf,Humanoid,ToB3 164
+1125,Medium,2,Sinoper Ooze,Ooze,ToB3 310
+1126,Medium,20,Gnoll,Humanoid,MM 163
+1127,Medium,8,Pegasus,Celestial,MM 250
+1128,Medium,1,Equitox,Fiend,ToB3 171
+1129,Medium,3,Core Spawn Emissary,Aberration,EGtW 286
+1130,Medium,4,Living Lightning Bolt,Construct,Ebb 299
+1131,Hard,3,Ziphius,Aberration,CC 392
+1132,Hard,2,Demon' Berstuc,Fiend,ToB 76
+1133,Hard,12,Flame Eater Swarm,Beast,CC 158
+1134,Hard,1,Ashen Rider,Celestial,MOoT 213
+1135,Hard,4,Vexxeh,Fiend,ToB2 360
+1136,Hard,5,Leonin Iconoclast,Humanoid,MOoT 232
+1137,Hard,8,Kelp Drake,Dragon,ToB2 124
+1138,Hard,6,Iron Cobra,Construct,MTF 125
+1139,Hard,3,Ikuchi,Elemental,ToB2 210
+1140,Hard,2,Djinni,Elemental,MM 144
+1141,Hard,12,Crystal Dragon Wyrmling,Dragon,FToD 172
+1142,Hard,1,Ashen Rider,Celestial,MOoT 213
+1143,Hard,4,Ruin Scarab,Undead,ToB3 337
+1144,Hard,5,Sandman,Celestial,ToB 333
+1145,Hard,8,Grolar Bear,Beast,ToB3 222
+1146,Hard,6,Demon' Yek,Fiend,CC 95
+1147,Hard,3,Hezrou,Fiend,MM 60
+1148,Hard,2,Behir,Monstrosity,MM 25
+1149,Hard,12,Roggenwolf,Monstrosity,CC 320
+1150,Hard,1,Arcane Leviathan,Construct,ToB3 40
+1151,Hard,4,Thursir Armorer,Giant,ToB3 206
+1152,Hard,5,Hound of the Night,Monstrosity,ToB 251
+1153,Hard,8,Veteran,Humanoid,MM 350
+1154,Hard,6,Cosmotronic Blastseeker,Humanoid,GGR 242
+1155,Hard,3,Snow Terror,Fiend,ToB2 334
+1156,Hard,2,Vesiculosa,Plant,ToB 399
+1157,Hard,12,Will-o-wisp,Undead,MM 301
+1158,Hard,1,Udaak,Fiend,EGtW 301
+1159,Hard,4,Primal Oozer,Aberration,ToB2 297
+1160,Hard,5,Shoth' Oth,Aberration,CC 334
+1161,Deadly,8,Vertigibbet,Fey,ToB3 384
+1162,Deadly,6,Derro Shadow Antipaladin,Humanoid,ToB 93
+1163,Deadly,3,Rot Troll,Giant,MTF 244
+1164,Deadly,12,Obeleric,Aberration,ToB3 294
+1165,Deadly,2,Narzugon,Fiend,MTF 167
+1166,Deadly,5,Gallows Speaker,Undead,VRgtR 234
+1167,Deadly,4,Shoosuva,Fiend,VGM 137
+1168,Deadly,22,Quasit,Fiend,MM 63
+1169,Deadly,1,Pit Fiend,Fiend,MM 77
+1170,Deadly,8,Trollkin Shaman,Humanoid,CC 357
+1171,Deadly,6,Mudmutt,Monstrosity,ToB3 279
+1172,Deadly,3,Young Sapphire Dragon,Dragon,FToD 216
+1173,Deadly,12,Neogi,Aberration,VGM 180
+1174,Deadly,2,Infernal Tutor,Fiend,ToB3 121
+1175,Deadly,5,Animated Breath,Elemental,FToD 163
+1176,Deadly,4,Inquisitor of the Sword,Humanoid,VRgtR 249
+1177,Deadly,22,Female Steeder,Monstrosity,MTF 238
+1178,Deadly,1,Ancient Brass Dragon,Dragon,MM 104
+1179,Deadly,8,Black Pudding,Ooze,MM 241
+1180,Deadly,6,Pike Guard Captain,Humanoid,ToB3 166
+1181,Deadly,3,Mytholabe,Construct,CC 271
+1182,Deadly,12,Daeodon,Beast,ToB3 103
+1183,Deadly,2,Rakshasa,Fiend,MM 257
+1184,Deadly,5,Ashen Custodian,Fey,ToB2 29
+1185,Deadly,4,Assassin,Humanoid,MM 343
+1186,Deadly,22,Slavedriver,Humanoid,Skaven 4
+1187,Deadly,1,Rhopalocerex Demon Lord of Deception,Fiend,ToB2 90
+1188,Deadly,8,Gnoll Fang of Yeenoghu,Fiend,MM 163
+1189,Deadly,6,Zombie' Lord,Undead,CC 394
+1190,Deadly,3,Hydroloth,Fiend,MTF 249
+1191,Insanity,5,Chaos Creeper,Plant,ToB3 80
+1192,Insanity,3,Devourer,Fiend,VGM 138
+1193,Insanity,4,Dragonborn' Ouroban,Humanoid,CC 125
+1194,Insanity,1,Iilari'jil The Fire of Forgotten Hope,Celestial,ToB3 24
+1195,Insanity,10,Dark Voice,Humanoid,CC 73
+1196,Insanity,9,Voidwarped Derro,Humanoid,ToB3 114
+1197,Insanity,20,Rutterkin,Fiend,MTF 136
+1198,Insanity,6,Nivix Cyclops,Giant,GGR 216
+1199,Insanity,2,Frost Worm,Monstrosity,EGtW 289
+1200,Insanity,5,Thornheart Guardian,Construct,ToB2 346
+1201,Medium,3,Ursa Polaris,Monstrosity,CC 364
+1202,Medium,1,Butatsch,Aberration,ToB2 54
+1203,Medium,22,Changeling,Humanoid,Ebb 317
+1204,Medium,2,Star-Nosed Diopsid,Aberration,ToB3 355
+1205,Medium,6,Giant' Laestrigonian,Giant,CC 184
+1206,Medium,4,Vampiric Mind Flayer,Undead,VRgtR 252
+1207,Medium,3,Sarsaok,Monstrosity,ToB2 313
+1208,Medium,1,Sphinx' Gypsosphinx,Monstrosity,ToB 359
+1209,Medium,22,Valkruung,Monstrosity,ToB2 355
+1210,Medium,2,Jinmenju,Plant,CC 232
+1211,Medium,6,Ostinato,Aberration,ToB 312
+1212,Medium,4,Mindwitness,Aberration,VGM 176
+1213,Medium,3,Wyvern' War,Dragon,CC 386
+1214,Medium,1,Cave Giant Shaman,Giant,ToB2 171
+1215,Medium,22,Nalusa Falaya,Aberration,CC 274
+1216,Medium,2,Arcane Scavenger,Construct,ToB3 41
+1217,Medium,6,Lemurfolk Greyfur,Humanoid,ToB 271
+1218,Medium,4,Dream Wraith,Undead,CC 135
+1219,Medium,3,Deathwisp,Undead,ToB 72
+1220,Medium,1,Deathpact Angel,Celestial,GGR 191
+1221,Medium,22,Eshin Arbalester,Humanoid,Skaven 13
+1222,Medium,2,Bone Devil,Fiend,MM 71
+1223,Medium,6,Darakhul Shadowmancer,Undead,CC 173
+1224,Medium,4,Darakhul Spy,Undead,ToB2 168
+1225,Medium,3,Midnight Sun,Aberration,ToB3 270
+1226,Medium,1,Cherufe,Elemental,ToB2 61
+1227,Medium,22,Lizardfolk,Humanoid,MM 204
+1228,Medium,2,Krake Spawn,Monstrosity,ToB 269
+1229,Medium,6,Dybbuk,Fiend,MTF 132
+1230,Medium,4,Vampire Spawn,Undead,MM 298
+1231,Hard,2,Demon' Berstuc,Fiend,ToB 76
+1232,Hard,5,Elves' Shadow Fey' Forest Hunter,Humanoid,ToB 173
+1233,Hard,3,Bloodstone Sentinel,Construct,ToB2 45
+1234,Hard,4,Caldera Kite,Monstrosity,ToB3 71
+1235,Hard,1,Adult Red Dragon,Dragon,MM 98
+1236,Hard,14,Leech Swarm,Beast,ToB2 396
+1237,Hard,17,Ooze' Suppurating,Ooze,CC 288
+1238,Hard,2,Dullahan,Fey,ToB 161
+1239,Hard,5,Wood Woad,Plant,VGM 198
+1240,Hard,3,Ahu-Nixta Cataphract,Aberration,ToB2 9
+1241,Hard,4,Lesser Infernal Tutor,Fiend,ToB3 120
+1242,Hard,1,Boreas,Elemental,ToB 42
+1243,Hard,14,Two-Headed Cerberus,Monstrosity,MOoT 215
+1244,Hard,17,Carbuncle,Monstrosity,CC 57
+1245,Hard,2,Adult Deep Dragon,Dragon,FToD 174
+1246,Hard,5,Shimmer Seal,Beast,ToB2 324
+1247,Hard,3,Savager,Beast,ToB 338
+1248,Hard,4,Ley Wanderer,Aberration,ToB3 260
+1249,Hard,1,Nagpa,Humanoid,MTF 215
+1250,Hard,14,Ettercap,Monstrosity,MM 131
+1251,Hard,17,Heggarna,Aberration,ToB2 196
+1252,Hard,2,Ecstatic Bloom,Celestial,CC 303
+1253,Hard,5,Snow Giant,Giant,ToB2 174
+1254,Hard,3,Hungry Ghost' Gaki,Undead,CC 222
+1255,Hard,4,Dragonborn of Tiamat,Humanoid,FToD 185
+1256,Hard,1,Goristro,Fiend,MM 59
+1257,Hard,14,Simian' Vanara,Humanoid,CC 338
+1258,Hard,17,Young Myrmex,Elemental,ToB3 284
+1259,Hard,2,Mother Moth,Fey,ToB3 180
+1260,Hard,5,Wormhearted Suffragan,Undead,ToB 410
+1261,Deadly,3,Vampire' Patrician,Undead,CC 365
+1262,Deadly,2,Fire Giant Dreadnought,Giant,VGM 147
+1263,Deadly,5,Dwarven Ringmage,Humanoid,ToB 420
+1264,Deadly,1,Ancient Copper Dragon,Dragon,MM 110
+1265,Deadly,4,Vampire' Priestess,Undead,CC 367
+1266,Deadly,8,Windy Wailer,Undead,ToB2 370
+1267,Deadly,6,Rusalka,Undead,ToB 331
+1268,Deadly,25,Grimmlet,Monstrosity,ToB2 186
+1269,Deadly,3,Fear Smith,Fey,ToB 181
+1270,Deadly,2,Cambium,Fiend,ToB 51
+1271,Deadly,5,Fire-Infused Water Elemental,Elemental,ToB2 132
+1272,Deadly,1,Ancient Black Dragon,Dragon,MM 87
+1273,Deadly,4,Oliphaunt,Beast,CC 280
+1274,Deadly,8,Ooze' Corrupting,Ooze,ToB 311
+1275,Deadly,6,Fate Eater,Aberration,ToB 180
+1276,Deadly,25,Spy,Humanoid,MM 349
+1277,Deadly,3,Young Gold Dragon,Dragon,MM 115
+1278,Deadly,2,Adult Mithral Dragon,Dragon,ToB 133
+1279,Deadly,5,A-Mi-Kuk,Aberration,ToB2 15
+1280,Deadly,1,Devil' Arbeyach,Fiend,ToB 95
+1281,Deadly,4,Astral Devourer,Aberration,ToB2 30
+1282,Deadly,8,Mindwitness,Aberration,VGM 176
+1283,Deadly,6,Barometz,Plant,ToB2 38
+1284,Deadly,25,Hippogriff,Monstrosity,MM 184
+1285,Deadly,3,Yochlol,Fiend,MM 65
+1286,Deadly,2,Ancient Sea Serpent,Dragon,FToD 219
+1287,Deadly,5,Origami Golem,Construct,ToB3 217
+1288,Deadly,1,Gugalanna,Celestial,CC 211
+1289,Deadly,4,Ankou Soul Seeker,Dragon,CC 38
+1290,Deadly,8,Gorgon,Monstrosity,MM 171
+1291,Insanity,8,Mamura,Fey,ToB 284
+1292,Insanity,22,Metee-Kolen-Ol,Humanoid,CC 404
+1293,Insanity,1,The Curator Hell's Collector,Fiend,ToB2 101
+1294,Insanity,3,Liminal Drake,Dragon,ToB2 126
+1295,Insanity,2,Dawnfly,Beast,ToB3 104
+1296,Insanity,9,Devil' Gilded,Fiend,ToB 106
+1297,Insanity,10,Voidpool,Ooze,ToB2 362
+1298,Insanity,4,Horned Devil,Fiend,MM 74
+1299,Insanity,6,Moon Nymph,Aberration,CC 269
+1300,Insanity,5,Githyanki Gish,Humanoid,MTF 205
+1301,Medium,9,Sword Wraith Warrior,Undead,MTF 241
+1302,Medium,10,Black Dragon Wyrmling,Dragon,MM 88
+1303,Medium,4,Hound of the Night,Monstrosity,ToB 251
+1304,Medium,25,Mandrake,Plant,CC 260
+1305,Medium,1,Nabassu,Fiend,MTF 135
+1306,Medium,2,Nharyth,Aberration,ToB2 269
+1307,Medium,6,Atavist,Humanoid,ToB3 404
+1308,Medium,3,Wyvern' War,Dragon,CC 386
+1309,Medium,9,Stormvermin,Humanoid,Skaven 3
+1310,Medium,10,Kallikantzaros,Fey,CC 233
+1311,Medium,4,Wereshark,Humanoid,ToB2 247
+1312,Medium,25,Nupperibo,Fiend,MTF 168
+1313,Medium,1,Death Tyrant (in lair),Undead,MM 29
+1314,Medium,2,Fire Giant,Giant,MM 154
+1315,Medium,6,Gnyan,Elemental,ToB3 210
+1316,Medium,3,Red Hag,Fey,ToB 244
+1317,Medium,9,Drake' Peluda,Dragon,CC 131
+1318,Medium,10,Desolation Nymph,Beast,ToB3 105
+1319,Medium,4,Tanarukk,Fiend,VGM 186
+1320,Medium,25,Gray Ooze,Ooze,MM 243
+1321,Medium,1,Timingila,Monstrosity,ToB2 349
+1322,Medium,2,Wickerman,Construct,CC 380
+1323,Medium,6,Orc Blade of Ilneval,Humanoid,VGM 183
+1324,Medium,3,Golem' Bone,Construct,CC 195
+1325,Medium,9,Frost Mole,Beast,ToB2 390
+1326,Medium,10,Cauldronborn,Construct,CC 59
+1327,Medium,4,Gargoctopus,Monstrosity,CC 167
+1328,Medium,25,Winged Thrull,Construct,GGR 221
+1329,Medium,1,Malmbjorn,Monstrosity,ToB3 267
+1330,Medium,2,Oozasis,Ooze,ToB 310
+1331,Hard,5,Jiangshi,Undead,CC 230
+1332,Hard,10,Drake' Peluda,Dragon,CC 131
+1333,Hard,19,Duergar,Humanoid,MM 122
+1334,Hard,3,Oasis Keeper,Monstrosity,ToB2 273
+1335,Hard,1,Fey Lord of the Hunt,Fey,ToB 188
+1336,Hard,2,Herald of Blood,Fiend,ToB 248
+1337,Hard,4,Walled Horror,Undead,ToB2 363
+1338,Hard,6,Kruthik Hive Lord,Monstrosity,MTF 212
+1339,Hard,9,Yuan-ti Nightmare Speaker,Monstrosity,VGM 205
+1340,Hard,5,Hooden Horse,Undead,ToB2 202
+1341,Hard,10,Quaggoth Thonot,Humanoid,MM 256
+1342,Hard,19,Wood Ward,Construct,ToB2 374
+1343,Hard,3,Coastline Reaper,Monstrosity,ToB3 92
+1344,Hard,1,Hollow Dragon,Undead,FToD 206
+1345,Hard,2,Lantern Giant,Giant,ToB3 204
+1346,Hard,4,Shadow Beast,Fey,ToB 345
+1347,Hard,6,Gem Stalker,Monstrosity,FToD 202
+1348,Hard,9,Ooze' Ink Guardian,Ooze,CC 285
+1349,Hard,5,Malphas,Fey,ToB 283
+1350,Hard,10,Bugbear Chief,Humanoid,MM 33
+1351,Hard,19,Xvart Warlock of Raxivort,Humanoid,VGM 200
+1352,Hard,3,Master of Cruelties,Fiend,GGR 196
+1353,Hard,1,Kogukhpak,Fiend,ToB3 109
+1354,Hard,2,Titanoboa,Beast,ToB 382
+1355,Hard,4,Jaanavar Jal,Monstrosity,CC 229
+1356,Hard,6,Hulking Whelp,Fey,ToB 252
+1357,Hard,9,Oread,Fey,MOoT 237
+1358,Hard,5,Mirror Hag,Fey,ToB 243
+1359,Hard,10,Nightmare,Fiend,MM 235
+1360,Hard,19,Offal Walker,Undead,ToB3 296
+1361,Deadly,10,Ratatosk,Celestial,ToB 319
+1362,Deadly,2,Elder Brain,Aberration,VGM 174
+1363,Deadly,28,Galvanice Weird,Elemental,GGR 209
+1364,Deadly,3,Remorhaz,Monstrosity,MM 258
+1365,Deadly,1,Giant' Mountain,Giant,CC 185
+1366,Deadly,4,Nharyth,Aberration,ToB2 269
+1367,Deadly,6,Naga' Moonchild,Monstrosity,CC 273
+1368,Deadly,5,Ophio Fungus,Plant,ToB2 157
+1369,Deadly,10,Pillar of Lost Magocracy,Construct,CC 299
+1370,Deadly,2,Adult Copper Dragon,Dragon,MM 111
+1371,Deadly,28,Caretaker Weevil,Beast,ToB3 73
+1372,Deadly,3,Roc,Monstrosity,MM 260
+1373,Deadly,1,Ancient Prismatic Dragon,Dragon,ToB3 141
+1374,Deadly,4,Slayer Rakshasa,Fiend,ToB3 330
+1375,Deadly,6,Sandwyrm,Dragon,ToB 334
+1376,Deadly,5,Possessed Pillar,Construct,ToB 314
+1377,Deadly,10,Cactus Drake,Dragon,ToB3 152
+1378,Deadly,2,Ice Devil,Fiend,MM 75
+1379,Deadly,28,Brown Bear,Beast,MM 319
+1380,Deadly,3,Young Sand Dragon,Dragon,ToB3 147
+1381,Deadly,1,Lich,Undead,MM 202
+1382,Deadly,4,Flame-Scourged Scion,Aberration,CC 159
+1383,Deadly,6,Scroll Mummy,Undead,ToB2 262
+1384,Deadly,5,Tar Golem,Construct,ToB3 218
+1385,Deadly,10,De Ogen,Undead,ToB2 80
+1386,Deadly,2,Butatsch,Aberration,ToB2 54
+1387,Deadly,28,Chamrosh,Celestial,ToB2 59
+1388,Deadly,3,Mouse King,Fey,CC 29
+1389,Deadly,1,Molydeus,Fiend,MTF 134
+1390,Deadly,4,Fire Giant,Giant,MM 154
+1391,Insanity,2,Harbinger of Wrath,Construct,ToB2 193
+1392,Insanity,9,Haleshi,Fey,ToB2 191
+1393,Insanity,12,Vampiric Mind Flayer,Undead,VRgtR 252
+1394,Insanity,5,Demon' Rubezahl,Fiend,ToB 80
+1395,Insanity,3,Adult Moonstone Dragon,Dragon,FToD 212
+1396,Insanity,1,Ancient Void Dragon,Dragon,ToB 138
+1397,Insanity,25,Grick,Monstrosity,MM 173
+1398,Insanity,4,Stellar Rorqual,Aberration,ToB2 338
+1399,Insanity,8,Hungry Ghost' Gaki,Undead,CC 222
+1400,Insanity,6,Sasori Fukurowashi,Fey,ToB2 224
+1401,Medium,3,Mind Flayer Arcanist,Aberration,MM 222
+1402,Medium,4,Rimepacted,Fiend,ToB3 124
+1403,Medium,8,Giff,Humanoid,MTF 204
+1404,Medium,28,Valenar Hound,Fey,Ebb 312
+1405,Medium,2,Belu,Giant,ToB3 55
+1406,Medium,12,Grung Elite Warrior,Humanoid,VGM 157
+1407,Medium,6,Zombie Plague Spreader,Undead,VRgtR 255
+1408,Medium,5,Arachnocrat,Fiend,ToB2 102
+1409,Medium,1,Fey Lord' River King,Fey,ToB 196
+1410,Medium,3,Howler,Fiend,MTF 210
+1411,Medium,4,Plague Harpy,Monstrosity,ToB3 229
+1412,Medium,8,Displacer Beast,Monstrosity,MM 81
+1413,Medium,28,Swarm of Meerkats,Beast,ToB3 268
+1414,Medium,2,Grave Behemoth,Undead,CC 208
+1415,Medium,12,Ogre Howdah,Giant,MTF 221
+1416,Medium,6,Elophar,Undead,CC 149
+1417,Medium,5,Asanbosam,Aberration,ToB 27
+1418,Medium,1,Adult Amethyst Dragon,Dragon,FToD 161
+1419,Medium,3,Drake' Rust,Dragon,ToB 155
+1420,Medium,4,Ghost Knight,Humanoid,ToB 423
+1421,Medium,8,Duergar Screamer,Construct,MTF 190
+1422,Medium,28,Giant Goat,Beast,MM 326
+1423,Medium,2,Pumpkin King,Fey,ToB2 298
+1424,Medium,12,Rock Roach,Beast,ToB2 308
+1425,Medium,6,Dau,Fey,ToB 70
+1426,Medium,5,Ramag Portal Master,Humanoid,CC 313
+1427,Medium,1,Dragon' Light' Adult,Dragon,CC 114
+1428,Medium,3,Dragonleaf Tree,Plant,ToB 147
+1429,Medium,4,Demon' Apau Perape,Fiend,ToB 75
+1430,Medium,8,Barnyard Golem,Construct,ToB3 214
+1431,Hard,12,Imperial Dragon Wyrmling,Dragon,ToB2 117
+1432,Hard,3,Slayer Rakshasa,Fiend,ToB3 330
+1433,Hard,5,White Ape,Monstrosity,ToB 408
+1434,Hard,2,Gigantura,Monstrosity,ToB3 208
+1435,Hard,9,Winterghast,Undead,ToB2 371
+1436,Hard,6,Jack of Strings,Fey,ToB2 218
+1437,Hard,4,Warforged Titan,Construct,Ebb 315
+1438,Hard,21,Swarm of Quippers,Beast,MM 338
+1439,Hard,1,Shoggoth,Aberration,ToB 347
+1440,Hard,12,Orc Red Fang of Shargaas,Humanoid,VGM 185
+1441,Hard,3,Skeleton' Monarch,Undead,CC 341
+1442,Hard,5,Priest of Osybus,Humanoid,VRgtR 241
+1443,Hard,2,Dire Troll,Giant,MTF 243
+1444,Hard,9,Atavist,Humanoid,ToB3 404
+1445,Hard,6,Red Slaad,Aberration,MM 276
+1446,Hard,4,Voidwracked Mage,Humanoid,CC 409
+1447,Hard,21,Giant Eagle,Beast,MM 324
+1448,Hard,1,Balor,Fiend,MM 55
+1449,Hard,12,Nightmare,Fiend,MM 235
+1450,Hard,3,Kirikari,Monstrosity,ToB2 230
+1451,Hard,5,Ibexian,Fiend,ToB3 238
+1452,Hard,2,Haugbui,Undead,ToB 247
+1453,Hard,9,Ettin,Giant,MM 132
+1454,Hard,6,Dinosaur' Young Spinosaurus,Beast,ToB 117
+1455,Hard,4,Young Moonstone Dragon,Dragon,FToD 213
+1456,Hard,21,Nyx-Fleece Ram,Monstrosity,MOoT 233
+1457,Hard,1,Ancient Crystal Dragon,Dragon,FToD 170
+1458,Hard,12,Werehyena,Humanoid,CC 259
+1459,Hard,3,Demon' Fulad-Zereh,Fiend,CC 85
+1460,Hard,5,Tidehunter,Monstrosity,ToB2 348
+1461,Deadly,5,Savager,Beast,ToB 338
+1462,Deadly,6,Cryoceros,Monstrosity,ToB2 76
+1463,Deadly,2,Typhon,Monstrosity,MOoT 246
+1464,Deadly,4,Bone Devil,Fiend,MM 71
+1465,Deadly,9,Sandman,Celestial,ToB 333
+1466,Deadly,3,Riptide Drake,Dragon,ToB3 155
+1467,Deadly,1,Greater Star Spawn Emissary,Aberration,VRgtR 245
+1468,Deadly,10,Winged Lion,Celestial,MOoT 214
+1469,Deadly,5,Golem' Manastorm,Construct,CC 203
+1470,Deadly,6,Necromancer,Humanoid,CC 404
+1471,Deadly,2,Animated Symphony,Construct,ToB3 37
+1472,Deadly,4,Rot Troll,Giant,MTF 244
+1473,Deadly,9,Wyvern Knight,Humanoid,CC 385
+1474,Deadly,3,Ecstatic Bloom,Celestial,CC 303
+1475,Deadly,1,Coral Queen,Fey,ToB3 176
+1476,Deadly,10,Stegosaurus,Beast,VGM 140
+1477,Deadly,5,Kachlian,Aberration,ToB2 219
+1478,Deadly,6,Bloated Ghoul,Undead,ToB2 166
+1479,Deadly,2,Adult Green Dragon,Dragon,MM 94
+1480,Deadly,4,Righteous Sentinel,Construct,ToB2 307
+1481,Deadly,9,Alke,Monstrosity,ToB3 16
+1482,Deadly,3,Ghost Hunter Kobold,Humanoid,ToB3 254
+1483,Deadly,1,Ancient Black Dragon,Dragon,MM 87
+1484,Deadly,10,Vertigibbet,Fey,ToB3 384
+1485,Deadly,5,Mind Flayer Arcanist,Aberration,MM 222
+1486,Deadly,6,Mulcher,Plant,ToB3 191
+1487,Deadly,2,Yaojing,Celestial,ToB2 377
+1488,Deadly,4,Skeleton' Monarch,Undead,CC 341
+1489,Deadly,9,Dogmole Juggernaut,Monstrosity,ToB 121
+1490,Deadly,3,Broodmother of Leng,Aberration,ToB2 52
+1491,Insanity,8,Scrag' Greater,Monstrosity,CC 322
+1492,Insanity,4,Salamander Monarch,Elemental,ToB2 311
+1493,Insanity,2,Astral Dreadnought,Monstrosity,MTF 117
+1494,Insanity,3,Githzerai Anarch,Humanoid,MTF 207
+1495,Insanity,18,Slithering Tracker,Ooze,VGM 191
+1496,Insanity,1,Devil' Mammon,Fiend,ToB 99
+1497,Insanity,6,Gloom Weaver,Humanoid,MTF 224
+1498,Insanity,5,Devil' Koralk (Harvester Devil),Fiend,ToB 108
+1499,Insanity,28,Folk of Leng,Humanoid,ToB 204
+1500,Insanity,10,Mortifera,Aberration,ToB3 278
+1501,Medium,4,Undercity Medusa,Monstrosity,GGR 222
+1502,Medium,1,Fey Lord' Moonlit King,Fey,ToB 190
+1503,Medium,2,Adult Deep Dragon,Dragon,FToD 174
+1504,Medium,5,Sahuagin Baron,Humanoid,MM 264
+1505,Medium,3,Golem' Manastorm,Construct,CC 203
+1506,Medium,16,Word Archon,Celestial,ToB3 44
+1507,Medium,8,Deathlock Wight,Undead,MTF 129
+1508,Medium,4,Transcendent Lunarchidna,Aberration,ToB2 244
+1509,Medium,1,Lazav,Monstrosity,GGR 232
+1510,Medium,2,Devil' Koralk (Harvester Devil),Fiend,ToB 108
+1511,Medium,5,Yuan-ti Pit Master,Monstrosity,VGM 206
+1512,Medium,3,Feyward Tree,Construct,ToB 200
+1513,Medium,16,Phantom,Undead,CC 296
+1514,Medium,8,Mahoru,Monstrosity,ToB 281
+1515,Medium,4,Tembril,Monstrosity,ToB2 344
+1516,Medium,1,Adult Gold Dragon,Dragon,MM 114
+1517,Medium,2,Naina,Dragon,ToB 302
+1518,Medium,5,Angel' Fidele,Celestial,ToB 21
+1519,Medium,3,Sewer Weird,Elemental,ToB3 341
+1520,Medium,16,Dire Wolf,Beast,MM 321
+1521,Medium,8,Orc Red Fang of Shargaas,Humanoid,VGM 185
+1522,Medium,4,Dire Lionfish,Beast,ToB3 131
+1523,Medium,1,Adult Gold Dragon,Dragon,MM 114
+1524,Medium,2,Devil' Koralk (Harvester Devil),Fiend,ToB 108
+1525,Medium,5,Golgari Shaman,Humanoid,GGR 236
+1526,Medium,3,Liosalfar,Elemental,ToB 277
+1527,Medium,16,Moppet,Construct,ToB3 277
+1528,Medium,8,Dragon' Wasteland Wyrmling,Dragon,CC 118
+1529,Medium,4,Swamp Naga,Monstrosity,ToB2 265
+1530,Medium,1,Blue Abishai,Fiend,MTF 161
+1531,Hard,2,Demon Lord' Chittr’k’k,Fiend,CC 76
+1532,Hard,5,Graveyard Dragon,Undead,ToB2 183
+1533,Hard,8,Gnyan,Elemental,ToB3 210
+1534,Hard,3,Algorith,Celestial,ToB 14
+1535,Hard,6,Dragonblood Ooze,Ooze,FToD 182
+1536,Hard,4,Cloaker,Aberration,MM 41
+1537,Hard,24,Vargouille,Fiend,VGM 195
+1538,Hard,1,Harbinger of Wrath,Construct,ToB2 193
+1539,Hard,12,Spectator,Aberration,MM 30
+1540,Hard,2,Dire Troll,Giant,MTF 243
+1541,Hard,5,Drow Mage,Humanoid,MM 129
+1542,Hard,8,Death Butterfly Swarm,Beast,ToB 71
+1543,Hard,3,Lamassu,Celestial,CC 247
+1544,Hard,6,Dvarapala,Giant,CC 137
+1545,Hard,4,Dakini' Simhamukha,Celestial,CC 70
+1546,Hard,24,Bronze Scout,Construct,MTF 125
+1547,Hard,1,Ghoul' Emperor,Undead,ToB 218
+1548,Hard,12,Bakery Drake,Dragon,ToB3 151
+1549,Hard,2,Ultroloth,Fiend,MM 314
+1550,Hard,5,Fey Revenant,Fey,ToB2 150
+1551,Hard,8,Gnyan,Elemental,ToB3 210
+1552,Hard,3,Devil' Automata,Fiend,ToB 102
+1553,Hard,6,Scarlet Ibis,Monstrosity,ToB2 318
+1554,Hard,4,Parzz'Val,Aberration,ToB2 292
+1555,Hard,24,Angel' Eye of the Gods,Celestial,CC 16
+1556,Hard,1,Ancient White Dragon,Dragon,MM 100
+1557,Hard,12,Imperial Dragon Wyrmling,Dragon,ToB2 117
+1558,Hard,2,Carnivorous Ship,Monstrosity,ToB2 56
+1559,Hard,5,Demon' Psoglav,Fiend,ToB 79
+1560,Hard,8,Shadow Demon,Fiend,MM 64
+1561,Deadly,6,A-Mi-Kuk,Aberration,ToB2 15
+1562,Deadly,5,Young Green Dragon,Dragon,MM 94
+1563,Deadly,4,Demon' Yek Alpha,Fiend,CC 95
+1564,Deadly,2,Category 3 Krasis,Monstrosity,GGR 212
+1565,Deadly,16,Wakwak,Beast,ToB3 388
+1566,Deadly,1,Demon Lord' Typhon,Fiend,CC 81
+1567,Deadly,3,Lord of Vultures,Fey,CC 26
+1568,Deadly,12,Red Dragon Wyrmling,Dragon,MM 98
+1569,Deadly,8,Gold-Forged Sentinel,Construct,MOoT 211
+1570,Deadly,6,Demon' Vellso,Fiend,CC 92
+1571,Deadly,5,Bone Collective,Undead,ToB 39
+1572,Deadly,4,Coastline Reaper,Monstrosity,ToB3 92
+1573,Deadly,2,Adult Prismatic Dragon,Dragon,ToB3 142
+1574,Deadly,16,Bandit Captain,Humanoid,MM 344
+1575,Deadly,1,Dragon' Light' Ancient,Dragon,CC 116
+1576,Deadly,3,Titanoboa,Beast,ToB 382
+1577,Deadly,12,Lich Hound,Undead,ToB 274
+1578,Deadly,8,Alke,Monstrosity,ToB3 16
+1579,Deadly,6,Tveirherjar,Undead,CC 359
+1580,Deadly,5,Ziphius,Aberration,CC 392
+1581,Deadly,4,Mytholabe,Construct,CC 271
+1582,Deadly,2,Adult Flame Dragon,Dragon,ToB 129
+1583,Deadly,16,Gray Thirster,Undead,ToB 238
+1584,Deadly,1,Ancient Sapphire Dragon,Dragon,FToD 214
+1585,Deadly,3,Archon of Falling Stars,Celestial,MOoT 212
+1586,Deadly,12,Sap Demon,Ooze,ToB 335
+1587,Deadly,8,Aphemia,Monstrosity,MOoT 226
+1588,Deadly,6,Mangrove Treant,Plant,ToB2 350
+1589,Deadly,5,Drake' Rust,Dragon,ToB 155
+1590,Deadly,4,Bukavac,Monstrosity,ToB 47
+1591,Insanity,6,Forgotten Regent,Undead,ToB3 188
+1592,Insanity,1,Marut,Construct,MTF 213
+1593,Insanity,12,Vrock,Fiend,MM 64
+1594,Insanity,20,Ghoulsteed,Undead,CC 177
+1595,Insanity,3,Dragon Turtle,Dragon,MM 119
+1596,Insanity,4,Equitox,Fiend,ToB3 171
+1597,Insanity,5,Death Barque,Undead,ToB2 268
+1598,Insanity,9,Hoard Drake,Dragon,ToB2 122
+1599,Insanity,2,Arasta,Monstrosity,MOoT 248
+1600,Insanity,8,Conclave Dryad,Fey,GGR 194
+1601,Medium,2,Ki-rin,Celestial,VGM 163
+1602,Medium,4,Ulnorya,Aberration,ToB2 354
+1603,Medium,19,Cueyatl Warrior,Humanoid,CC 69
+1604,Medium,6,Owl Harpy,Monstrosity,ToB 246
+1605,Medium,1,Adult Sand Dragon,Dragon,ToB3 146
+1606,Medium,10,Fleecemane Lion,Monstrosity,MOoT 223
+1607,Medium,5,Zeitgeist,Humanoid,ToB2 383
+1608,Medium,9,Nkosi Pridelord,Humanoid,ToB 306
+1609,Medium,3,Krake Spawn,Monstrosity,ToB 269
+1610,Medium,2,Gray Render,Monstrosity,MTF 209
+1611,Medium,4,Demon' Vellso,Fiend,CC 92
+1612,Medium,19,Grindylow,Aberration,CC 210
+1613,Medium,6,Scribe Devil,Fiend,ToB2 105
+1614,Medium,1,Sibriex,Fiend,MTF 137
+1615,Medium,10,Bearded Devil,Fiend,MM 70
+1616,Medium,5,Troll' Desert,Giant,CC 356
+1617,Medium,9,Kobold Chieftain,Humanoid,ToB 263
+1618,Medium,3,Conclave Dryad,Fey,GGR 194
+1619,Medium,2,Dragon Eel,Dragon,ToB 146
+1620,Medium,4,Vallowex,Aberration,ToB2 356
+1621,Medium,19,Sporous Crap,Beast,ToB2 398
+1622,Medium,6,Derro' Witch Queen,Humanoid,CC 97
+1623,Medium,1,Drow Favored Consort,Humanoid,MTF 183
+1624,Medium,10,Radiant Spark Swarm,Elemental,ToB2 305
+1625,Medium,5,Vrock,Fiend,MM 64
+1626,Medium,9,Derro Fetal Savant,Humanoid,ToB 92
+1627,Medium,3,Chaos Creeper,Plant,ToB3 80
+1628,Medium,2,Boneclaw,Undead,MTF 121
+1629,Medium,4,Vampire' Umbral,Fiend,ToB 397
+1630,Medium,19,Grimmlet,Monstrosity,ToB2 186
+1631,Hard,10,Gear Mage,Humanoid,CC 401
+1632,Hard,6,Swamp Naga,Monstrosity,ToB2 265
+1633,Hard,29,Dire Wolf,Beast,MM 321
+1634,Hard,1,Fey Queen of Night and Magic,Fey,ToB 192
+1635,Hard,5,Hezrou,Fiend,MM 60
+1636,Hard,2,Mummy Lord,Undead,MM 229
+1637,Hard,4,Gulper Behemoth,Monstrosity,ToB2 190
+1638,Hard,3,Gynosphinx,Monstrosity,MM 282
+1639,Hard,10,Wharfling Swarm,Beast,ToB 407
+1640,Hard,6,Akaasit,Construct,ToB2 11
+1641,Hard,29,Clockwork Leech,Construct,ToB2 66
+1642,Hard,1,Devil' Arbeyach,Fiend,ToB 95
+1643,Hard,5,Rockslide Elemental,Elemental,ToB3 168
+1644,Hard,2,Queen of Cats,Fey,CC 33
+1645,Hard,4,Hellfire Giant,Giant,ToB3 203
+1646,Hard,3,Young Imperial Dragon,Dragon,ToB2 117
+1647,Hard,10,Blistercoil Weird,Elemental,GGR 207
+1648,Hard,6,Bearfolk Thunderstomper,Humanoid,ToB3 53
+1649,Hard,29,Scorchrunner Jackal,Monstrosity,ToB3 340
+1650,Hard,1,Astral Dreadnought,Monstrosity,MTF 117
+1651,Hard,5,Moon Nymph,Aberration,CC 269
+1652,Hard,2,Andrenjinyi,Celestial,ToB 15
+1653,Hard,4,Demon' Yek Alpha,Fiend,CC 95
+1654,Hard,3,Demon' Berstuc,Fiend,ToB 76
+1655,Hard,10,Infernal Centaur,Fiend,ToB2 214
+1656,Hard,6,Undercity Medusa,Monstrosity,GGR 222
+1657,Hard,29,Thri-kreen,Humanoid,MM 288
+1658,Hard,1,Ancient Moonstone Dragon,Dragon,FToD 211
+1659,Hard,5,Shabti,Construct,ToB 343
+1660,Hard,2,Commander of Horn and Gold,Fey,ToB2 145
+1661,Deadly,4,Herald of Slaughter,Fiend,ToB2 198
+1662,Deadly,9,Black Patch,Ooze,ToB3 58
+1663,Deadly,6,Triton Master of Waves,Humanoid,MOoT 245
+1664,Deadly,2,Boreas,Elemental,ToB 42
+1665,Deadly,3,Psychic Vampire,Undead,ToB2 357
+1666,Deadly,5,Gulper Behemoth,Monstrosity,ToB2 190
+1667,Deadly,19,Hybrid Flyer,Humanoid,GGR 217
+1668,Deadly,1,Ancient Sand Dragon,Dragon,ToB3 145
+1669,Deadly,4,Gynosphinx,Monstrosity,MM 282
+1670,Deadly,9,Ice Willow,Plant,ToB3 240
+1671,Deadly,6,Giant' Blood,Giant,CC 180
+1672,Deadly,2,Fey Queen of Witches,Fey,ToB 194
+1673,Deadly,3,Psychic Vampire,Undead,ToB2 357
+1674,Deadly,5,Conclave Dryad,Fey,GGR 194
+1675,Deadly,19,Spider Thief,Construct,ToB 366
+1676,Deadly,1,Dragon' Wasteland' Ancient,Dragon,CC 120
+1677,Deadly,4,Crater Drake,Dragon,ToB2 120
+1678,Deadly,9,Vrock,Fiend,MM 64
+1679,Deadly,6,Cyonaxin,Celestial,ToB3 102
+1680,Deadly,2,Adult Boreal Dragon,Dragon,ToB2 111
+1681,Deadly,3,Adult Topaz Dragon,Dragon,FToD 221
+1682,Deadly,5,Psychophant,Humanoid,ToB3 405
+1683,Deadly,19,Githzerai Monk,Humanoid,MM 161
+1684,Deadly,1,Ancient Silver Dragon,Dragon,MM 116
+1685,Deadly,4,Valkyrie,Celestial,ToB 396
+1686,Deadly,9,Ouroboros,Dragon,CC 293
+1687,Deadly,6,Nivix Cyclops,Giant,GGR 216
+1688,Deadly,2,Koschei,Fiend,ToB 266
+1689,Deadly,3,Devilflame Juggler,Fiend,ToB3 119
+1690,Deadly,5,Young Silver Dragon,Dragon,MM 118
+1691,Insanity,6,Herald of Undeath,Undead,CC 219
+1692,Insanity,9,Ash Phoenix,Undead,ToB2 28
+1693,Insanity,14,Yavalnoi,Aberration,ToB2 379
+1694,Insanity,5,Noth-Norren,Elemental,ToB2 270
+1695,Insanity,12,Ursa Polaris,Monstrosity,CC 364
+1696,Insanity,8,Young Emerald Dragon,Dragon,FToD 197
+1697,Insanity,4,Forest Emperor,Aberration,ToB2 155
+1698,Insanity,16,Water Leaper,Monstrosity,ToB 406
+1699,Insanity,1,Zaratan,Monstrosity,ToB 414
+1700,Insanity,2,Hala'ath The Sentinel of Progress,Celestial,ToB3 22
+1701,Medium,1,Ancient Crystal Dragon,Dragon,FToD 170
+1702,Medium,4,Mind Flayer Arcanist,Aberration,MM 222
+1703,Medium,6,Half-Red Dragon Veteran,Humanoid,MM 180
+1704,Medium,3,Anzu,Monstrosity,ToB2 26
+1705,Medium,2,Adult Crystal Dragon,Dragon,FToD 171
+1706,Medium,12,Clockwork Huntsman,Construct,ToB 63
+1707,Medium,21,Quickling,Fey,VGM 187
+1708,Medium,9,Philosopher’s Ghost,Ooze,CC 297
+1709,Medium,5,Rotting Wind,Undead,ToB 330
+1710,Medium,1,Red Abishai,Fiend,MTF 162
+1711,Medium,4,Unspeakable Horror,Monstrosity,VRgtR 250
+1712,Medium,6,Gearmass,Ooze,ToB3 195
+1713,Medium,3,Genie' Al-Aeshma,Elemental,ToB 211
+1714,Medium,2,Culicoid,Fiend,ToB2 94
+1715,Medium,12,Leashed Lesion,Aberration,ToB3 259
+1716,Medium,21,Clacker Beetle Soldier,Beast,ToB3 54
+1717,Medium,9,Alchemical Skunk,Monstrosity,ToB2 13
+1718,Medium,5,Nichny,Fey,ToB 303
+1719,Medium,1,Balor,Fiend,MM 55
+1720,Medium,4,Necrotech Thunderer,Undead,ToB3 289
+1721,Medium,6,Mind Mage,Humanoid,GGR 233
+1722,Medium,3,Fulminar,Elemental,CC 165
+1723,Medium,2,Gray Render,Monstrosity,MTF 209
+1724,Medium,12,Mush Marcher,Plant,ToB3 192
+1725,Medium,21,Putrescent Slime,Ooze,ToB2 300
+1726,Medium,9,Jubjub Bird,Beast,ToB3 247
+1727,Medium,5,Bearfolk Chieftain,Humanoid,CC 51
+1728,Medium,1,Red Abishai,Fiend,MTF 162
+1729,Medium,4,Triton Master of Waves,Humanoid,MOoT 245
+1730,Medium,6,Star Spawn Mangler,Aberration,MTF 236
+1731,Hard,6,Ashen Custodian,Fey,ToB2 29
+1732,Hard,3,Nightmare Shepherd,Fiend,MOoT 221
+1733,Hard,5,Shabti,Construct,ToB 343
+1734,Hard,10,Ratatosk,Celestial,ToB 319
+1735,Hard,2,Nabassu,Fiend,MTF 135
+1736,Hard,9,Trollkin Ragecaster,Humanoid,ToB3 377
+1737,Hard,4,Jiangshi,Undead,VRgtR 236
+1738,Hard,1,Fey Queen of Night and Magic,Fey,ToB 192
+1739,Hard,6,Mirror Hag,Fey,ToB 243
+1740,Hard,3,Giant' Void,Giant,CC 187
+1741,Hard,5,Monolith Champion,Construct,ToB 294
+1742,Hard,10,Winterghast,Undead,ToB2 371
+1743,Hard,2,Herald of Great Wyrm,Dragon,CC 217
+1744,Hard,9,Felidar,Celestial,GGR 199
+1745,Hard,4,Infested Duelist,Humanoid,ToB3 409
+1746,Hard,1,Ancient Prismatic Dragon,Dragon,ToB3 141
+1747,Hard,6,Hobgoblin Warlord,Humanoid,MM 187
+1748,Hard,3,Thundercall Hadrosaur,Monstrosity,ToB3 129
+1749,Hard,5,Ooze' Shark Bowl,Ooze,CC 284
+1750,Hard,10,Frostveil,Plant,ToB 207
+1751,Hard,2,Snallygaster,Aberration,ToB3 348
+1752,Hard,9,Black Knight Commander,Humanoid,ToB 418
+1753,Hard,4,Bonecage Constrictor,Undead,ToB3 287
+1754,Hard,1,Shadow of Death,Celestial,ToB2 323
+1755,Hard,6,Necromancer,Humanoid,CC 404
+1756,Hard,3,Ghost Dragon,Undead,CC 170
+1757,Hard,5,Wanyudo,Fiend,ToB2 364
+1758,Hard,10,Ant Queen' Giant,Beast,ToB 23
+1759,Hard,2,Green Abishai,Fiend,MTF 162
+1760,Hard,9,Temple Dog,Celestial,ToB 378
+1761,Deadly,5,Krake Spawn,Monstrosity,ToB 269
+1762,Deadly,6,Moon Nymph,Aberration,CC 269
+1763,Deadly,10,Lamia' Matriarch Serp,Monstrosity,CC 249
+1764,Deadly,8,Young Wind Dragon,Dragon,ToB 144
+1765,Deadly,21,Inspired,Humanoid,Ebb 294
+1766,Deadly,1,Aurelia,Celestial,GGR 230
+1767,Deadly,3,Adult Mithral Dragon,Dragon,ToB 133
+1768,Deadly,2,Golem' War Machine,Construct,CC 205
+1769,Deadly,4,Valkyrie,Celestial,ToB 396
+1770,Deadly,5,Brine Hag,Fey,ToB3 225
+1771,Deadly,6,Cyonaxin,Celestial,ToB3 102
+1772,Deadly,10,Elves' Shadow Fey' Forest Hunter,Humanoid,ToB 173
+1773,Deadly,8,Ice Willow,Plant,ToB3 240
+1774,Deadly,21,Trollkin Fire Shaman,Humanoid,ToB3 376
+1775,Deadly,1,Kraken,Monstrosity,MM 197
+1776,Deadly,3,Khodumodumo,Monstrosity,ToB2 229
+1777,Deadly,2,Borborygmos,Giant,GGR 238
+1778,Deadly,4,Dragonbone Golem,Construct,FToD 183
+1779,Deadly,5,Horakh,Monstrosity,ToB 250
+1780,Deadly,6,Hantu Penanggal,Fiend,ToB2 192
+1781,Deadly,10,Kamaitachi,Monstrosity,ToB2 220
+1782,Deadly,8,Ogre Chieftain' Corrupted,Giant,ToB 423
+1783,Deadly,21,Two-Headed Cerberus,Monstrosity,MOoT 215
+1784,Deadly,1,Ancient Blue Dragon,Dragon,MM 90
+1785,Deadly,3,Ancient Sea Serpent,Dragon,FToD 219
+1786,Deadly,2,Amnizu,Fiend,MTF 164
+1787,Deadly,4,Doomwake Giant,Giant,MOoT 224
+1788,Deadly,5,Sasori Fukurowashi,Fey,ToB2 224
+1789,Deadly,6,Ushabti Greatbow,Construct,TombKings 10
+1790,Deadly,10,Night Hag,Fiend,MM 178
+1791,Insanity,6,Crater Drake,Dragon,ToB2 120
+1792,Insanity,27,Erina Tussler,Humanoid,ToB3 172
+1793,Insanity,4,Hellfire Engine,Construct,MTF 165
+1794,Insanity,9,Bone Devil,Fiend,MM 71
+1795,Insanity,5,Adult Brass Dragon,Dragon,MM 105
+1796,Insanity,1,Demon Lord of Apes' Mechuiti,Fiend,ToB 88
+1797,Insanity,2,Ancient Bronze Dragon,Dragon,MM 107
+1798,Insanity,12,Puca,Fey,ToB3 321
+1799,Insanity,17,Gnyan,Elemental,ToB3 210
+1800,Insanity,3,Polukranos,Monstrosity,MOoT 231
+1801,Medium,5,Fey Revenant,Fey,ToB2 150
+1802,Medium,6,Lindwurm,Dragon,ToB 276
+1803,Medium,3,Sunder Shaman,Giant,GGR 202
+1804,Medium,2,Incarnate Gloom,Undead,ToB2 213
+1805,Medium,1,Drow Matron Mother,Humanoid,MTF 186
+1806,Medium,4,Demon' Kishi,Fiend,ToB 77
+1807,Medium,8,Infernal Centaur,Fiend,ToB2 214
+1808,Medium,24,Pestilence Swarm,Beast,ToB2 294
+1809,Medium,5,Tar Golem,Construct,ToB3 218
+1810,Medium,6,Wind Acolyte,Humanoid,ToB3 412
+1811,Medium,3,Githyanki Gish,Humanoid,MTF 205
+1812,Medium,2,Demon Lord' Chittr’k’k,Fiend,CC 76
+1813,Medium,1,Demilich (in lair),Undead,MM 48
+1814,Medium,4,Tarkun the Desiccated,Fey,ToB2 148
+1815,Medium,8,Spawn of Chernobog,Fiend,CC 347
+1816,Medium,24,Giant Toad,Beast,MM 329
+1817,Medium,5,Woe Strider,Aberration,MOoT 247
+1818,Medium,6,Gladiator,Humanoid,MM 346
+1819,Medium,3,Young Red Dragon,Dragon,MM 98
+1820,Medium,2,Infernal Tutor,Fiend,ToB3 121
+1821,Medium,1,Harbinger of Wrath,Construct,ToB2 193
+1822,Medium,4,Shabti,Construct,ToB 343
+1823,Medium,8,Gnyan,Elemental,ToB3 210
+1824,Medium,24,Khamaseen,Elemental,ToB3 250
+1825,Medium,5,Sloth' Giant,Beast,CC 345
+1826,Medium,6,Shimmer Seal,Beast,ToB2 324
+1827,Medium,3,Undying Councilor,Undead,Ebb 311
+1828,Medium,2,Star Spawn Seer,Aberration,MTF 236
+1829,Medium,1,Leviathan,Elemental,MTF 198
+1830,Medium,4,Ushabti,Construct,TombKings 11
+1831,Hard,6,Cueyatl Warchief,Humanoid,ToB3 101
+1832,Hard,5,Wanyudo,Fiend,ToB2 364
+1833,Hard,3,Galidroo,Monstrosity,ToB2 161
+1834,Hard,1,Zaratan,Elemental,MTF 201
+1835,Hard,8,Golgari Shaman,Humanoid,GGR 236
+1836,Hard,4,Elf' Alchemist Archer,Humanoid,CC 141
+1837,Hard,12,Ant Queen' Giant,Beast,ToB 23
+1838,Hard,2,Steel Predator,Construct,MTF 239
+1839,Hard,6,Giant Husk,Undead,ToB2 205
+1840,Hard,5,Assassin,Humanoid,MM 343
+1841,Hard,3,Tosculi Hive Queen,Monstrosity,ToB 385
+1842,Hard,1,Ancient Sapphire Dragon,Dragon,FToD 214
+1843,Hard,8,Mudmutt,Monstrosity,ToB3 279
+1844,Hard,4,Dullahan,Undead,VRgtR 233
+1845,Hard,12,Giant' Laestrigonian,Giant,CC 184
+1846,Hard,2,Primordail Surge,Elemental,ToB3 320
+1847,Hard,6,Yathon,Humanoid,ToB2 378
+1848,Hard,5,Feyward Tree,Construct,ToB 200
+1849,Hard,3,Fey Lord' Reynard,Fey,CC 156
+1850,Hard,1,Jotun Giant,Giant,ToB 226
+1851,Hard,8,Elves' Shadow Fey' Forest Hunter,Humanoid,ToB 173
+1852,Hard,4,Field Commander,Humanoid,ToB3 406
+1853,Hard,12,Giant' Laestrigonian,Giant,CC 184
+1854,Hard,2,Fey Snow Queen,Fey,ToB 198
+1855,Hard,6,Sarsaok,Monstrosity,ToB2 313
+1856,Hard,5,Young Boreal Dragon,Dragon,ToB2 112
+1857,Hard,3,Yskarakta,Fiend,ToB2 317
+1858,Hard,1,Ancient Sea Dragon,Dragon,ToB 135
+1859,Hard,8,Razorleaf,Plant,CC 317
+1860,Hard,4,Bone Swarm,Undead,ToB 41
+1861,Deadly,2,Living Star,Celestial,CC 256
+1862,Deadly,24,Sea Hag,Fey,MM 179
+1863,Deadly,4,Stellar Rorqual,Aberration,ToB2 338
+1864,Deadly,3,Hvalfiskr,Giant,ToB3 237
+1865,Deadly,12,Flayed Wraith,Undead,ToB2 151
+1866,Deadly,6,Demon' Kishi,Fiend,ToB 77
+1867,Deadly,5,Oaken Sentinel,Plant,ToB3 293
+1868,Deadly,9,Living Cloudkill,Construct,Ebb 299
+1869,Deadly,1,Iorvensiav Lady of the Unforgiving Cold,Fiend,ToB3 117
+1870,Deadly,2,Hraesvelgr the Corpse Swallower,Giant,ToB 224
+1871,Deadly,24,Dragonnel,Dragon,FToD 190
+1872,Deadly,4,Culicoid,Fiend,ToB2 94
+1873,Deadly,3,Hundred-Handed One,Giant,MOoT 225
+1874,Deadly,12,Barbed Devil,Fiend,MM 70
+1875,Deadly,6,Sewer Weird,Elemental,ToB3 341
+1876,Deadly,5,Forgotten Regent,Undead,ToB3 188
+1877,Deadly,9,Golem' Armory,Construct,CC 194
+1878,Deadly,1,Rakdos,Fiend,GGR 247
+1879,Deadly,2,Dawnfly,Beast,ToB3 104
+1880,Deadly,24,Polar Bear,Beast,MM 334
+1881,Deadly,4,Fey Lord' Reynard,Fey,CC 156
+1882,Deadly,3,Green Abishai,Fiend,MTF 162
+1883,Deadly,12,Minotaur' Labyrinth,Monstrosity,CC 267
+1884,Deadly,6,Dragon' Clockwork 1-Head,Construct,CC 111
+1885,Deadly,5,Luck Leech,Fey,ToB2 241
+1886,Deadly,9,Lambent Witchfyre,Aberration,ToB2 234
+1887,Deadly,1,Ancient Boreal Dragon,Dragon,ToB2 110
+1888,Deadly,2,Polukranos,Monstrosity,MOoT 231
+1889,Deadly,24,Bilge Gremlin Bosun,Fey,ToB3 219
+1890,Deadly,4,Relentless Juggernaut,Fiend,VRgtR 243
+1891,Insanity,19,Cats of Ulthar,Beast,CC 58
+1892,Insanity,5,Archon of the Trimvirate,Celestial,GGR 192
+1893,Insanity,1,Alsikaya The Screeching Mother of Volcanoes,Fiend,ToB2 85
+1894,Insanity,14,Dhergoloth,Fiend,MTF 248
+1895,Insanity,3,Rhopalocerex Demon Lord of Deception,Fiend,ToB2 90
+1896,Insanity,10,Wanyudo,Fiend,ToB2 364
+1897,Insanity,9,Underworld Sentinel,Undead,ToB3 381
+1898,Insanity,4,Master of Demon Mtn,Humanoid,CC 264
+1899,Insanity,6,Gug,Giant,ToB 241
+1900,Insanity,8,Young Void Dragon,Dragon,ToB 140
+1901,Medium,4,Ammut,Celestial,CC 15
+1902,Medium,6,Loxoda,Monstrosity,ToB 280
+1903,Medium,10,Pech' Stonemaster,Elemental,CC 295
+1904,Medium,1,Shadow of Death,Celestial,ToB2 323
+1905,Medium,2,Retriever,Construct,MTF 222
+1906,Medium,3,Clockwork Tactician,Construct,ToB3 90
+1907,Medium,28,Serpentfolk of Yig,Humanoid,CC 324
+1908,Medium,5,Druid of the Old Ways,Humanoid,GGR 239
+1909,Medium,4,Dragon' Wasteland Young,Dragon,CC 118
+1910,Medium,6,Tatzelwurm,Dragon,ToB3 366
+1911,Medium,10,Rainforest Ogre,Giant,ToB3 301
+1912,Medium,1,Fey Queen of Night and Magic,Fey,ToB 192
+1913,Medium,2,Shetani,Fiend,ToB3 343
+1914,Medium,3,Abominable Beauty,Elemental,ToB 11
+1915,Medium,28,Pescavitus,Celestial,ToB3 315
+1916,Medium,5,Soul Eater,Fiend,ToB 356
+1917,Medium,4,Thin Giant,Giant,ToB2 175
+1918,Medium,6,Fate Eater,Aberration,ToB 180
+1919,Medium,10,Mead Archon,Celestial,ToB2 18
+1920,Medium,1,Primordial Matriarch,Elemental,ToB3 318
+1921,Medium,2,Deathpact Angel,Celestial,GGR 191
+1922,Medium,3,Ychen Bannog,Beast,ToB 413
+1923,Medium,28,Meazel,Humanoid,MTF 214
+1924,Medium,5,Earth Elemental Myrmidon,Elemental,MTF 202
+1925,Medium,4,Star-Nosed Diopsid,Aberration,ToB3 355
+1926,Medium,6,Plague Harpy,Monstrosity,ToB3 229
+1927,Medium,10,Overshadow,Undead,ToB2 289
+1928,Medium,1,Ankou Soul Herald,Dragon,CC 37
+1929,Medium,2,Ice Devil,Fiend,MM 75
+1930,Medium,3,Imperator,Monstrosity,ToB3 243
+1931,Hard,18,Bannik,Fey,ToB3 51
+1932,Hard,9,Rockwood,Elemental,ToB3 334
+1933,Hard,14,Astralsupial,Beast,ToB3 46
+1934,Hard,6,Bone Collective,Undead,ToB 39
+1935,Hard,3,Nariphon,Plant,ToB3 285
+1936,Hard,8,Devil' Gilded,Fiend,ToB 106
+1937,Hard,1,Iilari'jil The Fire of Forgotten Hope,Celestial,ToB3 24
+1938,Hard,2,Fey Queen of Witches,Fey,ToB 194
+1939,Hard,5,Thin Giant,Giant,ToB2 175
+1940,Hard,4,Montain Dryad,Fey,ToB2 130
+1941,Hard,18,Aurochs,Beast,VGM 207
+1942,Hard,9,Quiet Soul,Undead,CC 309
+1943,Hard,14,Forest Marauder,Giant,ToB 205
+1944,Hard,6,Canoloth,Fiend,MTF 247
+1945,Hard,3,Siege Archon,Celestial,ToB3 42
+1946,Hard,8,Haleshi,Fey,ToB2 191
+1947,Hard,1,Empyrean,Celestial,MM 130
+1948,Hard,2,Koschei,Fiend,ToB 266
+1949,Hard,5,Wickerman,Construct,CC 380
+1950,Hard,4,Baba Yaga’s Horsemen' Base,Fey,ToB 30
+1951,Hard,18,Sampgas Bubble,Ooze,ToB2 343
+1952,Hard,9,Spawn of Rhopalocerex,Fiend,ToB2 92
+1953,Hard,14,Frostveil,Plant,ToB 207
+1954,Hard,6,Avulzor,Aberration,ToB2 37
+1955,Hard,3,Wastrilith,Fiend,MTF 139
+1956,Hard,8,Jaanavar Jal,Monstrosity,CC 229
+1957,Hard,1,Dragon' Wasteland' Ancient,Dragon,CC 120
+1958,Hard,2,Lazav,Monstrosity,GGR 232
+1959,Hard,5,Devilbound Gnomish Prince,Humanoid,ToB 420
+1960,Hard,4,Shadow Fey Poisoner,Humanoid,CC 148
+1961,Deadly,1,Marut,Construct,MTF 213
+1962,Deadly,6,Gulper Behemoth,Monstrosity,ToB2 190
+1963,Deadly,4,Countess of Garlands,Fey,ToB3 178
+1964,Deadly,10,Vapor Drake,Dragon,ToB3 157
+1965,Deadly,28,Orc Claw of Luthic,Humanoid,VGM 183
+1966,Deadly,18,Millitaur,Monstrosity,ToB 288
+1967,Deadly,8,Mind Flayer,Aberration,MM 222
+1968,Deadly,3,Bathael The Exiled Lord,Fiend,ToB2 87
+1969,Deadly,2,Greater Star Spawn Emissary,Aberration,VRgtR 245
+1970,Deadly,5,Giant' Void,Giant,CC 187
+1971,Deadly,1,Warforged Colossus,Construct,Ebb 314
+1972,Deadly,6,Infested Duelist,Humanoid,ToB3 409
+1973,Deadly,4,Star Spawn Seer,Aberration,MTF 236
+1974,Deadly,10,Elf' Servant of the Vine,Humanoid,CC 144
+1975,Deadly,28,Rock Roach,Beast,ToB2 308
+1976,Deadly,18,Grell,Aberration,MM 172
+1977,Deadly,8,Snow Ooze,Ooze,ToB3 311
+1978,Deadly,3,Devil' Infernal Knight,Fiend,CC 104
+1979,Deadly,2,Ancient Moonstone Dragon,Dragon,FToD 211
+1980,Deadly,5,Leech Demon,Fiend,ToB3 110
+1981,Deadly,1,Devil' Mammon,Fiend,ToB 99
+1982,Deadly,6,Pine Doom,Plant,ToB2 295
+1983,Deadly,4,Nalfeshnee,Fiend,MM 62
+1984,Deadly,10,Spectral Guardian,Undead,ToB 358
+1985,Deadly,28,Centaur,Monstrosity,MM 38
+1986,Deadly,18,Gloomflower,Plant,CC 188
+1987,Deadly,8,Living Soot,Elemental,ToB3 263
+1988,Deadly,3,Nephirron Devil,Fiend,ToB2 104
+1989,Deadly,2,Ankou Soul Herald,Dragon,CC 37
+1990,Deadly,5,Valkyrie,Celestial,ToB 396
+1991,Insanity,4,Demon Lord' Rangda,Fiend,CC 79
+1992,Insanity,23,Tusked Skyfish,Aberration,ToB 391
+1993,Insanity,10,Young Flame Dragon,Dragon,ToB 130
+1994,Insanity,5,Death Tyrant (in lair),Undead,MM 29
+1995,Insanity,6,Wastrilith,Fiend,MTF 139
+1996,Insanity,3,Molydeus,Fiend,MTF 134
+1997,Insanity,8,Young Red Dragon,Dragon,MM 98
+1998,Insanity,2,Ancient Boreal Dragon,Dragon,ToB2 110
+1999,Insanity,1,Sul Khatesh,Fiend,Ebb 304
+2000,Insanity,9,Drow Shadowblade,Humanoid,MTF 187

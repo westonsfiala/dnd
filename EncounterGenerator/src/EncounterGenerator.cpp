@@ -7,6 +7,7 @@
 
 using namespace DnD;
 
+// Not used anymore, but kept for informative purposes.
 const std::vector<float> EncounterGenerator::MONSTER_ENCOUNTER_MODIFIERS = {
     0.5f, // 1 monster w/ large party
     1.0f, // 1 monster
@@ -193,7 +194,7 @@ uint32_t EncounterGenerator::getMaximumMonsterXp(const Difficulty& difficulty) c
         lastXp = xp;
     }
 
-    return 0;
+    return lastXp;
 }
 
 void EncounterGenerator::fillOutEncounters()
