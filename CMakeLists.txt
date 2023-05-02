@@ -23,10 +23,10 @@ endif()
 
 set(PRODUCT_VERSION ${PRODUCT_VERSION_NAME}_${PRODUCT_VERSION_MAJ}.${PRODUCT_VERSION_MIN}.${PRODUCT_VERSION_REV}.${PRODUCT_VERSION_PATCH}) 
 
-set(PLATFORM_NAME                 "Pathfinder Helper")
+set(PLATFORM_NAME                 "DnD Helper")
 set(COMPANY_NAME                  "Weston")
 set(COMPANY_NAME_FULL             "Weston Fiala")
-set(COPYRIGHT_STRING              "Copyright ${COMPANY_NAME_FULL} 2018-2023")
+set(COPYRIGHT_STRING              "Copyright ${COMPANY_NAME_FULL} 2018-2022")
 
 # PRODUCT_DESCRIPTION is the name displayed in the 'Open With' shortcut and in the .exe file properties Description
 set(PRODUCT_DESCRIPTION           "${COMPANY_NAME} ${PLATFORM_NAME}")
@@ -36,7 +36,7 @@ string(TIMESTAMP BUILD_TIMESTAMP %Y%m%d_%H%M%S)
 #
 #  Define project name
 #
-project (Pathfinder_Helper)
+project (DnD_Helper)
 
 # Set the output directories
 # See:  https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html#output-artifacts
@@ -159,8 +159,8 @@ set(TEST_RESULT_DIR ${CMAKE_BINARY_DIR}/TestResults)
 
 # Traditional cmake (release or debug)
 set(CURRENT_CONFIGURATION_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-set(PATHFINDER_OUTPUT_DIR ${CURRENT_CONFIGURATION_OUTPUT_DIRECTORY})
-set(CMAKE_INSTALL_PREFIX ${PATHFINDER_OUTPUT_DIR})
+set(DND_OUTPUT_DIR ${CURRENT_CONFIGURATION_OUTPUT_DIRECTORY})
+set(CMAKE_INSTALL_PREFIX ${DND_OUTPUT_DIR})
 
 #
 # Override Boost library filter 

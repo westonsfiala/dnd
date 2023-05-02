@@ -3,42 +3,36 @@
 
 #include <map>
 
-using namespace Pathfinder;
+using namespace DnD;
 
 /**
- * \brief An Encounter is a mapping of level and the number of monsters of that level.
+ * \brief An Encounter is a mapping of Cr and the number of monsters of that cr.
  */
 class Encounter
 {
 public:
-    Encounter(const int32_t& adventurerLevel);
+    Encounter();
     ~Encounter() = default;
 
     /**
-     * \brief Returns the level of adventurers involved in this encounter.
-     * \return Level of adventurers involved in this encounter.
-     */
-    int32_t getEncounterLevel() const;
-
-    /**
      * \brief Add monsters to this encounter.
-     * \param level The level of the monsters you want to add.
+     * \param cr The Cr of the monsters you want to add.
      * \param numMonsters The number of monsters you want to add.
      */
-    void addMonsters(int32_t level, uint32_t numMonsters);
+    void addMonsters(Cr cr, uint32_t numMonsters);
 
     /**
      * \brief Remove monsters from this encounter.
-     * \param level The level of the monsters you want to remove.
+     * \param cr The Cr of the monsters you want to remove.
      * \param numMonsters The number of monsters you want to remove.
      */
-    void removeMonsters(int32_t level, uint32_t numMonsters);
+    void removeMonsters(Cr cr, uint32_t numMonsters);
 
     /**
-     * \brief Get the monster levels that are in this encounter and how many of them there are.
-     * \return Monster level map of this encounter.
+     * \brief Get the monster Crs that are in this encounter and how many of them there are.
+     * \return Monster CR map of this encounter.
      */
-    std::map<int32_t, uint32_t> getMonsterLevelToCountMap() const;
+    std::map<Cr, uint32_t> getMonsterCrMap() const;
 
     /**
      * \brief Get the number of unique monsters in this encounter.
@@ -61,13 +55,12 @@ public:
     /**
      * \brief Converts the current encounter into a string.
      *
-     * Has the form "X level Y : A level B ...".
-     * \return String form of the encounter.
+     * Has the form "X Cr Y : A Cr B ...".
+     * \return String form 
      */
     std::string toString() const;
 
 private:
-    int32_t mAdventurerLevel;
-    std::map<int32_t, uint32_t> mMonsterLevelToCountMap;
+    std::map<Cr, uint32_t> mMonsterCrMap;
 
 };

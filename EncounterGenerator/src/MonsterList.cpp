@@ -4,7 +4,7 @@
 #include <chrono>
 #include <random>
 
-using namespace Pathfinder;
+using namespace DnD;
 
 MonsterList::MonsterList()
 {
@@ -22,61 +22,40 @@ void MonsterList::removeMonster(const Monster& monster)
 
 FilledEncounter MonsterList::fillEncounter(const Encounter& encounter) const
 {
-    FilledEncounter newEncounter(encounter.getEncounterLevel());
+    FilledEncounter newEncounter;
 
-    std::vector<std::string> foundTraits;
+    CreatureType foundType = CreatureType::INVALID;
     bool hasFoundType = false;
 
-    for(const auto& monsterPair : encounter.getMonsterLevelToCountMap())
+    for(const auto& monsterPair : encounter.getMonsterCrMap())
     {
-        auto filteredList = filteredListByLevel(monsterPair.first);
+        auto filteredList = filteredListByCr(monsterPair.first);
 
         // If we have already found a type, try to match found monsters to that list.
         // If we don't have any monsters that can match though, it gives up.
         if(hasFoundType)
         {
-            std::vector<MonsterList> possibleLists;
-            for(auto possibleTrait : foundTraits)
+            auto typeMatchedFilteredList = filteredList.filteredListByCreatureType(foundType);
+            if(!typeMatchedFilteredList.mMonsters.empty())
             {
-                // These traits make no sense to filter off of.
-                if(possibleTrait == "Uncommon" || possibleTrait == "Rare" || possibleTrait == "Unique")
-                {
-                    continue;
-                }
-
-                auto typeMatchedFilteredList = filteredList.filteredListByCreatureTrait(possibleTrait);
-                if (!typeMatchedFilteredList.mMonsters.empty())
-                {
-                    possibleLists.push_back(typeMatchedFilteredList);
-                    break;
-                }
-            }
-
-            // Choose the smallest list as that is more likely to give us options that are more of the same.
-            // May not be perfect, but eh whatever.
-            for(auto possibleList : possibleLists)
-            {
-                if(possibleList.mMonsters.size() < filteredList.mMonsters.size())
-                {
-                    filteredList = possibleList;
-                }
+                filteredList = typeMatchedFilteredList;
             }
         }
 
-        // We aren't guaranteed to always have monsters of what level we are looking for. Looking at you non-existent level 25+ monsters.
-        // If that happens, just start going downwards until we find something. Or eventually give if we are already at -1.
-        auto wantedLevel = monsterPair.first;
-        while(filteredList.mMonsters.empty() && wantedLevel != -1)
+        // We aren't guaranteed to always have monsters of what CR we are looking for. Looking at you non-existent CR 29 monsters.
+        // If that happens, just start going downwards until we find something. Or eventually give if we are already at zero.
+        auto wantedCr = monsterPair.first;
+        while(filteredList.mMonsters.empty() && wantedCr != Cr::Zero)
         {
-            wantedLevel = wantedLevel - 1;
-            filteredList = filteredListByLevel(wantedLevel);
+            wantedCr = static_cast<Cr>(static_cast<int>(wantedCr) - 1);
+            filteredList = filteredListByCr(wantedCr);
         }
 
         auto randomMonster = filteredList.getRandomMonster();
         newEncounter.addMonsters(randomMonster, monsterPair.second);
 
         hasFoundType = true;
-        foundTraits = randomMonster.getCreatureTraits();
+        foundType = randomMonster.getCreatureType();
     }
 
     return newEncounter;
@@ -95,13 +74,13 @@ std::vector<FilledEncounter> MonsterList::fillEncounters(const std::vector<Encou
     return filledEncounters;
 }
 
-MonsterList MonsterList::filteredListByLevel(const int32_t& level) const
+MonsterList MonsterList::filteredListByCr(const Cr& cr) const
 {
     MonsterList filteredList;
 
     for(const auto& monster : mMonsters)
     {
-        if(monster.getLevel() == level)
+        if(monster.getCr() == cr)
         {
             filteredList.addMonster(monster);
         }
@@ -110,13 +89,13 @@ MonsterList MonsterList::filteredListByLevel(const int32_t& level) const
     return filteredList;
 }
 
-MonsterList MonsterList::filteredListByCreatureTrait(const std::string& creatureTrait) const
+MonsterList MonsterList::filteredListByCreatureType(const CreatureType& creatureType) const
 {
     MonsterList filteredList;
 
     for (const auto& monster : mMonsters)
     {
-        if (monster.hasCreatureTrait(creatureTrait))
+        if (monster.getCreatureType() == creatureType)
         {
             filteredList.addMonster(monster);
         }

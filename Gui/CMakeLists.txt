@@ -37,7 +37,7 @@ add_executable (${PROJECT_NAME}
 	${CMAKE_CURRENT_BINARY_DIR}/version.rc 
 )
 
-set_target_properties(${PROJECT_NAME}  PROPERTIES OUTPUT_NAME "Pathfinder_Helper")
+set_target_properties(${PROJECT_NAME}  PROPERTIES OUTPUT_NAME "DnD_Helper")
 
 # this block keeps the console window from appearing on Windows 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")

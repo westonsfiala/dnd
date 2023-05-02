@@ -1,11 +1,12 @@
 #include "Monster.h"
 
-Monster::Monster(const std::string& name, const int32_t& level, const CreatureSize& creatureSize, const std::vector<std::string>& creatureTraits, const std::string& location) :
+Monster::Monster(const std::string& name, const Cr& cr, const CreatureSize& creatureSize, const CreatureType& creatureType, const std::string& book, const uint32_t& page) :
     mName{ name },
-    mLevel{ level },
+    mCr{ cr },
     mCreatureSize{ creatureSize },
-    mCreatureTraits{ creatureTraits },
-    mLocation{ location }
+    mCreatureType{ creatureType },
+    mBook{ book },
+    mPage{ page }
 {
 }
 
@@ -16,7 +17,7 @@ bool Monster::operator==(const Monster& other) const
     {
         return false;
     }
-    if (mLevel != other.mLevel)
+    if (mCr != other.mCr)
     {
         return false;
     }
@@ -24,11 +25,15 @@ bool Monster::operator==(const Monster& other) const
     {
         return false;
     }
-    if (mCreatureTraits != other.mCreatureTraits)
+    if (mCreatureType != other.mCreatureType)
     {
         return false;
     }
-    if (mLocation != other.mLocation)
+    if (mBook != other.mBook)
+    {
+        return false;
+    }
+    if (mPage != other.mPage)
     {
         return false;
     }
@@ -37,9 +42,9 @@ bool Monster::operator==(const Monster& other) const
 
 bool Monster::operator<(const Monster& other) const
 {
-    if(mLevel != other.mLevel)
+    if(mCr != other.mCr)
     {
-        return mLevel < other.mLevel;
+        return mCr < other.mCr;
     }
 
     return mName < other.mName;
@@ -51,7 +56,7 @@ bool Monster::isValid() const
     {
         return false;
     }
-    if(mLevel >= -1 && mLevel <= 30)
+    if(mCr == Cr::INVALID)
     {
         return false;
     }
@@ -59,11 +64,11 @@ bool Monster::isValid() const
     {
         return false;
     }
-    if(mCreatureTraits.empty())
+    if(mCreatureType == CreatureType::INVALID)
     {
         return false;
     }
-    if(mLocation.empty())
+    if(mBook.empty())
     {
         return false;
     }
@@ -75,9 +80,9 @@ std::string Monster::getName() const
     return mName;
 }
 
-int32_t Monster::getLevel() const
+Cr Monster::getCr() const
 {
-    return mLevel;
+    return mCr;
 }
 
 CreatureSize Monster::getCreatureSize() const
@@ -85,17 +90,22 @@ CreatureSize Monster::getCreatureSize() const
     return mCreatureSize;
 }
 
-std::vector<std::string> Monster::getCreatureTraits() const
+CreatureType Monster::getCreatureType() const
 {
-    return mCreatureTraits;
+    return mCreatureType;
 }
 
-bool Monster::hasCreatureTrait(const std::string& trait) const
+std::string Monster::getBookLocation() const
 {
-    return std::find(mCreatureTraits.begin(), mCreatureTraits.end(), trait) != mCreatureTraits.end();
+    return getBook() + " " + std::to_string(getPage());
 }
 
-std::string Monster::getLocation() const
+std::string Monster::getBook() const
 {
-    return mLocation;
+    return mBook;
+}
+
+uint32_t Monster::getPage() const
+{
+    return mPage;
 }

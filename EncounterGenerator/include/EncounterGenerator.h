@@ -5,7 +5,7 @@
 #include "Encounter.h"
 #include "Party.h"
 
-using namespace Pathfinder;
+using namespace DnD;
 
 /**
  * \brief The EncounterGenerator takes a party of adventurers and generates lists of valid encounters of all the difficulty types.
@@ -40,7 +40,8 @@ public:
 private:
     static const std::vector<float> MONSTER_ENCOUNTER_MODIFIERS;
 
-    Encounter convertMonsterVectorToEncounter(const std::vector<uint32_t>& monsterXpVector) const;
+    float getXpModifier(const uint32_t& numMonsters) const;
+    static Encounter convertMonsterVectorToEncounter(const std::vector<uint32_t>& monsterXpVector);
 
     static std::vector<uint32_t> getValidMonsterXPs(const uint32_t& minXp, const uint32_t& maxXp);
 

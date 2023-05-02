@@ -3,7 +3,7 @@
 #include "FilledEncounter.h"
 #include "Monster.h"
 
-using namespace Pathfinder;
+using namespace DnD;
 
 /**
  * \brief A MonsterList is a wrapper around a vector of monsters with some helper methods for turning encounters into filled encounters.
@@ -19,7 +19,6 @@ public:
      * \param monster Monster to add to the list.
      */
     void addMonster(const Monster& monster);
-
     /**
      * \brief Remove a monster from the list.
      * \param monster Monster to remove from the list.
@@ -32,7 +31,6 @@ public:
      * \return A filled encounter with monster.
      */
     FilledEncounter fillEncounter(const Encounter& encounter) const;
-
     /**
      * \brief Take many encounters and fill them up with monsters.
      * \param encounters Encounters to fill up.
@@ -43,17 +41,17 @@ public:
 private:
 
     /**
-     * \brief Filters the list of monsters by the given level.
-     * \param level Level to filter the monsters by.
-     * \return MonsterList consisting of only monsters of the given level.
+     * \brief Filters the list of monsters by the given CR.
+     * \param cr Cr to filter the monsters by.
+     * \return MonsterList consisting of only monsters of the given CR.
      */
-    MonsterList filteredListByLevel(const int32_t& level) const;
+    MonsterList filteredListByCr(const Cr& cr) const;
     /**
      * \brief Filters the list of monsters by the given creature type.
-     * \param creatureTrait Single trait of the monster to filter by.
-     * \return MonsterList consisting of only monsters of the given creature traits.
+     * \param creatureType CreatureType to filter the monsters by.
+     * \return MonsterList consisting of only monsters of the given CR.
      */
-    MonsterList filteredListByCreatureTrait(const std::string& creatureTrait) const;
+    MonsterList filteredListByCreatureType(const CreatureType& creatureType) const;
 
     /**
      * \brief Gets a random monster from the list of available monsters.

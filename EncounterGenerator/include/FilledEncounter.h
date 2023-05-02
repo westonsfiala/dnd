@@ -5,7 +5,7 @@
 
 #include <map>
 
-using namespace Pathfinder;
+using namespace DnD;
 
 /**
  * \brief A filled encounter is a grouping of monsters describing one encounter for a party of adventurers.
@@ -13,7 +13,7 @@ using namespace Pathfinder;
 class FilledEncounter
 {
 public:
-    FilledEncounter(const int32_t& adventurerLevel);
+    FilledEncounter();
     ~FilledEncounter() = default;
 
     /**
@@ -71,7 +71,6 @@ public:
     std::string toCsvString() const;
 
 private:
-    int32_t mAdventurerLevel;
     std::map<Monster, uint32_t> mMonsterMap;
 
 };

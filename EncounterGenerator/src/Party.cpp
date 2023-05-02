@@ -2,30 +2,61 @@
 #include "EncounterGenerator.h"
 #include "GeneratorUtilities.h"
 
-using namespace Pathfinder;
+using namespace DnD;
 
-constexpr float Party::UPPER_XP_MODIFIER = 1.10f;
-constexpr float Party::LOWER_XP_MODIFIER = 0.9f;
+constexpr float Party::UPPER_XP_MODIFIER = 1.25f;
+constexpr float Party::LOWER_XP_MODIFIER = 0.75f;
 
-Party::Party(const int32_t& level, const uint32_t& count)
+bool Party::addAdventurer(const uint32_t& level, const uint32_t& count)
 {
     // Only add an adventurer when the level is valid.
     if (level >= 1 && level <= 20)
     {
-        mAdventurerLevel = level;
-        mAdventurerCount = count;
+        const auto currentAdventurers = mAdventurerMap[level];
+        mAdventurerMap[level] = currentAdventurers + count;
         calculateDesiredXp();
+        return true;
     }
+    return false;
 }
 
-uint32_t Party::getLevel() const
+bool Party::removeAdventurer(const uint32_t& level)
 {
-    return mAdventurerLevel;
+    // Only remove an adventurer when the level is valid.
+    if (level >= 1 && level <= 20)
+    {
+        const auto currentAdventurers = mAdventurerMap[level];
+        // If we don't have an adventurer 
+        if (currentAdventurers != 0)
+        {
+            mAdventurerMap[level] = currentAdventurers - 1;
+            calculateDesiredXp();
+            return true;
+        }
+    }
+    return false;
 }
 
 uint32_t Party::getNumAdventurers() const
 {
-    return mAdventurerCount;
+    auto numAdventurers = 0;
+
+    for (const auto& adventurers : mAdventurerMap)
+    {
+        numAdventurers += adventurers.second;
+    }
+
+    return numAdventurers;
+}
+
+uint32_t Party::getNumAdventurers(const uint32_t& level) const
+{
+    if (mAdventurerMap.count(level) != 0)
+    {
+        return mAdventurerMap.at(level);
+    }
+
+    return 0;
 }
 
 uint32_t Party::getDesiredXp(const Difficulty& difficulty) const
@@ -68,15 +99,18 @@ void Party::calculateDesiredXp()
 
 uint32_t Party::getBattleXp(const Difficulty& difficulty) const
 {
-    if (difficulty < Difficulty::Trivial || difficulty > Difficulty::Extreme)
+    if (difficulty < Difficulty::Easy || difficulty > Difficulty::Insanity)
     {
         return 0;
     }
 
     auto desiredXp = 0;
 
-    // Get their desired xp and multiply it by the number of adventurers. 
-    desiredXp += ADVENTURER_XP_BUDGET.at(difficulty) * mAdventurerCount;
+    for (const auto& adventurers : mAdventurerMap)
+    {
+        // For every level that we have adventurers, get their desired xp and multiply it by the number of adventurers. 
+        desiredXp += GeneratorUtilities::getAdventurerXp(adventurers.first, difficulty) * adventurers.second;
+    }
 
     return desiredXp;
 }
