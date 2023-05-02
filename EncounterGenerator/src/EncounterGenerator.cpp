@@ -5,19 +5,7 @@
 #include <chrono>
 #include <numeric>
 
-using namespace DnD;
-
-// Not used anymore, but kept for informative purposes.
-const std::vector<float> EncounterGenerator::MONSTER_ENCOUNTER_MODIFIERS = {
-    0.5f, // 1 monster w/ large party
-    1.0f, // 1 monster
-    1.5f, // 2 monsters
-    2.0f, // 3-6 monsters
-    2.5f, // 7-10 monsters
-    3.0f, // 11-14 monsters
-    4.0f, // 15+ monsters
-    5.0f  // 15+ monsters w/ small party
-};
+using namespace Pathfinder;
 
 EncounterGenerator::EncounterGenerator(const Party &adventurers, const uint32_t &numUniqueMonsters, const uint32_t& numTotalMonsters) :
     mParty(adventurers),
@@ -57,13 +45,13 @@ std::vector<Encounter> EncounterGenerator::getEncounters(const Difficulty& diffi
     std::shuffle(selectionVector.begin(), selectionVector.end(), std::default_random_engine(seed));
 
     // Create the output battleVector.
-    std::vector<Encounter> outputBattles(numBattles);
+    std::vector<Encounter> outputBattles;
 
     // if we have less numBattles than the total num battles, we will never have repeats.
     // If we loop over, just keep filling it so that we always get how many we ask for.
     for(uint32_t i = 0; i < numBattles; i++)
     {
-        outputBattles[i] = vectorizedBattles[selectionVector[i%selectionVector.size()]];
+        outputBattles.push_back(vectorizedBattles[selectionVector[i%selectionVector.size()]]);
     }
 
     return outputBattles;
@@ -79,40 +67,14 @@ std::vector<Encounter> EncounterGenerator::getAllEncounters(const Difficulty& di
     return {};
 }
 
-float EncounterGenerator::getXpModifier(const uint32_t& numMonsters) const
+Encounter EncounterGenerator::convertMonsterVectorToEncounter(const std::vector<uint32_t>& monsterXpVector) const
 {
-    const auto numAdventurers = mParty.getNumAdventurers();
-    // If we have no characters, no xp can be given.
-    if (numAdventurers == 0)
-    {
-        assert(false);
-        return 0;
-    }
-
-    // If we have no monsters, no xp can be given.
-    if (numMonsters == 0)
-    {
-        return 0;
-    }
-
-    // This approximates the Monster EncounterGenerator Modifier, with more emphasis on balancing monsters vs players.
-    auto xpMod = 2.0f - numAdventurers / 4.0f + (numMonsters - 1)*0.2f;
-    if(xpMod < 0.5f)
-    {
-        xpMod = 0.5f;
-    }
-
-    return xpMod;
-}
-
-Encounter EncounterGenerator::convertMonsterVectorToEncounter(const std::vector<uint32_t>& monsterXpVector)
-{
-    Encounter encounter;
+    Encounter encounter(mParty.getLevel());
     // Fill out the list so we can get the desired xp.
     for (auto monsterXp : monsterXpVector)
     {
-        auto monsterCr = GeneratorUtilities::getMonsterCr(monsterXp);
-        encounter.addMonsters(monsterCr, 1);
+        auto monsterLevel = GeneratorUtilities::getMonsterLevel(mParty.getLevel(), monsterXp);
+        encounter.addMonsters(monsterLevel, 1);
     }
 
     return encounter;
@@ -182,7 +144,7 @@ uint32_t EncounterGenerator::getMaximumMonsterXp(const Difficulty& difficulty) c
         return 0;
     }
 
-    const auto highestXp = desiredXp / getXpModifier(1);
+    const auto highestXp = desiredXp;
     auto lastXp = 0;
 
     for (auto xp : MONSTER_XP_TABLE)
@@ -216,7 +178,7 @@ void EncounterGenerator::fillOutHelper(std::vector<uint32_t>& currentMonsters, c
 {
     // Get the current encounter as it stands.
     const auto encounter = convertMonsterVectorToEncounter(currentMonsters);
-    const auto xp = encounter.getEncounterXp() * getXpModifier(static_cast<uint32_t>(currentMonsters.size()));
+    const auto xp = encounter.getEncounterXp();
 
     // Run some checks to see if we should quit out now.
     const auto tooManyTotalMonsters = currentMonsters.size() > mNumTotalMonsters;
@@ -231,11 +193,11 @@ void EncounterGenerator::fillOutHelper(std::vector<uint32_t>& currentMonsters, c
     const auto inXpRange = (xp >= lowXp) && (xp <= highXp);
 
     // When adding monsters into the map, add them in chunks that must make up at least 20% of allotted xp.
-    const auto minXpPerCr = desiredXp / 5;
+    const auto minXpPerLevel = desiredXp / 5;
 
     // If we are in the correct xp range do some last checks.
     // Ensure that only one battle per set has a unique number of monsters.
-    // This stops it from having 3 entries in the table being nearly the same but just one cr off with the same number of monsters.
+    // This stops it from having 3 entries in the table being nearly the same but just one level off with the same number of monsters.
     if(inXpRange)
     {
         auto uniqueNumberOfMonsters = true;
@@ -258,7 +220,7 @@ void EncounterGenerator::fillOutHelper(std::vector<uint32_t>& currentMonsters, c
     for(auto newXp : validXps)
     {
         // Calculate how many monsters should be added in this batch
-        auto numNewMonsters = minXpPerCr / newXp;
+        auto numNewMonsters = minXpPerLevel / newXp;
         if (numNewMonsters == 0) numNewMonsters = 1;
 
         // Add the monsters in. Recurse. Remove monsters.

@@ -3,7 +3,7 @@
 
 #include "GeneratorUtilities.h"
 
-using namespace DnD;
+using namespace Pathfinder;
 
 /**
  * \brief A Monster is a creature used in encounters. It stores useful information about the creature and where to find more info.
@@ -11,7 +11,7 @@ using namespace DnD;
 class Monster
 {
 public:
-    Monster(const std::string& name, const Cr& cr, const CreatureSize& creatureSize, const CreatureType& creatureType, const std::string& book, const uint32_t& page);
+    Monster(const std::string& name, const int32_t& level, const CreatureSize& creatureSize, const std::vector<std::string>& creatureTraits, const std::string& location);
     Monster(const Monster& other) = default;
     ~Monster() = default;
 
@@ -31,10 +31,10 @@ public:
     std::string getName() const;
 
     /**
-     * \brief Gets the Cr of the monster.
-     * \return Cr of the monster.
+     * \brief Gets the level of the monster.
+     * \return Level of the monster.
      */
-    Cr getCr() const;
+    int32_t getLevel() const;
 
     /**
      * \brief Gets the creature size of the monster.
@@ -43,34 +43,27 @@ public:
     CreatureSize getCreatureSize() const;
 
     /**
-     * \brief Gets the creature type of the monster.
-     * \return Creature type of the monster
+     * \brief Gets the creature traits of the monster.
+     * \return Creature traits of the monster
      */
-    CreatureType getCreatureType() const;
+    std::vector<std::string> getCreatureTraits() const;
 
     /**
-     * \brief Gets the book location of the monster.
-     * \return Book location of the monster in the form "{Book} {Page}".
+     * \brief If the monster has the given trait.
+     * \return If the monster has the given trait.
      */
-    std::string getBookLocation() const;
+    bool hasCreatureTrait(const std::string& trait) const;
 
     /**
-     * \brief Gets the book that the monster is described in.
-     * \return Book that the monster is described in.
+     * \brief Gets the location of the monster.
+     * \return Location of the monster.
      */
-    std::string getBook() const;
-
-    /**
-     * \brief Gets the page in the book that the monster is described.
-     * \return Page in the book that the monster is described.
-     */
-    uint32_t getPage() const;
+    std::string getLocation() const;
 
 private:
     std::string mName;
-    Cr mCr;
+    int32_t mLevel;
     CreatureSize mCreatureSize;
-    CreatureType mCreatureType;
-    std::string mBook;
-    uint32_t mPage;
+    std::vector<std::string> mCreatureTraits;
+    std::string mLocation;
 };

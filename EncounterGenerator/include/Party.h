@@ -3,7 +3,7 @@
 
 #include <map>
 
-using namespace DnD;
+using namespace Pathfinder;
 
 /**
  * \brief A party is made up of a number of adventurers and has desired XP for each difficulty.
@@ -11,36 +11,27 @@ using namespace DnD;
 class Party
 {
 public:
-    Party() = default;
+
+    /**
+     * \brief Creates a party of a number of adventurers of a given level.
+     * \param level Level of the adventurer. Must be between 1 -> 20 inclusive.
+     * \param count Number of adventurers.
+     */
+    Party(const int32_t& level, const uint32_t& count);
     Party(const Party& other) = default;
     ~Party() = default;
 
     /**
-     * \brief Adds an adventurer to the party of the desired level.
-     * \param level Level of the adventurer. Must be between 1 -> 20 inclusive. 
-     * \return If the adventurer is added to the party.
+     * \brief Gets the level of adventurers in the party.
+     * \return Level of adventurers.
      */
-    bool addAdventurer(const uint32_t& level, const uint32_t& count);
-
-    /**
-     * \brief Removes an adventurer from the party of the desired level.
-     * \param level Level of the adventurer. Must be between 1 -> 20 inclusive.
-     * \return If an adventurer of the given level was removed.
-     */
-    bool removeAdventurer(const uint32_t& level);
+    uint32_t getLevel() const;
 
     /**
      * \brief Gets the number of adventurers in the party.
      * \return Number of adventurers.
      */
     uint32_t getNumAdventurers() const;
-
-    /**
-     * \brief Gets the number of adventurers in the party of a given level.
-     * \param level Level of the adventurers to search for.
-     * \return Number of adventurers of the given level.
-     */
-    uint32_t getNumAdventurers(const uint32_t& level) const;
 
     /**
      * \brief Gets the desired XP for a battle of the given difficulty.
@@ -80,7 +71,8 @@ private:
      */
     uint32_t getBattleXp(const Difficulty& difficulty) const;
 
-    std::map<uint32_t, uint32_t> mAdventurerMap;
+    int32_t mAdventurerLevel;
+    uint32_t mAdventurerCount;
     std::map<Difficulty, uint32_t> mDesiredXpMap;
 
 };
