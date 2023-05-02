@@ -2,10 +2,9 @@
 
 #include <string>
 
-using namespace Pathfinder;
+using namespace DnD;
 
-FilledEncounter::FilledEncounter(const int32_t& adventurerLevel) :
-    mAdventurerLevel{adventurerLevel}
+FilledEncounter::FilledEncounter()
 {
 }
 
@@ -54,7 +53,7 @@ uint32_t FilledEncounter::getEncounterXp() const
     auto battleXp = 0;
     for (const auto &monsterGroup : mMonsterMap)
     {
-        battleXp += GeneratorUtilities::getMonsterXp(mAdventurerLevel, monsterGroup.first.getLevel()) * monsterGroup.second;
+        battleXp += GeneratorUtilities::getMonsterXp(monsterGroup.first.getCr()) * monsterGroup.second;
     }
     return battleXp;
 }
@@ -64,7 +63,7 @@ std::string FilledEncounter::toString() const
     std::string FilledEncounterString = "";
     for (auto monsterPair : mMonsterMap)
     {
-        FilledEncounterString += std::to_string(monsterPair.second) + " " + monsterPair.first.getName() + "(" + monsterPair.first.getLocation() + ")" + " : ";
+        FilledEncounterString += std::to_string(monsterPair.second) + " " + monsterPair.first.getName() + "(" + monsterPair.first.getBookLocation() + ")" + " : ";
     }
     // Get rid of the fence post stuff.
     FilledEncounterString.pop_back();
@@ -79,11 +78,7 @@ std::string FilledEncounter::toCsvString() const
     std::string FilledEncounterString = "";
     for (auto monsterPair : mMonsterMap)
     {
-        FilledEncounterString += std::to_string(monsterPair.second) + ","
-                            + std::to_string(monsterPair.first.getLevel()) + ","
-                            + monsterPair.first.getName() + ","
-                            + GeneratorUtilities::toStringCreatureTraits(monsterPair.first.getCreatureTraits()) + ","
-                            + monsterPair.first.getLocation() + ",";
+        FilledEncounterString += std::to_string(monsterPair.second) + "," + monsterPair.first.getName() + "," + GeneratorUtilities::toStringCreatureType(monsterPair.first.getCreatureType()) + "," + monsterPair.first.getBookLocation() + ",";
     }
     // Get rid of the fence post stuff.
     FilledEncounterString.pop_back();
